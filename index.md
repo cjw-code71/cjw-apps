@@ -27,4 +27,4 @@ reader.
 
 ---
 
-[Support and contact](support.html) · [CJW-Apps@outlook.com](mailto:CJW-Apps@outlook.com)
+[Privacy policy](privacy.html) · [Support and contact](support.html) · [CJW-Apps@outlook.com](mailto:CJW-Apps@outlook.com)

@@ -41,6 +41,7 @@ the file type and what you see.
 
 ## Privacy policies
 
+- [CJW Apps (all apps)](privacy.html)
 - [Audiobook Library](audiobook-library/privacy.html)
 - [eBook AI Reader](ebook-ai-reader/privacy.html)
 - [eBook Library](ebook-library/privacy.html)
