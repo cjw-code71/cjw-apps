@@ -4,7 +4,7 @@ title: CJW Apps — Privacy Policy
 
 # CJW Apps — Privacy Policy
 
-*Last updated 17 October 2026*
+*Last updated 20 October 2026*
 
 This policy covers the apps published by CJW Apps:
 [Audiobook Library](audiobook-library/), [eBook AI Reader](ebook-ai-reader/)
@@ -67,7 +67,7 @@ information from the apps.
 | Project Gutenberg and Gutendex, Wikisource, the Internet Archive | eBook AI Reader, eBook Library | Free books |
 | OPDS catalogues you add | eBook AI Reader, eBook Library | When you open them; your user name and password go only to that catalogue |
 | Apple Books search, Open Library | eBook AI Reader, eBook Library | Find details online |
-| Hugging Face | eBook AI Reader | Once, when you download the natural voice |
+| Hugging Face | eBook AI Reader | Once for each, when you download the natural voice or My voices (Pocket TTS) |
 
 ## Purchases
 

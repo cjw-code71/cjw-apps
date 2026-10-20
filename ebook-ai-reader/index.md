@@ -22,8 +22,9 @@ car and on your PC. For Android and Windows.
 
 ## Read aloud
 
-- Uses your device's voices, or the natural voice (Pro): a high-quality
-  voice that runs on your device, offline
+- Uses your device's voices, or natural voices (Pro) that run on your device,
+  offline: the natural voice, and My voices, with six included English voices
+  (UK, US and Australian, female and male) or ones you make yourself
 - Highlights the sentence being read
 - Sleep timer, lock-screen and headphone controls
 - Android Auto: listen to your books in the car
@@ -37,7 +38,7 @@ car and on your PC. For Android and Windows.
 
 ## Pro (one-off purchase)
 
-- The natural voice
+- The natural voice and My voices
 - Edit a book's details and cover, find details online, and edit several
   books together
 - Save details back into your original files, on your device or in the

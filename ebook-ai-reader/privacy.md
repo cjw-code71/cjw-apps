@@ -4,7 +4,7 @@ title: eBook AI Reader — Privacy Policy
 
 # eBook AI Reader — Privacy Policy
 
-*CJW Apps · Last updated 17 October 2026*
+*CJW Apps · Last updated 20 October 2026*
 
 eBook AI Reader is an ebook reader for Android and Windows that can read
 books aloud. This policy explains what the app does with your
@@ -18,7 +18,8 @@ Everything the app keeps is stored only on your phone or PC:
 
 - your books, their covers and details, and your library;
 - reading positions, bookmarks and their notes, and your settings;
-- the natural voice, if you download it;
+- the natural voice and My voices, if you download them, and any voice
+  files you add to My voices;
 - sign-in tokens for OneDrive and Google Drive, and passwords for any OPDS
   catalogues you add, in your system's secure storage;
 - a small diagnostic log, which never contains sign-in tokens or
@@ -30,8 +31,11 @@ Uninstalling the app removes all of this.
 
 Reading aloud uses either your device's own speech engine (for example
 Google's text-to-speech on Android, or the voices built into Windows) or
-the natural voice, which runs entirely on your device. The text of your
-books is not sent anywhere by this app. Your device's speech engine is
+the natural voice or My voices, which run entirely on your device. The
+text of your books is not sent anywhere by this app. My voices uses Pocket
+TTS by Kyutai (voice model licensed CC BY 4.0), with six voices that come
+with the app and any voice files you choose to add; voice files you add
+stay on your device. Your device's speech engine is
 provided by its maker, whose own policies apply.
 
 ## Your cloud storage (OneDrive, Google Drive)
@@ -69,7 +73,7 @@ account or personal information from the app.
 | Project Gutenberg and Gutendex, Wikisource, the Internet Archive | When you browse, search or download free books |
 | OPDS catalogues you add yourself | When you open them; your user name and password go only to that catalogue |
 | Apple Books search, Open Library | When you use Find details online |
-| Hugging Face (huggingface.co) | Once, when you download the natural voice |
+| Hugging Face (huggingface.co) | Once for each, when you download the natural voice or My voices (Pocket TTS) |
 | Archive of Our Own | Opened in your web browser when you choose it |
 
 ## Purchases

@@ -16,7 +16,7 @@ Drive or your device, with a player made for audiobooks.
 ## [eBook AI Reader](ebook-ai-reader/)
 
 Read your ebooks, or have them read aloud: ePub, Kindle, PDF and more, with
-a natural voice that runs offline.
+natural voices, including six of our own, that run offline.
 [Privacy policy](ebook-ai-reader/privacy.html)
 
 ## [eBook Library](ebook-library/)
