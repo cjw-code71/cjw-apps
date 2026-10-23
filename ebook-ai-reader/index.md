@@ -15,6 +15,16 @@ car and on your PC. For Android and Windows.
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NWL094R78JQ) (listed as "eBook AI Reader")
 - **Android:** coming soon to Google Play
 
+## Screenshots
+
+Windows, with free classics from Project Gutenberg.
+
+<p><img src="../assets/screenshots/ebook-ai-reader/reader.png" alt="Reading Pride and Prejudice, with the sentence being read highlighted" style="max-width:100%"></p>
+<p><img src="../assets/screenshots/ebook-ai-reader/library.png" alt="The library, with search and filters" style="max-width:100%"></p>
+<p><img src="../assets/screenshots/ebook-ai-reader/reader-light.png" alt="The same book in the light theme" style="max-width:100%"></p>
+<p><img src="../assets/screenshots/ebook-ai-reader/my-voices.png" alt="Settings: the natural voice and My voices, with six included voices" style="max-width:100%"></p>
+<p><img src="../assets/screenshots/ebook-ai-reader/sources.png" alt="Sources: your files and folders, Project Gutenberg, Wikisource, the Internet Archive and your own catalogues" style="max-width:100%"></p>
+
 ## Every book you have
 
 - ePub, Kindle (MOBI, AZW, AZW3, without DRM), PDF, FB2, Word (DOCX), RTF,
