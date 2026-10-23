@@ -15,6 +15,16 @@ reader. For Android and Windows.
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9P23H7S4TF02) (listed as "eBook Library Bookshelf")
 - **Android:** coming soon to Google Play
 
+## Screenshots
+
+Windows, with free classics from Project Gutenberg.
+
+<p><img src="../assets/screenshots/ebook-library/home.png" alt="Home: recently added books" style="max-width:100%"></p>
+<p><img src="../assets/screenshots/ebook-library/library.png" alt="The library, with search and filters" style="max-width:100%"></p>
+<p><img src="../assets/screenshots/ebook-library/reader.png" alt="Reading Pride and Prejudice" style="max-width:100%"></p>
+<p><img src="../assets/screenshots/ebook-library/library-light.png" alt="The library in the light theme" style="max-width:100%"></p>
+<p><img src="../assets/screenshots/ebook-library/sources.png" alt="Sources: your files and folders, Project Gutenberg, Wikisource, the Internet Archive and your own catalogues" style="max-width:100%"></p>
+
 ## Every book you have
 
 - ePub, Kindle (MOBI, AZW, AZW3, without DRM), PDF, FB2, Word (DOCX), RTF,

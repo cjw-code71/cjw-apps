@@ -19,6 +19,7 @@ car and on your PC. For Android and Windows.
 
 Windows, with free classics from Project Gutenberg.
 
+<p><img src="../assets/screenshots/ebook-ai-reader/home.png" alt="Home: recently added books" style="max-width:100%"></p>
 <p><img src="../assets/screenshots/ebook-ai-reader/reader.png" alt="Reading Pride and Prejudice, with the sentence being read highlighted" style="max-width:100%"></p>
 <p><img src="../assets/screenshots/ebook-ai-reader/library.png" alt="The library, with search and filters" style="max-width:100%"></p>
 <p><img src="../assets/screenshots/ebook-ai-reader/reader-light.png" alt="The same book in the light theme" style="max-width:100%"></p>
