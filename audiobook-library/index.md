@@ -11,6 +11,11 @@ your OneDrive and Google Drive, and plays them without downloading whole
 books first. Built for big collections: thousands of books, tens of
 thousands of files. For Android and Windows.
 
+## Get it
+
+- **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NTCNMVBPCNG) (listed as "Audiobook Library Player")
+- **Android:** coming soon to Google Play
+
 ## Your library, sorted for you
 
 - Add a folder or connect OneDrive / Google Drive: books are found

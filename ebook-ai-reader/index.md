@@ -10,6 +10,11 @@ eBook AI Reader opens the books you already have and reads them aloud,
 sentence by sentence, following along on the page. On your phone, in the
 car and on your PC. For Android and Windows.
 
+## Get it
+
+- **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NWL094R78JQ) (listed as "eBook AI Reader")
+- **Android:** coming soon to Google Play
+
 ## Every book you have
 
 - ePub, Kindle (MOBI, AZW, AZW3, without DRM), PDF, FB2, Word (DOCX), RTF,
@@ -25,6 +30,7 @@ car and on your PC. For Android and Windows.
 - Uses your device's voices, or natural voices (Pro) that run on your device,
   offline: the natural voice, and My voices, with six included English voices
   (UK, US and Australian, female and male) or ones you make yourself
+- [Hear the six included voices](voices.html)
 - Highlights the sentence being read
 - Sleep timer, lock-screen and headphone controls
 - Android Auto: listen to your books in the car
