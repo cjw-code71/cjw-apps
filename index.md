@@ -34,6 +34,21 @@ reader.
 
 [Privacy policy](ebook-library/privacy.html)
 
+## How the apps use Google Drive
+
+If you choose to connect Google Drive, the apps ask for access to your Drive
+so you can use the audiobooks and ebooks you keep there:
+
+- **Reading:** the apps list the folders you browse and read the files you
+  add, so they can show covers and details, and play or open your books.
+- **Writing:** only when you ask, the apps save a book's details back into its
+  original file (and, for audiobooks, its cover and chapters).
+
+Your files go straight between your device and Google. They never pass through
+a server of ours, and they aren't used for advertising, sold or shared. You can
+disconnect in the app at any time, or remove CJW Apps' access in your Google
+Account. See the [privacy policy](privacy.html).
+
 ---
 
 [Privacy policy](privacy.html) · [Support and contact](support.html) · [CJW-Apps@outlook.com](mailto:CJW-Apps@outlook.com)
