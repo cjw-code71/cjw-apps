@@ -2,37 +2,36 @@
 title: CJW Apps
 ---
 
-# CJW Apps
+<div class="hero">
+  <p class="eyebrow">CJW Apps</p>
+  <h1>Apps that keep your data on your own device</h1>
+  <p>No accounts with us, no ads, no tracking. For your books at home, and your IT assets at work.</p>
+</div>
 
-Apps for people with a lot of books, on **Android** and **Windows**. No
-accounts, no ads, no tracking: your library stays on your device.
+<div class="cards two">
+  <div class="card">
+    <p class="eyebrow">Entertainment</p>
+    <h2><a href="entertainment/">For people with a lot of books</a></h2>
+    <p>Audiobooks and ebooks on Android and Windows. Your library stays on your device.</p>
+    <div class="icon-row">
+      <a href="audiobook-library/"><img src="assets/icons/audiobook-library.png" alt="" width="30" height="30">Audiobook Library</a>
+      <a href="ebook-ai-reader/"><img src="assets/icons/ebook-ai-reader.png" alt="" width="30" height="30">eBook AI Reader</a>
+      <a href="ebook-library/"><img src="assets/icons/ebook-library.png" alt="" width="30" height="30">eBook Library</a>
+    </div>
+    <div class="card-actions"><a class="btn" href="entertainment/">See the Entertainment apps</a></div>
+  </div>
+  <div class="card">
+    <p class="eyebrow">Business</p>
+    <h2><a href="business/">For small and growing organisations</a></h2>
+    <p>Tools for Windows. Your records stay on your own PC, not in somebody else's cloud.</p>
+    <div class="icon-row">
+      <a href="itam/"><img class="app-icon plain" src="assets/icons/itam.png" alt="" width="30" height="30">CJW-Apps ITAM: IT Asset Management</a>
+    </div>
+    <div class="card-actions"><a class="btn" href="business/">See the Business apps</a></div>
+  </div>
+</div>
 
-## [Audiobook Library](audiobook-library/)
-
-All your audiobooks in one place, streamed straight from OneDrive, Google
-Drive or your device, with a player made for audiobooks.
-
-**Get it:** [Microsoft Store (Windows)](https://apps.microsoft.com/detail/9NTCNMVBPCNG) · Google Play: coming soon
-
-[Privacy policy](audiobook-library/privacy.html)
-
-## [eBook AI Reader](ebook-ai-reader/)
-
-Read your ebooks, or have them read aloud: ePub, Kindle, PDF and more, with
-natural voices, including six of our own, that run offline.
-
-**Get it:** [Microsoft Store (Windows)](https://apps.microsoft.com/detail/9NWL094R78JQ) · Google Play: coming soon · [Hear the voices](ebook-ai-reader/voices.html)
-
-[Privacy policy](ebook-ai-reader/privacy.html)
-
-## [eBook Library](ebook-library/)
-
-All your ebooks in one tidy library, with covers, series and a comfortable
-reader.
-
-**Get it:** [Microsoft Store (Windows)](https://apps.microsoft.com/detail/9P23H7S4TF02) · Google Play: coming soon
-
-[Privacy policy](ebook-library/privacy.html)
+<div class="panel" markdown="1">
 
 ## How the apps use Google Drive
 
@@ -49,6 +48,4 @@ a server of ours, and they aren't used for advertising, sold or shared. You can
 disconnect in the app at any time, or remove CJW Apps' access in your Google
 Account. See the [privacy policy](privacy.html).
 
----
-
-[Privacy policy](privacy.html) · [Support and contact](support.html) · [CJW-Apps@outlook.com](mailto:CJW-Apps@outlook.com)
+</div>

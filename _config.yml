@@ -1,3 +1,8 @@
 title: CJW Apps
-description: Audiobook and ebook apps for Android and Windows
+description: Apps that keep your data on your own device
 theme: jekyll-theme-minimal
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

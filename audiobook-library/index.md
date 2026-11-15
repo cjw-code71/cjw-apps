@@ -64,5 +64,5 @@ Windows, with free LibriVox audiobooks.
 No account, no ads, no tracking. You sign in to Microsoft or Google on
 their own pages, and your files are only changed when you ask.
 
-[Privacy policy](privacy.html) · [Support](../support.html) ·
+[Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) ·
 [All apps](../)

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="icon" href="{{ site.baseurl }}/assets/icons/cjw-apps.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="{{ site.baseurl }}/" aria-label="CJW Apps home">
+        <span class="brand-mark" aria-hidden="true">CJW</span><span class="brand-name">Apps</span>
+      </a>
+      <nav class="menu" aria-label="Site menu">
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/entertainment/">Entertainment</a>
+        <a href="{{ site.baseurl }}/business/">Business</a>
+        <a href="{{ site.baseurl }}/support.html">Support</a>
+        <a href="{{ site.baseurl }}/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap content">
+{{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <div>
+        <div class="foot-brand">CJW Apps</div>
+        <div class="foot-note">Apps that keep your data on your own device.<br>No accounts with us, no ads, no tracking.</div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="{{ site.baseurl }}/entertainment/">Entertainment</a>
+        <a href="{{ site.baseurl }}/business/">Business</a>
+        <a href="{{ site.baseurl }}/support.html">Support</a>
+        <a href="{{ site.baseurl }}/contact.html">Contact</a>
+        <a href="{{ site.baseurl }}/privacy.html">Privacy policy</a>
+        <a href="mailto:CJW-Apps@outlook.com">CJW-Apps@outlook.com</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // mark the menu entry of the section this page belongs to
+    (function () {
+      var base = "{{ site.baseurl }}";
+      var path = location.pathname.replace(/index\.html$/, "");
+      if (base && path.indexOf(base) === 0) path = path.slice(base.length);
+      var section = /^\/(audiobook-library|ebook-ai-reader|ebook-library|entertainment)\//.test(path) ? "/entertainment/"
+        : /^\/(itam|business)\//.test(path) ? "/business/" : path;
+      document.querySelectorAll(".menu a").forEach(function (link) {
+        var target = link.getAttribute("href");
+        if (base && target.indexOf(base) === 0) target = target.slice(base.length);
+        if (target === section) link.setAttribute("aria-current", "page");
+      });
+    })();
+  </script>
+</body>
+</html>

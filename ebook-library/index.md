@@ -56,5 +56,5 @@ Windows, with free classics from Project Gutenberg.
 No account, no ads, no tracking. You sign in to Microsoft or Google on
 their own pages, and your books and reading stay on your device.
 
-[Privacy policy](privacy.html) · [Support](../support.html) ·
+[Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) ·
 [All apps](../)
