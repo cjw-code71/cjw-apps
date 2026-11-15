@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installation &amp;amp; Configuration Guide — CJW-Apps ITAM</title>
+<link rel="icon" href="images/itam-icon.png">
+<style>
+:root { --bg:#f5f7fa; --paper:#fff; --text:#17212b; --muted:#56636f; --line:#dde3ea; --brand:#0f4c81; --accent:#0b6bcb;
+        --soft:#e8f1fb; --note:#fff7e0; --note-line:#e5c55a; --code:#eef2f6; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0f151c; --paper:#161f29; --text:#e8edf2; --muted:#a3afbb; --line:#2a3644; --brand:#14365a; --accent:#6cb2f5;
+          --soft:#1b2d42; --note:#2b2615; --note-line:#7a6526; --code:#1e2935; }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Segoe UI", system-ui, Arial, sans-serif; }
+a { color:var(--accent); text-underline-offset:3px; }
+header.bar { background:var(--brand); color:#fff; position:sticky; top:0; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,.15); }
+header .inner { max-width:1180px; margin:0 auto; padding:10px 20px; display:flex; flex-wrap:wrap; gap:6px 22px; align-items:center; }
+header .brand { font-weight:700; font-size:1.05rem; display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; }
+header .brand img { width:30px; height:30px; border-radius:7px; background:#fff; }
+header nav { display:flex; flex-wrap:wrap; gap:4px; }
+header nav a { color:#dbe8f5; text-decoration:none; font-weight:600; font-size:.92rem; padding:6px 11px; border-radius:999px; }
+header nav a:hover { background:rgba(255,255,255,.12); color:#fff; }
+header nav a.here { background:#fff; color:var(--brand); }
+main { max-width:1000px; margin:28px auto 60px; padding:44px 56px; background:var(--paper); border:1px solid var(--line);
+       border-radius:14px; box-shadow:0 6px 24px rgba(16,32,48,.06); }
+h1 { font-size:2.1rem; line-height:1.2; margin:0 0 .2em; color:var(--brand); letter-spacing:-.3px; }
+@media (prefers-color-scheme: dark) { h1 { color:var(--text); } }
+h1 + p em { color:var(--muted); font-style:normal; font-size:.95rem; }
+h1, h2, h3, h4 { scroll-margin-top:84px; }
+h2 { font-size:1.45rem; margin:2.2em 0 .6em; padding-bottom:.3em; border-bottom:2px solid var(--line); }
+h3 { font-size:1.15rem; margin:1.8em 0 .5em; }
+h4 { font-size:1rem; margin:1.4em 0 .4em; }
+p, li { max-width:860px; }
+table { border-collapse:collapse; width:100%; margin:1em 0 1.4em; font-size:.93rem; }
+th, td { text-align:left; vertical-align:top; padding:9px 12px; border:1px solid var(--line); }
+th { background:var(--soft); font-weight:600; }
+tr:nth-child(even) td { background:color-mix(in srgb, var(--soft) 35%, transparent); }
+code { background:var(--code); padding:1px 6px; border-radius:5px; font-size:.9em; font-family:Consolas, "Cascadia Mono", monospace; }
+pre { background:var(--code); padding:14px 16px; border-radius:10px; overflow-x:auto; border:1px solid var(--line); }
+pre code { background:none; padding:0; }
+blockquote { margin:1.2em 0; padding:12px 16px; background:var(--note); border-left:4px solid var(--note-line); border-radius:8px; }
+blockquote p { margin:.2em 0; }
+img { max-width:100%; height:auto; display:block; margin:1em 0 1.6em; border:1px solid var(--line); border-radius:10px;
+      box-shadow:0 4px 16px rgba(16,32,48,.10); }
+.figure-caption { font-size:.85rem; color:var(--muted); margin:-1.1em 0 1.6em; }
+hr { border:0; border-top:1px solid var(--line); margin:2.4em 0; }
+footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85rem; color:var(--muted); text-align:center; }
+.pager { display:flex; justify-content:space-between; gap:12px; margin-top:3em; padding-top:1.2em; border-top:1px solid var(--line); }
+.pager a { font-weight:600; }
+@media (max-width:760px) { main { margin:12px; padding:22px 18px; } h1 { font-size:1.7rem; } }
+@media print {
+  :root { --bg:#fff; --paper:#fff; --text:#000; --muted:#444; --line:#bbb; --brand:#0f4c81; --soft:#eef3f8; --code:#f2f2f2; }
+  header.bar, .pager { display:none; }
+  body { background:#fff; font-size:11pt; }
+  main { margin:0; padding:0; border:0; box-shadow:none; max-width:none; }
+  h2 { break-after:avoid; } h3 { break-after:avoid; } table, img, pre, blockquote { break-inside:avoid; }
+  img { box-shadow:none; max-height:16cm; object-fit:contain; }
+  pre { white-space:pre-wrap; word-break:break-all; }
+  a { color:#000; text-decoration:none; }
+  footer { margin:2em 0 0; }
+}
+</style>
+</head>
+<body>
+<header class="bar"><div class="inner">
+  <a class="brand" href="../" title="CJW-Apps ITAM on apps.cwink.com"><img src="images/itam-icon.png" alt="">CJW-Apps ITAM</a>
+  <nav aria-label="Guides"><a href="index.html" class="">Contents</a><a href="01-Getting-Started.html" class="">1. Getting Started</a><a href="02-Installation-and-Configuration.html" class="here">2. Installation &amp; Configuration</a><a href="03-User-Guide.html" class="">3. User Guide</a><a href="04-Troubleshooting.html" class="">4. Troubleshooting</a></nav>
+</div></header>
+<main>
+<h1 id="installation--configuration-guide">Installation &amp; Configuration Guide</h1>
+<p><em>CJW-Apps ITAM · Version 2.7.0 · For administrators</em></p>
+<p>This guide covers installing ITAM, connecting it to your network and services, and every setting an administrator
+looks after. New to ITAM? Start with the <a href="01-Getting-Started.html">Getting Started guide</a>.</p>
+<p>Everything in this guide is done in <strong>Settings</strong> (the cog in the top bar), by an account with the
+<strong>Administrator</strong> role unless it says otherwise. Set up only the parts you need.</p>
+<p><strong>Contents</strong></p>
+<ol>
+<li><a href="#system-requirements">System requirements</a></li>
+<li><a href="#installing-and-updating">Installing and updating</a></li>
+<li><a href="#network-ports-and-protocols">Network ports and protocols</a></li>
+<li><a href="#where-itam-keeps-its-data">Where ITAM keeps its data</a></li>
+<li><a href="#network-access-and-https">Network access and HTTPS</a></li>
+<li><a href="#users-and-sign-in">Users and sign-in</a>: <a href="#roles">Roles</a> · <a href="#sign-in-with-microsoft">Microsoft</a> · <a href="#sign-in-with-google">Google</a> · <a href="#recovery-key">Recovery key</a></li>
+<li><a href="#backups">Backups</a></li>
+<li><a href="#company-name-ci-types-and-dashboard-groups">Company name, CI types and dashboard groups</a></li>
+<li><a href="#software-licences">Software licences</a></li>
+<li><a href="#agentless-network-discovery">Agentless network discovery</a>: <a href="#windows-logins-wmi">Windows logins</a> · <a href="#snmp-v1v2c">SNMP</a> · <a href="#snmpv3-network-devices">SNMPv3</a> · <a href="#schedules">Schedules</a></li>
+<li><a href="#microsoft-intune">Microsoft Intune</a> · <a href="#google-workspace">Google Workspace</a></li>
+<li><a href="#hardware-models-and-lifecycle">Hardware models and lifecycle</a></li>
+<li><a href="#restart-shut-down-and-factory-reset">Restart, shut down and factory reset</a></li>
+</ol>
+<blockquote>
+<p><strong>Hybrid networks.</strong> Microsoft sign-in, Google sign-in, Intune and Google Workspace can all be used together,
+alongside network scans. One device reported by several sources stays one asset: see
+<a href="#microsoft-intune">Microsoft Intune</a>.</p>
+</blockquote>
+<hr />
+<h2 id="system-requirements">System requirements</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating system</td>
+<td>Windows 10 version 1809 or later, Windows 11, or Windows Server 2019 / 2022 / 2025 (64-bit)</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>Microsoft Edge (included with Windows) or Google Chrome, for ITAM's own window. Colleagues can use any current browser</td>
+</tr>
+<tr>
+<td>Processor and memory</td>
+<td>Any PC that runs Windows 10 or 11 well; 4 GB of memory or more</td>
+</tr>
+<tr>
+<td>Disk</td>
+<td>About 200 MB for the program, plus your database and backups (a few MB for most organisations)</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>A Windows administrator to install; ITAM runs as an ordinary user</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Only for the features you use: see <a href="#network-ports-and-protocols">Network ports and protocols</a></td>
+</tr>
+<tr>
+<td>Microsoft Intune (optional)</td>
+<td>A Microsoft 365 tenant with Intune, such as Microsoft 365 Business Premium</td>
+</tr>
+<tr>
+<td>Google Workspace (optional)</td>
+<td>A Google Workspace edition with device management</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Which PC to install on.</strong> For one person, their own PC is fine. If colleagues will use ITAM, choose a PC that stays
+switched on and signed in (an office server or an always-on desktop): ITAM runs while that Windows user is signed
+in, and others connect to it with their browser.</p>
+<hr />
+<h2 id="installing-and-updating">Installing and updating</h2>
+<h3 id="installing">Installing</h3>
+<ol>
+<li>Install <strong>CJW-Apps ITAM</strong> from the Microsoft Store.</li>
+<li>Start it from the Start menu, and sign in as described in <a href="01-Getting-Started.html#4-sign-in-for-the-first-time">Getting Started</a>.</li>
+</ol>
+<ul>
+<li><strong>Updates</strong> arrive through the Microsoft Store and keep your data.</li>
+<li><strong>Free and Pro.</strong> Free for up to 200 assets; <strong>ITAM Pro</strong> has no limit (see <a href="#free-version-and-pro">Free version and Pro</a>).</li>
+<li><strong>Uninstalling removes the data</strong> kept in the app's own storage, including backups left in the default folder.
+  Keep backups in a folder of your own (<a href="#backups">Backups</a>).</li>
+</ul>
+<h3 id="moving-to-another-pc">Moving to another PC</h3>
+<ol>
+<li>On the old PC: <strong>Settings → Backups &amp; Storage → Create Full Database Backup</strong>, then <strong>Download</strong> it.</li>
+<li>On the new PC: install ITAM from the Microsoft Store, sign in, then <strong>Upload Backup File...</strong> and <strong>Restore...</strong>.</li>
+<li>Enter saved passwords and keys again (they are encrypted for one Windows user on one PC).</li>
+</ol>
+<h3 id="starting-itam-with-windows">Starting ITAM with Windows</h3>
+<p>To have ITAM start when you sign in: press <strong>Windows + R</strong>, type <code>shell:startup</code> and press Enter. Then open the
+Start menu, find <strong>CJW-Apps ITAM</strong> under <strong>All apps</strong>, and drag it into that folder.</p>
+<h3 id="free-version-and-pro">Free version and Pro</h3>
+<p>ITAM is free for up to <strong>200 active assets</strong> (software licences and decommissioned assets do not
+count). <strong>ITAM Pro</strong> removes the limit: GBP 45 a month or GBP 450 a year, with a 30-day free trial, paid through the
+Microsoft Store.</p>
+<ul>
+<li>A banner appears from 180 assets. Only the built-in <code>admin</code> account can <strong>Upgrade to Pro</strong>, <strong>Cancel Pro</strong> (in
+  <strong>About</strong>) or <strong>Recover purchase</strong>.</li>
+<li>Without Pro nothing is deleted or locked: viewing, editing, exporting and backups all work; only adding new assets
+  pauses.</li>
+<li>ITAM checks Pro with the Microsoft Store. If the Store cannot be reached, Pro carries on for 7 days, then shows
+  <strong>Pro (offline)</strong> and counts down 7 more days. After 14 days ITAM works as the free version until the Store answers
+  again; press <strong>Recover purchase</strong> in <strong>About</strong> once the PC is online.</li>
+</ul>
+<img alt="About, with the edition and Pro buttons" src="images/14-about.png" loading="lazy" /><p class="figure-caption">About, with the edition and Pro buttons</p>
+<hr />
+<h2 id="network-ports-and-protocols">Network ports and protocols</h2>
+<p>Use this chapter to set up firewalls, proxies and web filters. Only open what you use: a single-PC installation that
+does not scan the network needs <strong>nothing opened at all</strong>.</p>
+<h3 id="overview">Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Connection</th>
+<th>Direction</th>
+<th>Needed for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ITAM's own window</td>
+<td>Inside this PC only</td>
+<td>Always (no firewall change)</td>
+</tr>
+<tr>
+<td>Colleagues' browsers → ITAM</td>
+<td><strong>Inbound</strong> to the ITAM PC</td>
+<td>Network access only</td>
+</tr>
+<tr>
+<td>ITAM → devices on your network</td>
+<td><strong>Outbound</strong> from the ITAM PC</td>
+<td>Network discovery only</td>
+</tr>
+<tr>
+<td>ITAM → Microsoft and Google</td>
+<td><strong>Outbound</strong> to the internet</td>
+<td>Sign-in with Microsoft or Google, Intune, Google Workspace, the Microsoft Store</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inbound-to-the-itam-pc">Inbound to the ITAM PC</h3>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Protocol</th>
+<th>Used for</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TCP 5050</strong></td>
+<td>HTTP</td>
+<td>ITAM's own window on this PC</td>
+<td>Bound to <code>127.0.0.1</code> only: other computers cannot reach it, so no firewall rule is needed. Changeable in <strong>Settings → Server &amp; Access</strong></td>
+</tr>
+<tr>
+<td><strong>TCP 5443</strong></td>
+<td>HTTPS (TLS 1.2 / 1.3)</td>
+<td>Colleagues opening ITAM in their browser</td>
+<td>Only when <strong>Who can open ITAM</strong> is set to <code>0.0.0.0</code>. Allow it in <strong>Windows Defender Firewall</strong> on the ITAM PC, ideally for your office network only. Changeable in <strong>Settings → Server &amp; Access</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Windows usually asks the first time ITAM listens on the network. Choose <strong>Private networks</strong> only. To add the rule
+yourself (an administrator's PowerShell):</p>
+<pre><code>New-NetFirewallRule -DisplayName &quot;CJW-Apps ITAM (HTTPS)&quot; -Direction Inbound -Protocol TCP -LocalPort 5443 -Action Allow -Profile Domain,Private
+</code></pre>
+<p>Network access is always encrypted: ITAM never offers plain HTTP to other computers. See
+<a href="#network-access-and-https">Network access and HTTPS</a> for the certificate.</p>
+<h3 id="outbound-from-the-itam-pc-to-your-devices-network-discovery">Outbound from the ITAM PC to your devices (network discovery)</h3>
+<p>A scan only sends what is needed to recognise a device. Without saved logins it reads nothing private: it checks
+which ports answer and reads public banners. Open these <strong>from the ITAM PC to the networks it scans</strong>, on any
+firewall between them.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Protocol</th>
+<th>Used for</th>
+<th>Login needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td><strong>ICMP</strong> echo (ping)</td>
+<td>Finding which addresses are in use</td>
+<td>No</td>
+</tr>
+<tr>
+<td>—</td>
+<td>ARP</td>
+<td>MAC addresses on the same network segment (used by Windows automatically)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>TCP 5985</strong></td>
+<td><strong>WinRM</strong> (HTTP, Kerberos / NTLM encrypted)</td>
+<td>Windows make, model, serial number and OS (tried first)</td>
+<td>Windows login</td>
+</tr>
+<tr>
+<td><strong>TCP 135</strong> + <strong>TCP 49152–65535</strong></td>
+<td><strong>WMI over DCOM / RPC</strong></td>
+<td>The same Windows details, when WinRM is not available</td>
+<td>Windows login</td>
+</tr>
+<tr>
+<td>TCP 135, 445, 3389, 5985</td>
+<td>TCP connect only</td>
+<td>Recognising a Windows PC from its open ports</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>TCP 22</strong></td>
+<td><strong>SSH</strong></td>
+<td>Reading the SSH banner of Linux, macOS and network devices (ITAM does not log in)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>UDP 161</strong></td>
+<td><strong>SNMP</strong> v1 / v2c / v3</td>
+<td>Name, description, make and model of switches, routers, printers, NAS and UPS units</td>
+<td>SNMP community or SNMPv3 user</td>
+</tr>
+<tr>
+<td><strong>UDP 5353</strong></td>
+<td><strong>mDNS</strong> (Bonjour)</td>
+<td>Names of Apple devices, phones and printers</td>
+<td>No</td>
+</tr>
+<tr>
+<td>TCP 80, 443</td>
+<td>TCP connect only</td>
+<td>Recognising devices with a web interface</td>
+<td>No</td>
+</tr>
+<tr>
+<td>TCP 1433, 1521, 3306, 5432, 6379, 27017</td>
+<td>TCP connect, plus a harmless greeting</td>
+<td>Recognising SQL Server, Oracle, MySQL, PostgreSQL, Redis and MongoDB servers and their versions</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>On Windows PCs that ITAM should read</strong>, allow these built-in Windows Defender Firewall rules for the ITAM PC's
+address (Group Policy is easiest for many PCs):</p>
+<ul>
+<li><strong>Windows Remote Management (HTTP-In)</strong>: for WinRM, the faster method.</li>
+<li><strong>Windows Management Instrumentation (DCOM-In)</strong> and <strong>(WMI-In)</strong>: for WMI over DCOM.</li>
+</ul>
+<p>Use a dedicated scan account with the least rights it needs, not a domain administrator: see
+<a href="#windows-logins-wmi">Windows logins (WMI)</a>.</p>
+<p><strong>Across VLANs and VPNs</strong>, routers do not pass MAC addresses or Bonjour, so devices on another VLAN show no MAC
+address. For the fullest results, run ITAM on a PC in the same VLAN, or scan from one PC per site.</p>
+<h3 id="outbound-to-the-internet-tcp-443-https">Outbound to the internet (TCP 443, HTTPS)</h3>
+<p>Only needed for the services you connect. Allow these names through your proxy or web filter. ITAM sends nothing to
+CJW Apps.</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Addresses</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sign in with Microsoft</td>
+<td><code>login.microsoftonline.com</code></td>
+<td>Microsoft account sign-in to ITAM</td>
+</tr>
+<tr>
+<td>Microsoft Intune</td>
+<td><code>login.microsoftonline.com</code>, <code>graph.microsoft.com</code></td>
+<td>Reading the devices Intune manages (read-only)</td>
+</tr>
+<tr>
+<td>Sign in with Google</td>
+<td><code>accounts.google.com</code>, <code>oauth2.googleapis.com</code>, <code>www.googleapis.com</code></td>
+<td>Google account sign-in to ITAM</td>
+</tr>
+<tr>
+<td>Google Workspace</td>
+<td><code>accounts.google.com</code>, <code>oauth2.googleapis.com</code>, <code>admin.googleapis.com</code>, <code>cloudidentity.googleapis.com</code>, <code>licensing.googleapis.com</code></td>
+<td>Reading devices and licence counts (read-only)</td>
+</tr>
+<tr>
+<td>Microsoft Store</td>
+<td>The Microsoft Store service, as for any Store app</td>
+<td>Checking ITAM Pro</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-is-never-used">What is never used</h3>
+<ul>
+<li>No agent is installed on any device, and ITAM opens no remote shell or remote desktop.</li>
+<li>SSH and database ports are only checked, never logged in to.</li>
+<li>Only private address ranges (10.x, 172.16–31.x, 192.168.x, 169.254.x) can be scanned, each network a /24 or smaller.</li>
+<li>While <strong>Enable Agentless Network Discovery</strong> is off, ITAM sends nothing on your network.</li>
+</ul>
+<hr />
+<h2 id="where-itam-keeps-its-data">Where ITAM keeps its data</h2>
+<p>ITAM keeps its data in <code>%LOCALAPPDATA%\CJW-Apps-ITAM</code>, inside the app's own storage. The folder holds the database (<code>itam_local.db</code>), the log file (<code>itam.log</code>) and the default <code>backups</code> folder.
+<strong>Settings → Backups &amp; Storage</strong> shows the database's exact path and size.</p>
+<p>Passwords and keys you save in ITAM (client secrets, scan logins, API keys) are encrypted with Windows. They
+only work for the <strong>same Windows user on the same PC</strong>. If you move the database to another PC, enter them
+again.</p>
+<h2 id="network-access-and-https">Network access and HTTPS</h2>
+<p><strong>Settings → Server &amp; Access</strong></p>
+<img alt="Settings: Server &amp; Access" src="images/09-server-access.png" loading="lazy" /><p class="figure-caption">Settings: Server &amp; Access</p>
+<p>Choose who can open ITAM with the two buttons:</p>
+<ul>
+<li><strong>127.0.0.1 – this PC only</strong> (default): only this PC can open ITAM.</li>
+<li><strong>0.0.0.0 – other computers on your network</strong>: other computers can open ITAM in a browser, always over
+  <strong>HTTPS</strong> (encrypted) on the <strong>network port</strong>. Allow that port through Windows Firewall on this PC (Windows
+  usually asks the first time). This PC's own window stays on <code>http://127.0.0.1</code>, which never leaves the PC.</li>
+<li><strong>Port for this PC</strong>: 1024 to 65535, default 5050. If it is taken, ITAM picks the next free port.</li>
+<li><strong>Network port (HTTPS)</strong>: default 5443, only used with 0.0.0.0. It must differ from the port for this PC.</li>
+</ul>
+<p>You do not type this PC's own IP address here: 0.0.0.0 already covers it, and a fixed address would stop ITAM
+starting if the PC's address changed. (An older copy with an address saved starts on 127.0.0.1 and says so in
+<code>itam.log</code>.)</p>
+<p><strong>Opening ITAM from other computers</strong> (on the same tab) lists the addresses to give people, each with a
+<strong>Copy</strong> button, for example <code>https://192.168.1.20:5443</code>, and this PC's name, such as <code>https://OFFICE-PC:5443</code>.
+The name keeps working if the IP address changes; otherwise ask your network administrator to reserve this
+PC's address. Addresses marked VPN or virtual adapter only work for computers on that VPN or on this PC. If
+network access could not start (for example the network port is taken), the tab says why in red.</p>
+<p><strong>Certificate.</strong> HTTPS needs a certificate; the tab shows the one in use, with its SHA-256 fingerprint.
+- <strong>Made by ITAM (default).</strong> ITAM makes a certificate for this PC's name and addresses the first time network
+  access starts, and renews it by itself before it runs out or when the PC's name or addresses change. As no
+  authority vouches for it, browsers warn the first time ("Your connection isn't private"): check the
+  fingerprint matches the one in Settings, then continue. To stop the warning, press <strong>Download certificate
+  (.crt)</strong> and install it on the other PCs under <strong>Trusted Root Certification Authorities</strong> (by hand, or by
+  Group Policy for many PCs).
+- <strong>Company certificate.</strong> If your company has a certificate for this PC (from your own certificate authority
+  or a public one), choose its <strong>PFX</strong> file (.pfx or .p12, exported <strong>with</strong> its private key), type its
+  password and press <strong>Import PFX</strong>. ITAM checks it (right password, private key included, in date, made for
+  web servers) and warns if it does not name this PC. <strong>Use ITAM's own certificate</strong> goes back.
+- A new or changed certificate is used after ITAM restarts. Private keys are stored encrypted and tied to this
+  Windows user; moved to another PC, ITAM makes its own certificate again and a company certificate must be
+  imported again.
+- Antivirus programs that inspect secure connections (for example Norton's Web Shield) may show their own
+  certificate instead, so the fingerprint seen on such a PC differs. That is the antivirus, not ITAM.</p>
+<p>Changes apply the next time ITAM starts (<strong>Settings → Power → Restart</strong>). If ITAM cannot start (for example
+another program has the port), it shows a message saying why.</p>
+<hr />
+<h2 id="users-and-sign-in">Users and sign-in</h2>
+<p><strong>Settings → Users &amp; Auth</strong></p>
+<img alt="Settings: Users &amp; Auth" src="images/08-users.png" loading="lazy" /><p class="figure-caption">Settings: Users &amp; Auth</p>
+<p>There are three ways to sign in: local accounts, Microsoft and Google. You can use any of them together.</p>
+<h3 id="local-accounts">Local accounts</h3>
+<ol>
+<li>Under <strong>Create New Local Account</strong>, enter a username, a temporary password and a <a href="#roles">role</a> (new
+   accounts start as <strong>Viewer</strong>), and optionally an e-mail address.</li>
+<li>The person signs in with the username (or the e-mail address) and is asked to choose their own password.</li>
+</ol>
+<ul>
+<li><strong>Reset PW</strong> gives someone a new temporary password.</li>
+<li><strong>E-mail</strong> adds, changes or removes the address they can sign in with.</li>
+<li>Five wrong passwords lock a username for 15 minutes; twenty wrong attempts from one address lock that
+  address. Lockouts are written to the change log.</li>
+</ul>
+<h3 id="roles">Roles</h3>
+<p>Each account has one role. Change it in the user list (<strong>Settings → Users &amp; Auth</strong>); invites for Microsoft and
+Google accounts take a role too.</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Can do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Viewer</strong> (read-only)</td>
+<td>View and search assets, licences, hardware models and the dashboard; open any asset; change their own appearance settings and password.</td>
+</tr>
+<tr>
+<td><strong>Editor</strong></td>
+<td>Everything a Viewer can, plus: add, edit and decommission assets and licences; CSV import and export; set hardware model dates and import the reference table; review devices from network scans (from the alert bell).</td>
+</tr>
+<tr>
+<td><strong>Administrator</strong></td>
+<td>Everything an Editor can, plus: users and roles, Config CI &amp; Taxonomy, Server &amp; Access, Backups &amp; Storage, network discovery (scans, networks, logins, schedules), Intune and Google, the change log, licence keys and permanent deletes.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>The built-in <code>admin</code> account: everything, plus restart, shut down and factory reset, removing Microsoft or Google sign-in or a device link, and the recovery key. It cannot be removed or demoted.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Buttons and tabs a role cannot use are <strong>greyed out with a lock</strong>. Hover to see which role is needed.</li>
+<li>New local accounts, invites and people who sign in with Microsoft in organisation mode start as <strong>Viewer</strong>.</li>
+<li>Accounts from before roles existed ("User") became <strong>Editors</strong>, so they keep what they could do.</li>
+</ul>
+<h3 id="sign-in-with-microsoft">Sign in with Microsoft</h3>
+<p>Lets people use their Microsoft account: personal (Outlook, Hotmail, Live) or work/school. They sign in on
+Microsoft's own page, so ITAM never sees the password, and two-step sign-in, PINs and Windows Hello work.</p>
+<p><strong>In the Microsoft Entra admin center</strong> (entra.microsoft.com):
+1. Go to <strong>App registrations → New registration</strong>.
+2. Name it, for example <code>ITAM</code>.
+3. Under <strong>Supported account types</strong>, choose <strong>Accounts in any organizational directory and personal Microsoft
+   accounts</strong>. Choose "this organization only" if only your company's accounts should sign in.
+4. Under <strong>Redirect URI</strong>, choose <strong>Public client/native (mobile &amp; desktop)</strong> and enter the address ITAM shows
+   under the Microsoft section in Users &amp; Auth (normally <code>http://127.0.0.1:5050/auth/microsoft/callback</code>).
+5. Press <strong>Register</strong>. Then, in <strong>Authentication</strong>, set <strong>Allow public client flows</strong> to <strong>Yes</strong> and save.
+6. Copy the <strong>Application (client) ID</strong> from <strong>Overview</strong>.</p>
+<blockquote>
+<p>If you already use an app registration for something else (for example OneDrive in another program), create
+a separate one for ITAM, so changes for ITAM cannot affect the other program.</p>
+</blockquote>
+<p><strong>In ITAM</strong> (Users &amp; Auth → Microsoft Sign-In):
+1. <strong>Azure Application (Client) ID</strong>: paste the ID.
+2. <strong>Directory (Tenant) ID</strong>:
+   - <code>common</code> to allow personal and work accounts, or
+   - your Directory (tenant) ID for one organisation only.
+3. <strong>Client Secret</strong>: leave empty. It is only needed if you registered the address as <strong>Web</strong> instead.
+4. <strong>Who may sign in</strong>:
+   - <strong>Invite-only</strong> (default): add each person under <strong>Add Microsoft Account</strong> first. Anyone not added is
+     refused.
+   - <strong>One organisation</strong>: everyone in your tenant can sign in as a standard user. This needs the tenant ID,
+     not <code>common</code>.
+5. Press <strong>Save Microsoft OAuth</strong>.</p>
+<p>The sign-in page now shows <strong>Sign in with Microsoft</strong>. If Microsoft refuses a sign-in, the page shows
+Microsoft's reason and how to fix it; see <a href="04-Troubleshooting.html#sign-in-with-microsoft">Troubleshooting</a>.</p>
+<h3 id="sign-in-with-google">Sign in with Google</h3>
+<p>Lets people use a Gmail or Google Workspace account. They sign in on Google's own page, and 2-step
+verification and passkeys work.</p>
+<p><strong>In the Google Cloud console</strong> (console.cloud.google.com):
+1. Create a project, or use the one you made for the Google Workspace link.
+2. Go to <strong>APIs &amp; Services → OAuth consent screen</strong>. Choose <strong>Internal</strong> to allow only your Workspace, or
+   <strong>External</strong> (and publish it) to allow Gmail accounts.
+3. Go to <strong>Credentials → Create credentials → OAuth client ID</strong>, type <strong>Desktop app</strong>. No redirect address needs
+   registering for this type.
+4. Copy the client ID and client secret.</p>
+<p><strong>In ITAM</strong> (Users &amp; Auth → Google Sign-In):
+1. Paste the <strong>Google Client ID</strong> and <strong>Client Secret</strong>. If you set up the Google Workspace link first, these
+   are already filled in.
+2. Press <strong>Save Google Sign-In</strong>.
+3. Add each person under <strong>Add Google Account</strong> (their Google e-mail address and a role). Google sign-in is
+   <strong>invite-only</strong>: anyone not added is refused.</p>
+<p>With an <strong>Internal</strong> consent screen, Google itself only lets accounts of your own Workspace through. When
+Google Workspace is connected, <strong>Add Google Account</strong> warns if you add an address outside it (for example a
+Gmail address): it is added, but it only works if the consent screen is <strong>External</strong> and published.</p>
+<p>An invitation is tied to the Google account that first uses it. A later change of e-mail address on that
+account keeps working, and nobody else can take over the invitation.</p>
+<h3 id="removing-microsoft-or-google-sign-in">Removing Microsoft or Google sign-in</h3>
+<p>Only the built-in <code>admin</code> account can do this, because everyone who signs in that way is locked out
+afterwards. In <strong>Users &amp; Auth</strong>, press <strong>Clear Microsoft Sign-In</strong> or <strong>Clear Google Sign-In</strong> and confirm.
+The people's ITAM accounts are kept; they can sign in that way again once it is set up again. Other
+administrators can change the settings but cannot remove them.</p>
+<h3 id="recovery-key">Recovery key</h3>
+<p>The Master Recovery Key (shown once at the first sign-in) lets you back in if the <code>admin</code> password is lost:
+1. On the sign-in page, press <strong>Ctrl + Shift + Alt + R</strong>, or click the logo five times quickly.
+2. Enter the recovery key.
+3. <code>admin</code> gets a one-time password, which must be changed at the next sign-in. Everyone else is signed out.</p>
+<p>To set a new recovery key: <strong>Settings → Users &amp; Auth → Update Recovery Key</strong>.</p>
+<hr />
+<h2 id="backups">Backups</h2>
+<p><strong>Settings → Backups &amp; Storage</strong></p>
+<img alt="Settings: Backups &amp; Storage" src="images/12-backups.png" loading="lazy" /><p class="figure-caption">Settings: Backups &amp; Storage</p>
+<ol>
+<li><strong>Backup Target Directory / Location</strong>: choose a folder, ideally on another drive, a NAS or a synced folder.</li>
+<li><strong>Automated Backup Schedule</strong>: Daily, Weekly or Monthly at a set time, plus <strong>Keep Backups</strong> (how many to
+   keep). Backups run while ITAM is running.</li>
+<li><strong>Create Full Database Backup</strong> makes a complete copy now (<code>itam_dbbackup_&lt;date&gt;_&lt;time&gt;.db</code>). It holds
+   everything (assets, licences, users, settings, logins) and is safe to make while ITAM is in use.</li>
+</ol>
+<p>Full backups contain password hashes and encrypted logins: keep them as private as the database.</p>
+<ul>
+<li><strong>Export Backup to Location</strong> writes a CSV of the assets only. It is handy for spreadsheets, but it cannot
+  bring back users, settings or licences.</li>
+<li><strong>Restoring</strong>: press <strong>Restore...</strong> beside a full backup, check the summary, enter your password and type
+  <code>RESTORE</code>. ITAM first saves the current data as <code>itam_prerestore_...db</code> (restore that to undo), then signs
+  everyone out.</li>
+<li><strong>Moving to another PC</strong>: <strong>Download</strong> a full backup here, then on the other PC use
+  <strong>Upload Backup File...</strong> and <strong>Restore...</strong>. Re-enter saved passwords and keys afterwards.</li>
+</ul>
+<hr />
+<h2 id="company-name-ci-types-and-dashboard-groups">Company name, CI types and dashboard groups</h2>
+<p><strong>Settings → Config CI &amp; Taxonomy</strong></p>
+<img alt="Settings: Config CI &amp; Taxonomy" src="images/13-company-and-types.png" loading="lazy" /><p class="figure-caption">Settings: Config CI &amp; Taxonomy</p>
+<ul>
+<li><strong>Company name and picture</strong>: shown at the top of the dashboard for everyone. Use PNG, JPEG, GIF or WebP,
+  up to 300 KB; a small square works best.</li>
+<li><strong>Dropdown lists</strong> (CI types, statuses, environments, locations, departments): add values here or with
+  <strong>+ Add New</strong> on any form. Remove a value with its <strong>x</strong>. One value always stays in each list.</li>
+<li><strong>Dashboard groups</strong>: each CI type belongs to Servers &amp; Computers, Network Devices, Databases or Software
+  Licence. A new type asks for its group; change it later with the small list beside each type.</li>
+<li><strong>Sample data</strong>: <strong>Load Sample Data</strong> and <strong>Remove Sample Data</strong> (removes only demo items you have not
+  changed).</li>
+</ul>
+<hr />
+<h2 id="software-licences">Software licences</h2>
+<p><strong>Settings → Software Licences (SAM)</strong>, or <strong>Add Software Licence</strong> in the left menu.</p>
+<img alt="Settings: Software Licences" src="images/06-software-licences.png" loading="lazy" /><p class="figure-caption">Settings: Software Licences</p>
+<p>For each licence, record the title, publisher, version, seats, cost per seat, purchase date, expiry date and
+notes, and these:</p>
+<ul>
+<li><strong>Licensed per</strong>: what one seat is: <strong>Device</strong>, <strong>User</strong> (for example Microsoft 365), <strong>Processor core</strong> (for
+  example Windows Server), <strong>Concurrent users</strong> or <strong>Site / unlimited</strong>. Only per-device licences are compared
+  with the installs ITAM finds; per-user, per-core and concurrent licences show <strong>Not measured</strong> (check their
+  seats in the publisher's portal), and a site licence is always Compliant.</li>
+<li><strong>Billed</strong>: Monthly, Yearly, Every 2 years or Every 3 years. The cost per seat is per billing period, so 10
+  seats at £10 billed monthly is £1,200 a year.</li>
+<li><strong>Auto-renews</strong>: the supplier renews it unless it is cancelled.</li>
+<li><strong>Licence key</strong>: hidden as dots. In a saved licence, administrators press the <strong>eye</strong> to show it; each look is
+  recorded in the change log. Keys are never sent to other users' screens or exported. Editing a licence
+  without touching the key keeps it.</li>
+<li><strong>Supplier / Reseller</strong>, <strong>PO / Invoice No.</strong>, <strong>Agreement / Contract No.</strong> and <strong>Owner / Cost Centre</strong>, for
+  audits and finance.</li>
+<li>
+<p><strong>Installed on</strong>: the assets the licence is installed on. Type part of an asset name and choose it from the
+  list (or <strong>+ Add all shown</strong>). Compliance counts these against the seats; decommissioned assets use no seat.</p>
+</li>
+<li>
+<p><strong>One-time purchase (no expiry)</strong>: tick it for software you pay for once (a perpetual licence). The expiry
+  date and Needs renewing are switched off; the licence stays <strong>Active</strong> and never raises a warning. Untick it
+  to give the licence an expiry date again.</p>
+</li>
+<li>
+<p><strong>Needs renewing</strong> (ticked by default; only used when there is an expiry date): the licence shows <strong>amber</strong> from a month before it expires and
+  <strong>red</strong> in its last week. Once the date has passed it becomes <strong>Expired</strong>. The alert bell and the menu count
+  show these.</p>
+</li>
+<li><strong>Discontinued</strong>: for a licence you no longer renew. It clears its warnings.</li>
+<li><strong>Currency</strong>: chosen at the top of the licence screen. Until then, the PC's regional setting is used.</li>
+<li><strong>Spend</strong> at the top of the licence screen:</li>
+<li><strong>Subscriptions / Year</strong>: every current subscription per year (monthly ones × 12). Discontinued ones are
+    left out, and so are Expired ones until they are renewed with a new expiry date.</li>
+<li><strong>One-off Purchases</strong> (with the year): one-time purchases bought this calendar year. Older ones are not
+    counted.</li>
+<li><strong>Many at once</strong>: <strong>Settings → Import &amp; Export</strong> has a licence CSV template, export and import. See the
+  <a href="03-User-Guide.html#importing-and-exporting">User guide</a>.</li>
+<li><strong>Google Workspace licences</strong> come in with their seat count only; add the dates yourself. See
+  <a href="#google-licences-dates">Google licences: dates</a>.</li>
+</ul>
+<hr />
+<h2 id="agentless-network-discovery">Agentless network discovery</h2>
+<p>ITAM can scan your own networks and find devices without installing anything on them.
+<strong>Settings → Discovery (Agentless)</strong></p>
+<img alt="Settings: Discovery" src="images/10-discovery.png" loading="lazy" /><p class="figure-caption">Settings: Discovery</p>
+<h3 id="1-switch-it-on">1. Switch it on</h3>
+<p>Tick <strong>Enable Agentless Network Discovery</strong>. While it is off, ITAM sends nothing on the network.</p>
+<h3 id="2-add-your-networks">2. Add your networks</h3>
+<p>Under <strong>Available Networks</strong>, press <strong>+ Add Subnet Block</strong> and enter:
+- a name;
+- the network in CIDR form, for example <code>192.168.1.0/24</code>;
+- a default location and environment;
+- optionally a <strong>Target Credential Profile</strong> (a saved login, see below).</p>
+<p>Rules that keep scans safe:
+- Only private ranges (10.x, 172.16–31.x, 192.168.x, 169.254.x) can be scanned.
+- Each network is a /24 (256 addresses) or smaller. Split bigger networks into several.</p>
+<p><strong>One login of each type per network.</strong> A network can use one Windows login, one SNMP profile and one SSH
+profile at the same time. To add another type, add the same CIDR again with that login, and it is attached to
+the existing network. Each login shows as a badge on the network; the <strong>×</strong> on a badge takes it off.</p>
+<h3 id="3-what-a-scan-finds">3. What a scan finds</h3>
+<ul>
+<li><strong>Every device that answers</strong>: IP address, MAC address and maker (from the MAC address).</li>
+<li><strong>Bonjour / mDNS</strong>: Apple devices, printers and Chromecasts report their names and models.</li>
+<li><strong>Windows PCs and servers</strong>: recognised from their open ports. With a Windows login, ITAM also reads the real
+  name, make, model, serial number and operating system. The PC running ITAM is always read this way, without
+  a login.</li>
+<li><strong>Linux, NAS and network gear</strong>: the SSH banner, and SNMP details (with a community string or SNMPv3 login).
+  NAS boxes (TerraMaster, Synology, QNAP and others) are recognised and filed as Storage.</li>
+<li><strong>Database servers</strong>: SQL Server, Oracle, MySQL/MariaDB, PostgreSQL, Redis and MongoDB, recognised from their
+  ports and, where possible, a harmless greeting. ITAM never logs in to a database.</li>
+</ul>
+<p>Found devices are <strong>staged</strong>. Nothing goes into the inventory until an administrator reviews it (see the
+<a href="03-User-Guide.html#reviewing-discovered-devices">User guide</a>), unless <strong>Auto-Sync</strong> or a schedule adds the
+clearly safe ones.</p>
+<h3 id="options">Options</h3>
+<ul>
+<li><strong>Auto-Sync Discovered Hosts to ITAM</strong>: after each scan, adds new devices whose CI type, make and model are
+  already in your inventory. Anything unfamiliar waits for review.</li>
+<li><strong>Skip Devices Managed by Microsoft Intune / Google Workspace</strong> (on by default): when Intune or Google
+  Workspace is linked, devices it manages are left alone, matched by MAC address (and by computer name). The
+  same PC is not reported twice or sent a Windows login. MAC addresses you linked to such a device with
+  <strong>Same as…</strong> (see the User guide) count too. The network list shows how many were skipped, for example
+  "Completed (10 found, 1 skipped: managed by Google Workspace)".</li>
+<li><strong>Wake Devices First</strong> (on by default): before the detailed scan, every address is pinged at once. Phones and
+  laptops saving power on Wi-Fi often miss the first ping; this wakes them so they are found first time. It
+  adds a few seconds per network. Devices that still miss the quick check get one slower ping as well.</li>
+</ul>
+<h3 id="windows-logins-wmi">Windows logins (WMI)</h3>
+<p>ITAM reads Windows details over <strong>WinRM</strong> (fast) or <strong>WMI/DCOM</strong> (slower, can take a minute) using a saved
+login. Save one under <strong>Targeted Credential Vaults → Add Credential Profile</strong>, type <strong>WMI</strong>. Use <strong>Test</strong> to try
+it on one PC before scanning; <strong>Change</strong> replaces the password later.</p>
+<p><strong>In a company domain: create a separate scan account</strong></p>
+<blockquote>
+<p><strong>Do not scan with a Domain Admin or your own account.</strong> A scan offers the login to the Windows devices that
+answer on the network, including any that should not be there. Many domains also block Domain Admins from
+logging on to workstations, so the scan would be refused anyway.</p>
+</blockquote>
+<ol>
+<li>Create a domain account just for ITAM, for example <code>svc-itam-scan</code>, with a long unique password. Do not add it
+   to Domain Admins.</li>
+<li>Give it access on the PCs and servers to be read, using Group Policy. Either:
+   - <strong>Simplest:</strong> add it to the local <strong>Administrators</strong> group; or
+   - <strong>Fewer rights:</strong> add it to <strong>Distributed COM Users</strong> and give it <strong>Enable Account</strong> and <strong>Remote Enable</strong> on
+     the WMI namespace <code>Root\CIMv2</code>. Check this with <strong>Test</strong>, as some details may need more rights.</li>
+<li>Check Group Policy lets it log on over the network ("Deny access to this computer from the network" must not
+   apply to it).</li>
+<li>Save it in ITAM as <code>DOMAIN\svc-itam-scan</code>. An e-mail style name, such as the one used for Microsoft 365, is less
+   reliable: that is a different identity if the domain is not synchronised with it.</li>
+<li>Press <strong>Test</strong> on one PC <strong>before</strong> scanning a whole subnet.</li>
+<li>Allow the traffic: see <a href="#ports-and-firewalls">Ports and firewalls</a>. Tell your security team before the first
+   scan, as a scan looks like a port scan and login attempts to their tools.</li>
+</ol>
+<p><strong>How ITAM protects the account</strong>
+- If 5 PCs in a row refuse the login, the scan stops using it for the rest of that network. A locked-out account
+  stops at once. The network list says so, for example "Windows login refused by 5 PCs, so it was not tried on 23
+  more". Failed logons can count towards your lockout policy, so fix the cause before scanning again.
+- Where a PC's DNS name points back to its address, ITAM connects by name, which allows Kerberos. Otherwise it uses
+  the IP address, which uses NTLM and can be refused where NTLM is restricted or the account is in Protected Users.</p>
+<p><strong>Home or workgroup PCs (no domain)</strong>
+On each PC to be read, in an admin PowerShell:</p>
+<pre><code class="language-powershell">net user itamscan * /add                       # asks for the password without showing it
+net localgroup administrators itamscan /add
+New-ItemProperty -Path &quot;HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System&quot; -Name LocalAccountTokenFilterPolicy -Value 1 -PropertyType DWord -Force
+Enable-PSRemoting -SkipNetworkProfileCheck -Force
+</code></pre>
+<p>On the PC that runs ITAM, in an admin PowerShell:</p>
+<pre><code class="language-powershell">Start-Service WinRM
+Set-Item WSMan:\localhost\Client\TrustedHosts -Value &quot;192.168.1.20&quot; -Force   # the PC's IP; several: comma-separated
+</code></pre>
+<p>In ITAM, save the login with the username <code>PCNAME\itamscan</code> (the name <code>hostname</code> prints on that PC), then
+press <strong>Test</strong>.</p>
+<p><strong>Keep it secure.</strong> A scan login is an administrator login, so treat it like one:
+- Give the scan account a long password you use nowhere else.
+- Limit WinRM on each PC to the ITAM computer only (run on each PC, using the ITAM PC's IP):
+  <code>powershell
+  Get-NetFirewallRule -Name "WINRM-HTTP-In-TCP*" | Set-NetFirewallRule -RemoteAddress 192.168.1.220</code>
+- In a domain, prefer a domain scan account. The registry change above is then not needed.
+- If you only need a device list (not serial numbers and models), skip Windows logins altogether, or use Intune
+  instead, which needs no network logins.</p>
+<p><strong>Microsoft accounts and Windows Hello.</strong> A PC that signs in only with Windows Hello (PIN, face or fingerprint)
+has no password ITAM can use. Windows Hello cannot be used over the network. Use a local scan account as
+above.</p>
+<h3 id="ports-and-firewalls">Ports and firewalls</h3>
+<p>The ports a scan uses, and the Windows firewall rules to allow, are listed in <a href="#network-ports-and-protocols">Network ports and protocols</a>.</p>
+<p><strong>Scanning across VLANs.</strong> Routers do not pass on MAC addresses, so a device on another VLAN shows no MAC: no make from
+its MAC, no <strong>Same as…</strong> button, and the skip switch can only match it by name. Bonjour usually stays within one VLAN
+too. For the fullest results, run the scan from a PC on that VLAN.</p>
+<h3 id="snmp-v1v2c">SNMP (v1/v2c)</h3>
+<p>For printers, NAS boxes and simple network gear.
+- <strong>SNMP v1/v2c community strings</strong>: type up to 10, one per line. A scan tries the network's SNMP profile
+  first, then these, then <code>public</code>. They are stored encrypted.
+- Or save an <strong>SNMP</strong> credential profile and attach it to a network.</p>
+<p>Switch SNMP on in the device's own settings, preferably read-only and with a community other than <code>public</code>.</p>
+<h3 id="snmpv3-network-devices">SNMPv3 network devices</h3>
+<p>For switches, routers and firewalls that use SNMPv3 (username plus authentication and encryption passwords).
+1. In <strong>SNMPv3 network devices</strong>, type the full path of a CSV file (for example <code>D:\ITAM\snmpv3.csv</code>) and press
+   <strong>Save</strong>. <strong>Create starter file</strong> writes an example there.
+2. Add one row per device. The columns are <code>ip_address, username, auth_protocol, auth_password, priv_protocol,
+   priv_password, port, context, name</code>.
+   - Only <code>ip_address</code> and <code>username</code> are required.
+   - Authentication: MD5 or SHA (SHA224–SHA512). Encryption: DES, 3DES or AES128/192/256.
+   - With passwords but no protocols, ITAM uses SHA + AES128.
+3. ITAM reads the file at every scan. <strong>Test</strong> beside a device asks it now and explains any failure.</p>
+<p>Use a <strong>read-only</strong> SNMPv3 user; ITAM only ever reads. The CSV holds passwords in plain text, so keep it in a
+folder only administrators can open.</p>
+<h3 id="schedules">Schedules</h3>
+<p>Discovery, Intune and Google Workspace each have a <strong>Schedule</strong> box:
+- <strong>Off</strong>, every <strong>1, 2, 4, 6 or 12 hours</strong> from a chosen time, <strong>daily</strong> at a time, or <strong>weekly</strong> on a day at a
+  time.
+- <strong>Run now</strong> starts a run straight away. The box shows the next run and the last result.</p>
+<p>What a scheduled run does by itself:
+- <strong>Discovery</strong>: scans every active network and adds the clearly new devices (known type, make and model).
+- <strong>Intune / Google</strong>: adds new devices of a known type, make and model, and updates existing ones when their
+  type, make and model stay the same. These updates keep the tag, department, location, environment and rack
+  you set in ITAM.</p>
+<p>Everything else waits for review, and the alert bell says so, for example "Microsoft Intune: 3 devices waiting
+for review". Runs happen while ITAM is running; a run missed while it was shut down happens once when it
+starts again. Every run is written to the change log.</p>
+<hr />
+<h2 id="microsoft-intune">Microsoft Intune</h2>
+<img alt="Settings: Integrations" src="images/11-integrations.png" loading="lazy" /><p class="figure-caption">Settings: Integrations</p>
+<p>Brings in the devices Intune manages (Windows, Mac, iPhone, iPad, Android). The link is read-only; nothing
+is changed in Microsoft. <strong>Settings → Integrations → Microsoft Intune</strong></p>
+<p>You need a Microsoft 365 tenant with Intune (for example Microsoft 365 Business Premium) and a Global
+Administrator account in it.</p>
+<p><strong>In the Entra admin center</strong>, using an app registration (the one you use for Microsoft sign-in is fine):
+1. Go to <strong>API permissions → Add a permission → Microsoft Graph → Application permissions</strong>, and tick
+   <strong>DeviceManagementManagedDevices.Read.All</strong>. It must be <strong>Application</strong>, not Delegated.
+2. Press <strong>Grant admin consent for <your organisation></strong>. The row should show a green "Granted" tick.
+3. Go to <strong>Certificates &amp; secrets → New client secret</strong>, and copy the <strong>Value</strong> straight away. It is shown only
+   once; the Secret ID will not work.
+4. From <strong>Overview</strong>, copy the <strong>Directory (tenant) ID</strong> and <strong>Application (client) ID</strong>.</p>
+<p><strong>In ITAM</strong>:
+1. Paste the tenant ID, client ID and secret value.
+2. Press <strong>Save and check connection</strong>. ITAM checks with Microsoft at once and shows its message if something
+   is wrong.</p>
+<p>If Microsoft sign-in is still empty, ITAM fills it in with the same app registration and tells you which
+redirect address to add.</p>
+<p>Then:
+- <strong>Review Intune devices</strong> shows what would be added or changed before anything is saved.
+- Set a <strong>Schedule</strong> to keep the inventory up to date.</p>
+<p>Client secrets expire (often after 6–24 months): create a new one in Entra and save it in ITAM before then.</p>
+<p><strong>When a device is in more than one source</strong> (for example Intune and Google Workspace), it stays one asset. Imports
+match on the device's ID from that source, then its serial number, then a known MAC address, then its name.</p>
+<p>The first time two different names are joined on a serial number or MAC address, or a device matches an asset from another
+source by name only, the review shows a warning and a scheduled run leaves it for you. Commit it once if they are the same
+device: from then on its device ID matches it automatically.</p>
+<p>Where sources disagree, the order is <strong>Intune, then Google Workspace, then a network scan</strong>: a lower source only fills
+in fields that are empty. Details you set in ITAM (asset tag, department, environment, location, rack) are kept, and a
+blank value never erases a saved one.</p>
+<p>Only the built-in <code>admin</code> account can remove the Intune link (<strong>Remove Intune link</strong> / <strong>Disconnect and
+forget</strong>). Assets already imported stay.</p>
+<hr />
+<h2 id="google-workspace">Google Workspace</h2>
+<p>Brings in Chromebooks, managed phones and tablets, Windows/Mac/Linux computers and licence seat counts from
+Google Workspace. The link is read-only; nothing is changed in Google. <strong>Settings → Integrations → Google
+Workspace</strong></p>
+<p>You need a Google Workspace account with super administrator rights, on a domain you have verified in the
+Google Admin console. Gmail does not need to be switched on for the domain.</p>
+<p><strong>In the Google Cloud console</strong> (console.cloud.google.com), signed in as the Workspace super administrator:
+1. Create a project, for example <code>ITAM</code>. Under <strong>Location</strong>, choose your Workspace organisation (your domain),
+   not "No organisation".</p>
+<blockquote>
+<p>If your domain is not offered, open <strong>IAM &amp; Admin → IAM</strong>, pick your organisation at the top, and give
+your admin account the roles <strong>Organization Administrator</strong> and <strong>Project Creator</strong>. Wait a minute and
+try again.
+2. Under <strong>APIs &amp; Services → Library</strong>, enable:
+   - <strong>Admin SDK API</strong> (devices),
+   - <strong>Enterprise License Manager API</strong> (licence seats),
+   - <strong>Cloud Identity API</strong> (only for Windows, Mac and Linux computers).
+3. Under <strong>OAuth consent screen</strong> (Google Auth Platform), press <strong>Get started</strong> and choose <strong>Internal</strong>.
+4. Under <strong>Clients</strong> (or <strong>Credentials → Create credentials → OAuth client ID</strong>), create a client of type
+   <strong>Desktop app</strong>. Copy the <strong>Client ID</strong> and <strong>Client secret</strong>, or press <strong>Download JSON</strong> to keep them.
+Google may show the secret only once. If you lose it, open the client and press <strong>Add secret</strong> to make a
+new one.</p>
+</blockquote>
+<p><strong>In ITAM</strong> (open on the same PC, at <code>http://127.0.0.1</code>):
+1. Paste the client ID and secret and press <strong>Save client</strong>.
+2. Press <strong>Connect Google Workspace</strong> and approve the read-only access as the super administrator.</p>
+<p>ITAM also fills in <strong>Sign in with Google</strong> with the same client if that is still empty, and adds the Google
+account you approved the link with as an ITAM <strong>administrator</strong> (a Workspace super administrator already
+controls the devices). If that account is already in ITAM, it is left as it is. Everyone else must be added
+under <strong>Add Google Account</strong>.</p>
+<p>Then:
+- <strong>Review devices from Google</strong> shows the devices before anything is saved. Tick which kinds to bring in:
+  Chrome OS devices, mobile devices and, once allowed, Windows, Mac &amp; Linux computers.
+  - Phones and tablets are named like the Admin console: the owner's full name and the model, for example
+    "Colin Wink's SM-S928B". Only when two devices would get the same name is the end of the serial number added.
+  - When Google leaves out the maker, ITAM works it out from the model code (SM- → Samsung, Pixel → Google,
+    XQ- → Sony, moto → Motorola, iPhone/iPad → Apple).
+  - Computers that report the motherboard's placeholder text ("System Product Name") get no model; computers
+    with no name, serial number, model or maker at all (usually browser sign-ins on a PC already listed) are
+    left out, and the review says how many.
+  - ITAM remembers each device's Google ID on the asset. A later review or scheduled run matches the device on
+    that ID first, so a renamed device (for example when its owner's name changes) updates the asset instead of
+    adding a second one. Intune devices work the same way.
+- <strong>Review licence seats</strong> shows the seats <strong>assigned</strong> per Google licence and adds or updates them under
+  Software Licences. See <a href="#google-licences-dates">Google licences: dates</a> below.
+- Set a <strong>Schedule</strong> to keep it up to date.</p>
+<h3 id="windows-mac-and-linux-computers">Windows, Mac and Linux computers</h3>
+<p>Google knows a computer when the person installs <strong>Endpoint Verification</strong> on it (a Chrome extension and helper
+app) and signs in with their Workspace account. It then appears in the Admin console under <strong>Devices → Mobile &amp;
+endpoints → Endpoints</strong>.</p>
+<p>Google only gives this list to a <strong>service account</strong> that the Workspace administrator has allowed
+("domain-wide delegation"); a normal sign-in is refused. The service account acts for the administrator who
+connected Google Workspace, and ITAM only uses it to read the computer list. This part is optional: Chrome OS,
+phones and licences work without it.</p>
+<p><strong>In the Google Cloud console</strong> (same project):
+1. Make sure the <strong>Cloud Identity API</strong> is enabled.
+2. Go to <strong>IAM &amp; Admin → Service accounts → Create service account</strong>. Name it, for example <code>itam-computers</code>.
+   It needs no roles: press <strong>Done</strong>.
+3. Open it, go to <strong>Keys → Add key → Create new key → JSON</strong>. A key file downloads. <strong>Keep it private</strong>: it
+   works like a password for the service account.</p>
+<blockquote>
+<p>If Google says key creation is blocked by an organisation policy, open <strong>IAM &amp; Admin → Organisation
+policies</strong> with your organisation picked at the top, find <strong>Disable service account key creation</strong>, press
+<strong>Manage policy</strong>, choose <strong>Override parent's policy</strong> and set it to <strong>Off</strong>, then save. Your account needs
+the <strong>Organization Policy Administrator</strong> role for this (add it under IAM like the other roles).
+4. On the service account's <strong>Details</strong> tab, copy its <strong>Client ID</strong> (also called OAuth 2 Client ID or Unique
+   ID: a long number).</p>
+</blockquote>
+<p><strong>In the Google Admin console</strong> (admin.google.com):
+1. Go to <strong>Security → Access and data control → API controls → Manage Domain Wide Delegation → Add new</strong>.
+2. Paste the <strong>Client ID</strong> and the scope <code>https://www.googleapis.com/auth/cloud-identity.devices.readonly</code>
+   (ITAM shows it on the card to copy), then press <strong>Authorise</strong>.</p>
+<p><strong>In ITAM</strong> (Google Workspace card → <strong>Windows, Mac &amp; Linux computers</strong>):
+1. Press <strong>Choose key file (JSON)</strong> and pick the downloaded file. ITAM keeps it encrypted and checks it with
+   Google straight away: it says how many computers Google lists, or exactly what is still missing.
+2. The <strong>Windows, Mac &amp; Linux computers</strong> tick box then appears next to the other device types.</p>
+<p>A new delegation entry can take a few minutes to work; if the first check says the service account is not
+allowed yet, wait and choose the key file again. Only the built-in <code>admin</code> can remove the service account.
+Delete the downloaded key file once ITAM has it, or keep it somewhere only administrators can open.</p>
+<h3 id="google-licences-dates">Google licences: dates</h3>
+<p>Google only reports which licence each user has, so ITAM records the number of seats assigned. <strong>Google does
+not report the purchase date, the renewal or expiry date, or how many seats were bought</strong>, so these stay
+empty.</p>
+<p>To add them:
+1. In the Google Admin console, open <strong>Billing → Subscriptions</strong> and your plan (for example Business Starter).
+   It shows the start date and when the plan or trial ends.
+2. In ITAM, open <strong>Settings → Software Licences (SAM)</strong> and press <strong>Edit</strong> on the Google licence (for example
+   "Google Workspace - Google Workspace Business Starter").
+3. Enter the <strong>purchase date</strong> and <strong>expiry date</strong>, tick <strong>Needs renewing</strong> to be warned before it ends, and
+   save.</p>
+<p><strong>Review licence seats</strong> later only updates the seat count and the note. The dates you entered are kept.</p>
+<h3 id="removing-the-link">Removing the link</h3>
+<p>Only the built-in <code>admin</code> account sees <strong>Disconnect and forget</strong>. It removes the saved sign-in and the client
+details; assets and licences already imported stay. It does <strong>not</strong> remove Sign in with Google: to remove that
+too, use <strong>Clear Google Sign-In</strong> in Users &amp; Auth.</p>
+<hr />
+<h2 id="hardware-models-and-lifecycle">Hardware models and lifecycle</h2>
+<p><strong>Settings → Hardware &amp; Logs → Hardware Models</strong> lists every make and model with its release, end-of-life and
+end-of-support dates. Every asset of a model shows that model's dates.</p>
+<ul>
+<li>Dates come from a built-in table of approximate dates. Nothing is sent anywhere. Unknown models show as
+  Unknown; ITAM never invents dates.</li>
+<li><strong>Set dates</strong> (editors and administrators) enters a model's dates yourself; they always win over the table.
+  For a <strong>new product</strong> the release date alone is enough: it shows as <strong>Supported</strong> until you add an
+  end-of-life or end-of-support date.</li>
+<li><strong>Keeping the reference table up to date</strong>: <strong>Export Reference Table (CSV)</strong> saves the whole table (built-in
+  entries and yours; the <code>source</code> column says which). Add models or correct dates in Excel, then
+  <strong>Import Reference Table (CSV)</strong> (editors and administrators): ITAM shows what it would add, update or leave
+  alone, and which rows have problems, before anything is saved.</li>
+<li>Dates can be <code>2027-12-31</code> or <code>31/12/2027</code> (as Excel saves them in the UK). A blank cell keeps the date the
+    table already has. Each row needs at least one date, in order: release, end of life, end of support.</li>
+<li>Your entries are kept with your data, so updates of ITAM never remove them, and they win over the
+    built-in entry for the same model. Their Source shows <strong>Reference table (your entry)</strong>.</li>
+<li>The model name must be at least 4 letters or digits, and it matches whole words, as the built-in entries do.</li>
+</ul>
+<h2 id="restart-shut-down-and-factory-reset">Restart, shut down and factory reset</h2>
+<p>Only the built-in <code>admin</code> account sees <strong>Shutdown/Reset</strong> in the top bar (<strong>Settings → Power</strong>):
+- <strong>Restart</strong>: applies network and port changes. Nothing is lost.
+- <strong>Shut down</strong>: stops ITAM for everyone. Backups and schedules stop until it is started again.
+- <strong>Reset to factory settings</strong>: erases all data and returns ITAM to first-run. It needs the recovery key and
+  typing <code>RESET</code>. A full backup is made first.</p>
+<div class="pager"><a href="01-Getting-Started.html">&larr; 1. Getting Started</a><a href="03-User-Guide.html">3. User Guide &rarr;</a></div>
+</main>
+<footer>CJW-Apps ITAM 2.7.0 · CJW Apps · CJW-Apps@outlook.com · apps.cwink.com</footer>
+</body>
+</html>

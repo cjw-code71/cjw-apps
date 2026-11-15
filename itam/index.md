@@ -11,6 +11,11 @@ stored locally.
 
 **Get it:** Microsoft Store (Windows): coming soon
 
+**Guides:** [Getting Started](guides/01-Getting-Started.html) ·
+[Installation & Configuration](guides/02-Installation-and-Configuration.html) ·
+[User Guide](guides/03-User-Guide.html) · [Troubleshooting](guides/04-Troubleshooting.html) ·
+[Network ports and firewalls](guides/02-Installation-and-Configuration.html#network-ports-and-protocols)
+
 ## Know what you have
 
 - One record per asset: name, tag, serial number, type, user,
@@ -52,4 +57,4 @@ stored locally.
 - If Pro ends, nothing is deleted or locked. Only adding new assets
   pauses.
 
-[Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) · [Business apps](../business/) · [All CJW Apps](../)
+[Guides](guides/) · [Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) · [Business apps](../business/) · [All CJW Apps](../)

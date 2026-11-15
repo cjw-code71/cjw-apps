@@ -24,6 +24,7 @@ title: CJW Apps — Business
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../itam/">More about it</a>
+      <a class="btn ghost" href="../itam/guides/">Guides</a>
       <a class="btn ghost" href="../itam/privacy.html">Privacy policy</a>
     </div>
   </div>

@@ -48,8 +48,9 @@ the file type and what you see.
 
 ## CJW-Apps ITAM
 
-The app comes with its own guides (Quick start, Setup guide, User guide
-and Troubleshooting). These are the questions asked most.
+**[Read the ITAM guides](itam/guides/)**: Getting Started, Installation &
+Configuration (including the network ports to open in a firewall), the
+User Guide and Troubleshooting. These are the questions asked most.
 
 **Do I need an account with CJW Apps?**
 No. ITAM runs on your own PC and has its own sign-in. The first time, sign

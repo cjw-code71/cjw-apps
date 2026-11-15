@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting Started — CJW-Apps ITAM</title>
+<link rel="icon" href="images/itam-icon.png">
+<style>
+:root { --bg:#f5f7fa; --paper:#fff; --text:#17212b; --muted:#56636f; --line:#dde3ea; --brand:#0f4c81; --accent:#0b6bcb;
+        --soft:#e8f1fb; --note:#fff7e0; --note-line:#e5c55a; --code:#eef2f6; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0f151c; --paper:#161f29; --text:#e8edf2; --muted:#a3afbb; --line:#2a3644; --brand:#14365a; --accent:#6cb2f5;
+          --soft:#1b2d42; --note:#2b2615; --note-line:#7a6526; --code:#1e2935; }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Segoe UI", system-ui, Arial, sans-serif; }
+a { color:var(--accent); text-underline-offset:3px; }
+header.bar { background:var(--brand); color:#fff; position:sticky; top:0; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,.15); }
+header .inner { max-width:1180px; margin:0 auto; padding:10px 20px; display:flex; flex-wrap:wrap; gap:6px 22px; align-items:center; }
+header .brand { font-weight:700; font-size:1.05rem; display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; }
+header .brand img { width:30px; height:30px; border-radius:7px; background:#fff; }
+header nav { display:flex; flex-wrap:wrap; gap:4px; }
+header nav a { color:#dbe8f5; text-decoration:none; font-weight:600; font-size:.92rem; padding:6px 11px; border-radius:999px; }
+header nav a:hover { background:rgba(255,255,255,.12); color:#fff; }
+header nav a.here { background:#fff; color:var(--brand); }
+main { max-width:1000px; margin:28px auto 60px; padding:44px 56px; background:var(--paper); border:1px solid var(--line);
+       border-radius:14px; box-shadow:0 6px 24px rgba(16,32,48,.06); }
+h1 { font-size:2.1rem; line-height:1.2; margin:0 0 .2em; color:var(--brand); letter-spacing:-.3px; }
+@media (prefers-color-scheme: dark) { h1 { color:var(--text); } }
+h1 + p em { color:var(--muted); font-style:normal; font-size:.95rem; }
+h1, h2, h3, h4 { scroll-margin-top:84px; }
+h2 { font-size:1.45rem; margin:2.2em 0 .6em; padding-bottom:.3em; border-bottom:2px solid var(--line); }
+h3 { font-size:1.15rem; margin:1.8em 0 .5em; }
+h4 { font-size:1rem; margin:1.4em 0 .4em; }
+p, li { max-width:860px; }
+table { border-collapse:collapse; width:100%; margin:1em 0 1.4em; font-size:.93rem; }
+th, td { text-align:left; vertical-align:top; padding:9px 12px; border:1px solid var(--line); }
+th { background:var(--soft); font-weight:600; }
+tr:nth-child(even) td { background:color-mix(in srgb, var(--soft) 35%, transparent); }
+code { background:var(--code); padding:1px 6px; border-radius:5px; font-size:.9em; font-family:Consolas, "Cascadia Mono", monospace; }
+pre { background:var(--code); padding:14px 16px; border-radius:10px; overflow-x:auto; border:1px solid var(--line); }
+pre code { background:none; padding:0; }
+blockquote { margin:1.2em 0; padding:12px 16px; background:var(--note); border-left:4px solid var(--note-line); border-radius:8px; }
+blockquote p { margin:.2em 0; }
+img { max-width:100%; height:auto; display:block; margin:1em 0 1.6em; border:1px solid var(--line); border-radius:10px;
+      box-shadow:0 4px 16px rgba(16,32,48,.10); }
+.figure-caption { font-size:.85rem; color:var(--muted); margin:-1.1em 0 1.6em; }
+hr { border:0; border-top:1px solid var(--line); margin:2.4em 0; }
+footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85rem; color:var(--muted); text-align:center; }
+.pager { display:flex; justify-content:space-between; gap:12px; margin-top:3em; padding-top:1.2em; border-top:1px solid var(--line); }
+.pager a { font-weight:600; }
+@media (max-width:760px) { main { margin:12px; padding:22px 18px; } h1 { font-size:1.7rem; } }
+@media print {
+  :root { --bg:#fff; --paper:#fff; --text:#000; --muted:#444; --line:#bbb; --brand:#0f4c81; --soft:#eef3f8; --code:#f2f2f2; }
+  header.bar, .pager { display:none; }
+  body { background:#fff; font-size:11pt; }
+  main { margin:0; padding:0; border:0; box-shadow:none; max-width:none; }
+  h2 { break-after:avoid; } h3 { break-after:avoid; } table, img, pre, blockquote { break-inside:avoid; }
+  img { box-shadow:none; max-height:16cm; object-fit:contain; }
+  pre { white-space:pre-wrap; word-break:break-all; }
+  a { color:#000; text-decoration:none; }
+  footer { margin:2em 0 0; }
+}
+</style>
+</head>
+<body>
+<header class="bar"><div class="inner">
+  <a class="brand" href="../" title="CJW-Apps ITAM on apps.cwink.com"><img src="images/itam-icon.png" alt="">CJW-Apps ITAM</a>
+  <nav aria-label="Guides"><a href="index.html" class="">Contents</a><a href="01-Getting-Started.html" class="here">1. Getting Started</a><a href="02-Installation-and-Configuration.html" class="">2. Installation &amp; Configuration</a><a href="03-User-Guide.html" class="">3. User Guide</a><a href="04-Troubleshooting.html" class="">4. Troubleshooting</a></nav>
+</div></header>
+<main>
+<h1 id="getting-started">Getting Started</h1>
+<p><em>CJW-Apps ITAM · Version 2.7.0</em></p>
+<p>This guide takes you from installing ITAM to a working asset register in about fifteen minutes. It is written for
+whoever installs ITAM and looks after it. For every setting in detail, see the
+<a href="02-Installation-and-Configuration.html">Installation &amp; Configuration Guide</a>.</p>
+<p><strong>In this guide</strong></p>
+<ol>
+<li><a href="#1-what-itam-does">What ITAM does</a></li>
+<li><a href="#2-before-you-start">Before you start</a></li>
+<li><a href="#3-install-itam">Install ITAM</a></li>
+<li><a href="#4-sign-in-for-the-first-time">Sign in for the first time</a></li>
+<li><a href="#5-a-tour-of-the-screen">A tour of the screen</a></li>
+<li><a href="#6-your-first-fifteen-minutes">Your first fifteen minutes</a></li>
+<li><a href="#7-where-to-go-next">Where to go next</a></li>
+</ol>
+<hr />
+<h2 id="1-what-itam-does">1. What ITAM does</h2>
+<p>CJW-Apps ITAM is an <strong>IT asset register</strong> for small and growing organisations. It keeps one record for every
+piece of IT you own, and keeps it up to date for you.</p>
+<table>
+<thead>
+<tr>
+<th>You want to...</th>
+<th>ITAM gives you...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Know what you have, who has it and where it is</td>
+<td>One record per asset: name, tag, serial number, type, user, department, location, status, make, model and OS</td>
+</tr>
+<tr>
+<td>Know what it cost and when the warranty ends</td>
+<td>Purchase date, cost, supplier, PO / invoice number and warranty end, with a warning before a warranty runs out</td>
+</tr>
+<tr>
+<td>Stop typing it all in</td>
+<td>Agentless network scans, Microsoft Intune and Google Workspace imports, and CSV import</td>
+</tr>
+<tr>
+<td>Stay licence-compliant</td>
+<td>Software licences with seats bought, the assets each is installed on, and renewal alerts</td>
+</tr>
+<tr>
+<td>Plan replacements</td>
+<td>End-of-life and end-of-support dates for each hardware model</td>
+</tr>
+<tr>
+<td>Share it with colleagues</td>
+<td>Viewer, editor and administrator roles, sign-in with Microsoft or Google, and secure access over your network</td>
+</tr>
+</tbody>
+</table>
+<p>Everything is stored <strong>on your own PC</strong>. There is no account with CJW Apps and nothing is sent to us.</p>
+<h2 id="2-before-you-start">2. Before you start</h2>
+<table>
+<thead>
+<tr>
+<th>You need</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A Windows PC</td>
+<td>Windows 10 (version 1809 or later), Windows 11, or Windows Server 2019 or later, 64-bit</td>
+</tr>
+<tr>
+<td>Microsoft Edge or Google Chrome</td>
+<td>ITAM opens in its own browser window. Edge is part of Windows</td>
+</tr>
+<tr>
+<td>About 200 MB of disk space</td>
+<td>Plus room for your backups</td>
+</tr>
+<tr>
+<td>An administrator's Windows account</td>
+<td>Only to install. ITAM itself runs as an ordinary user</td>
+</tr>
+<tr>
+<td>Internet access</td>
+<td>Only for the Microsoft Store, Microsoft or Google sign-in, and Intune or Google Workspace imports</td>
+</tr>
+</tbody>
+</table>
+<p>If colleagues will use ITAM from their own PCs, install it on a PC that stays switched on, such as an office
+server or an always-on desktop. They need nothing installed: they use their web browser.</p>
+<h2 id="3-install-itam">3. Install ITAM</h2>
+<ol>
+<li>Open the <strong>Microsoft Store</strong>, search for <strong>CJW-Apps ITAM</strong> and press <strong>Get</strong>.</li>
+<li>Start <strong>CJW-Apps ITAM</strong> from the Start menu.</li>
+</ol>
+<p>ITAM is <strong>free for up to 200 assets</strong>. Software licences and decommissioned assets are not counted.
+<strong>ITAM Pro</strong> removes the limit (GBP 45 a month or GBP 450 a year, with a 30-day free trial). Without Pro nothing
+is ever deleted or locked: only adding new assets pauses at the limit.</p>
+<h3 id="what-happens-when-itam-starts">What happens when ITAM starts</h3>
+<ul>
+<li>ITAM opens in its own window. The address is <code>http://127.0.0.1:5050</code>, which only this PC can reach.</li>
+<li>The <strong>ITAM icon</strong> appears in the notification area near the clock (it may be under the <strong>^</strong> arrow). Closing the
+  window does <strong>not</strong> stop ITAM: backups and scheduled scans carry on. Click the icon to open the window again,
+  or right-click it and choose <strong>Quit ITAM</strong> to stop the program.</li>
+<li>The first time, Windows Defender Firewall may ask whether ITAM may use the network. Choose <strong>Private
+  networks</strong>. This is only needed for network scans and for colleagues to connect.</li>
+</ul>
+<h2 id="4-sign-in-for-the-first-time">4. Sign in for the first time</h2>
+<img alt="The sign-in page" src="images/01-sign-in.png" loading="lazy" /><p class="figure-caption">The sign-in page</p>
+<ol>
+<li>Sign in with user name <strong><code>admin</code></strong> and the temporary password <strong><code>AdminPassword123!</code></strong>.</li>
+<li>ITAM asks you to choose a new password at once. It needs at least 8 characters, with a capital letter, a
+   number and a special character, and no spaces.</li>
+<li>ITAM then shows a <strong>Master Recovery Key</strong>, once only. <strong>Write it down and keep it somewhere safe</strong>, away from
+   the PC. It is the only way back in if the <code>admin</code> password is forgotten, and it is needed for a factory reset.</li>
+</ol>
+<p>The <code>admin</code> account is the <strong>built-in owner</strong> of ITAM. Only it can buy or cancel Pro, restart, shut down and reset
+ITAM. Create named accounts for everyday use (see step 6).</p>
+<h2 id="5-a-tour-of-the-screen">5. A tour of the screen</h2>
+<img alt="The dashboard" src="images/02-dashboard.png" loading="lazy" /><p class="figure-caption">The dashboard</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Left menu</strong></td>
+<td>Views (all assets, servers and computers, network devices, databases, software licences) with counts; add assets and licences; the change log, Settings and About</td>
+</tr>
+<tr>
+<td><strong>Top bar</strong></td>
+<td>Light, dark or Windows theme; Settings; the <strong>alert bell</strong>; <strong>Add Asset</strong>; your name and role; Sign Out</td>
+</tr>
+<tr>
+<td><strong>Dashboard tiles</strong></td>
+<td>Totals for each group. Click a tile to show that group</td>
+</tr>
+<tr>
+<td><strong>Filters</strong></td>
+<td>Search, type, status, environment and location; <strong>Columns</strong> chooses which details the table shows</td>
+</tr>
+<tr>
+<td><strong>Asset table</strong></td>
+<td>One row per asset. Click a row for its details; <strong>Edit</strong> and <strong>More</strong> change it</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>alert bell</strong> warns you about licences that need renewing, warranties that are ending, and scheduled imports
+waiting for your review. Each alert can be cleared with its ✕.</p>
+<img alt="The alert bell" src="images/05-alert-bell.png" loading="lazy" /><p class="figure-caption">The alert bell</p>
+<h2 id="6-your-first-fifteen-minutes">6. Your first fifteen minutes</h2>
+<h3 id="step-1-set-up-backups-2-minutes">Step 1: Set up backups (2 minutes)</h3>
+<p><strong>Settings → Backups &amp; Storage</strong></p>
+<ol>
+<li>Set <strong>Backup Target Directory</strong> to a folder on another drive, a network share or a synced folder.</li>
+<li>Set the <strong>Automated Backup Schedule</strong> to <strong>Daily</strong>.</li>
+<li>Press <strong>Create Full Database Backup</strong> once to check it works.</li>
+</ol>
+<img alt="Backups and storage" src="images/12-backups.png" loading="lazy" /><p class="figure-caption">Backups and storage</p>
+<blockquote>
+<p><strong>Keep backups in a folder of your own.</strong> If ITAM is uninstalled, Windows removes the app's own storage, including
+backups left in the default folder.</p>
+</blockquote>
+<h3 id="step-2-add-your-company-name-1-minute">Step 2: Add your company name (1 minute)</h3>
+<p><strong>Settings → Config CI &amp; Taxonomy</strong>: type your company name and choose a small logo. They replace "CJW-Apps" at
+the top of the screen for everyone.</p>
+<img alt="Company name, types and lists" src="images/13-company-and-types.png" loading="lazy" /><p class="figure-caption">Company name, types and lists</p>
+<h3 id="step-3-add-your-assets-5-minutes">Step 3: Add your assets (5 minutes)</h3>
+<p>Choose whichever suits you. You can mix them.</p>
+<table>
+<thead>
+<tr>
+<th>Way</th>
+<th>Best for</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>By hand</strong></td>
+<td>A few assets</td>
+<td><strong>Add Asset</strong> in the top bar</td>
+</tr>
+<tr>
+<td><strong>CSV file</strong></td>
+<td>A spreadsheet you already have</td>
+<td><strong>Settings → Import &amp; Export → Bulk CI CSV Import</strong></td>
+</tr>
+<tr>
+<td><strong>Network scan</strong></td>
+<td>PCs, servers, printers and network devices on your network</td>
+<td><strong>Settings → Discovery (Agentless)</strong></td>
+</tr>
+<tr>
+<td><strong>Microsoft Intune</strong></td>
+<td>Laptops and phones Intune already manages</td>
+<td><strong>Settings → Integrations</strong></td>
+</tr>
+<tr>
+<td><strong>Google Workspace</strong></td>
+<td>Chromebooks, phones and computers Google already manages</td>
+<td><strong>Settings → Integrations</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Every import shows you what it will add or change <strong>before</strong> anything is saved.</p>
+<img alt="Adding an asset" src="images/03-add-asset.png" loading="lazy" /><p class="figure-caption">Adding an asset</p>
+<p>Only <strong>Asset Name</strong> is required. Section 4, <strong>Purchase &amp; Warranty</strong>, is optional, but filling in the warranty end
+means ITAM warns you 30 days before it runs out.</p>
+<img alt="An asset's details" src="images/04-asset-details.png" loading="lazy" /><p class="figure-caption">An asset's details</p>
+<h3 id="step-4-add-your-software-licences-3-minutes">Step 4: Add your software licences (3 minutes)</h3>
+<p>Press <strong>Add Software Licence</strong> in the left menu. Enter the product, seats bought, cost, renewal date and how it is
+licensed (per device, per user, site licence...). Under <strong>Installed on</strong>, choose the assets that use it: ITAM then
+shows whether you are compliant.</p>
+<img alt="Software licences" src="images/06-software-licences.png" loading="lazy" /><p class="figure-caption">Software licences</p>
+<h3 id="step-5-add-your-colleagues-2-minutes">Step 5: Add your colleagues (2 minutes)</h3>
+<p><strong>Settings → Users &amp; Auth</strong></p>
+<ul>
+<li><strong>Local accounts</strong>: create a user name and temporary password for each person; they choose their own at first
+  sign-in.</li>
+<li><strong>Sign in with Microsoft or Google</strong>: people use their existing work account. See the
+  <a href="02-Installation-and-Configuration.html#users-and-sign-in">Installation &amp; Configuration Guide</a>.</li>
+</ul>
+<p>Give each person a role: <strong>Viewer</strong> (look and search), <strong>Editor</strong> (also add, change, import and export) or
+<strong>Administrator</strong> (everything, including settings).</p>
+<img alt="Users and roles" src="images/08-users.png" loading="lazy" /><p class="figure-caption">Users and roles</p>
+<h3 id="want-to-explore-first">Want to explore first?</h3>
+<p><strong>Settings → Config CI &amp; Taxonomy → Load Sample Data</strong> adds ten example assets, four licences and a network.
+<strong>Remove Sample Data</strong> later takes away only the examples you have not changed.</p>
+<h2 id="7-where-to-go-next">7. Where to go next</h2>
+<table>
+<thead>
+<tr>
+<th>To...</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Let colleagues open ITAM from their PCs</td>
+<td><a href="02-Installation-and-Configuration.html#network-access-and-https">Installation &amp; Configuration: Network access</a></td>
+</tr>
+<tr>
+<td>Find devices on your network automatically</td>
+<td><a href="02-Installation-and-Configuration.html#agentless-network-discovery">Installation &amp; Configuration: Network discovery</a></td>
+</tr>
+<tr>
+<td>Check which firewall ports are needed</td>
+<td><a href="02-Installation-and-Configuration.html#network-ports-and-protocols">Installation &amp; Configuration: Network ports and protocols</a></td>
+</tr>
+<tr>
+<td>Bring in Intune or Google Workspace devices</td>
+<td><a href="02-Installation-and-Configuration.html#microsoft-intune">Microsoft Intune</a> · <a href="02-Installation-and-Configuration.html#google-workspace">Google Workspace</a></td>
+</tr>
+<tr>
+<td>Learn the day-to-day screens</td>
+<td><a href="03-User-Guide.html">User Guide</a></td>
+</tr>
+<tr>
+<td>Fix a problem</td>
+<td><a href="04-Troubleshooting.html">Troubleshooting</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Support:</strong> <a href="mailto:CJW-Apps@outlook.com">CJW-Apps@outlook.com</a> · <a href="https://apps.cwink.com/support.html">apps.cwink.com/support.html</a></p>
+<div class="pager"><a href="index.html">&larr; Contents</a><a href="02-Installation-and-Configuration.html">2. Installation &amp; Configuration &rarr;</a></div>
+</main>
+<footer>CJW-Apps ITAM 2.7.0 · CJW Apps · CJW-Apps@outlook.com · apps.cwink.com</footer>
+</body>
+</html>

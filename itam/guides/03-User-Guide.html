@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User Guide — CJW-Apps ITAM</title>
+<link rel="icon" href="images/itam-icon.png">
+<style>
+:root { --bg:#f5f7fa; --paper:#fff; --text:#17212b; --muted:#56636f; --line:#dde3ea; --brand:#0f4c81; --accent:#0b6bcb;
+        --soft:#e8f1fb; --note:#fff7e0; --note-line:#e5c55a; --code:#eef2f6; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0f151c; --paper:#161f29; --text:#e8edf2; --muted:#a3afbb; --line:#2a3644; --brand:#14365a; --accent:#6cb2f5;
+          --soft:#1b2d42; --note:#2b2615; --note-line:#7a6526; --code:#1e2935; }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Segoe UI", system-ui, Arial, sans-serif; }
+a { color:var(--accent); text-underline-offset:3px; }
+header.bar { background:var(--brand); color:#fff; position:sticky; top:0; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,.15); }
+header .inner { max-width:1180px; margin:0 auto; padding:10px 20px; display:flex; flex-wrap:wrap; gap:6px 22px; align-items:center; }
+header .brand { font-weight:700; font-size:1.05rem; display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; }
+header .brand img { width:30px; height:30px; border-radius:7px; background:#fff; }
+header nav { display:flex; flex-wrap:wrap; gap:4px; }
+header nav a { color:#dbe8f5; text-decoration:none; font-weight:600; font-size:.92rem; padding:6px 11px; border-radius:999px; }
+header nav a:hover { background:rgba(255,255,255,.12); color:#fff; }
+header nav a.here { background:#fff; color:var(--brand); }
+main { max-width:1000px; margin:28px auto 60px; padding:44px 56px; background:var(--paper); border:1px solid var(--line);
+       border-radius:14px; box-shadow:0 6px 24px rgba(16,32,48,.06); }
+h1 { font-size:2.1rem; line-height:1.2; margin:0 0 .2em; color:var(--brand); letter-spacing:-.3px; }
+@media (prefers-color-scheme: dark) { h1 { color:var(--text); } }
+h1 + p em { color:var(--muted); font-style:normal; font-size:.95rem; }
+h1, h2, h3, h4 { scroll-margin-top:84px; }
+h2 { font-size:1.45rem; margin:2.2em 0 .6em; padding-bottom:.3em; border-bottom:2px solid var(--line); }
+h3 { font-size:1.15rem; margin:1.8em 0 .5em; }
+h4 { font-size:1rem; margin:1.4em 0 .4em; }
+p, li { max-width:860px; }
+table { border-collapse:collapse; width:100%; margin:1em 0 1.4em; font-size:.93rem; }
+th, td { text-align:left; vertical-align:top; padding:9px 12px; border:1px solid var(--line); }
+th { background:var(--soft); font-weight:600; }
+tr:nth-child(even) td { background:color-mix(in srgb, var(--soft) 35%, transparent); }
+code { background:var(--code); padding:1px 6px; border-radius:5px; font-size:.9em; font-family:Consolas, "Cascadia Mono", monospace; }
+pre { background:var(--code); padding:14px 16px; border-radius:10px; overflow-x:auto; border:1px solid var(--line); }
+pre code { background:none; padding:0; }
+blockquote { margin:1.2em 0; padding:12px 16px; background:var(--note); border-left:4px solid var(--note-line); border-radius:8px; }
+blockquote p { margin:.2em 0; }
+img { max-width:100%; height:auto; display:block; margin:1em 0 1.6em; border:1px solid var(--line); border-radius:10px;
+      box-shadow:0 4px 16px rgba(16,32,48,.10); }
+.figure-caption { font-size:.85rem; color:var(--muted); margin:-1.1em 0 1.6em; }
+hr { border:0; border-top:1px solid var(--line); margin:2.4em 0; }
+footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85rem; color:var(--muted); text-align:center; }
+.pager { display:flex; justify-content:space-between; gap:12px; margin-top:3em; padding-top:1.2em; border-top:1px solid var(--line); }
+.pager a { font-weight:600; }
+@media (max-width:760px) { main { margin:12px; padding:22px 18px; } h1 { font-size:1.7rem; } }
+@media print {
+  :root { --bg:#fff; --paper:#fff; --text:#000; --muted:#444; --line:#bbb; --brand:#0f4c81; --soft:#eef3f8; --code:#f2f2f2; }
+  header.bar, .pager { display:none; }
+  body { background:#fff; font-size:11pt; }
+  main { margin:0; padding:0; border:0; box-shadow:none; max-width:none; }
+  h2 { break-after:avoid; } h3 { break-after:avoid; } table, img, pre, blockquote { break-inside:avoid; }
+  img { box-shadow:none; max-height:16cm; object-fit:contain; }
+  pre { white-space:pre-wrap; word-break:break-all; }
+  a { color:#000; text-decoration:none; }
+  footer { margin:2em 0 0; }
+}
+</style>
+</head>
+<body>
+<header class="bar"><div class="inner">
+  <a class="brand" href="../" title="CJW-Apps ITAM on apps.cwink.com"><img src="images/itam-icon.png" alt="">CJW-Apps ITAM</a>
+  <nav aria-label="Guides"><a href="index.html" class="">Contents</a><a href="01-Getting-Started.html" class="">1. Getting Started</a><a href="02-Installation-and-Configuration.html" class="">2. Installation &amp; Configuration</a><a href="03-User-Guide.html" class="here">3. User Guide</a><a href="04-Troubleshooting.html" class="">4. Troubleshooting</a></nav>
+</div></header>
+<main>
+<h1 id="user-guide">User Guide</h1>
+<p><em>CJW-Apps ITAM · Version 2.7.0 · For everyone who uses ITAM</em></p>
+<p>Day-to-day use of ITAM. What you can do depends on your role (see the
+<a href="02-Installation-and-Configuration.html#roles">Installation &amp; Configuration Guide</a>): <strong>Viewers</strong> look, <strong>Editors</strong> also add, change, import and export,
+and <strong>Administrators</strong> do the rest. Actions are marked <strong>(editor)</strong> or <strong>(admin)</strong> below; a button your role
+cannot use is greyed out with a lock, and hovering says which role it needs.</p>
+<p>Dates are shown in your own Windows date format (for example 31/12/2027 in the UK). Date boxes and CSV files
+use the same dates; CSV files write them <code>2027-12-31</code>.</p>
+<ul>
+<li><a href="#the-screen">The screen</a></li>
+<li><a href="#finding-assets">Finding assets</a></li>
+<li><a href="#adding-and-changing-assets">Adding and changing assets</a></li>
+<li><a href="#software-licences">Software licences</a></li>
+<li><a href="#alerts-and-messages">Alerts and messages</a></li>
+<li><a href="#importing-and-exporting">Importing and exporting</a></li>
+<li><a href="#reviewing-discovered-devices">Reviewing discovered devices</a> (editor)</li>
+<li><a href="#hardware-models-and-lifecycle">Hardware models and lifecycle</a></li>
+<li><a href="#change-log">Change log</a></li>
+<li><a href="#your-own-settings">Your own settings</a></li>
+</ul>
+<hr />
+<h2 id="the-screen">The screen</h2>
+<p><strong>Left menu</strong>
+- <strong>Views &amp; Discovery</strong>: All Configuration Items, Servers &amp; Computers, Network Devices, Databases and Software
+  Licences, each with a count. Click one to show it.
+- <strong>Data Management</strong>: Add Configuration Item, Add Database and Add Software Licence (admin).
+- <strong>Change Log Ledger</strong>, <strong>Settings</strong> and <strong>About CJW-Apps ITAM</strong> (version and a support link).
+- The three-line button at the top left hides or shows the menu.</p>
+<p><strong>ITAM icon near the clock</strong> (on the PC that runs ITAM): shows that ITAM is running, even with its window closed.
+Click it, or right-click and choose <strong>Open ITAM</strong>, to open the window again. <strong>Quit ITAM</strong> stops the program (it asks
+first, because it also stops for anybody using it over the network).</p>
+<p><strong>Automatic sign-out</strong>: after 30 minutes without using ITAM you are signed out, and the sign-in page says why. An
+administrator can change the time in <strong>Settings → Server &amp; Access</strong>.</p>
+<p><strong>Top bar</strong>
+- The <strong>alert bell</strong>.
+- <strong>Add Asset</strong>.
+- Your name: click it for your profile and password.
+- <strong>Shutdown/Reset</strong>: built-in <code>admin</code> account only.</p>
+<img alt="The dashboard" src="images/02-dashboard.png" loading="lazy" /><p class="figure-caption">The dashboard</p>
+<p><strong>Dashboard tiles</strong>: Total Assets, Servers &amp; Computers, Network Devices, Databases and Software Licences.
+Click a tile to show that group.</p>
+<h2 id="finding-assets">Finding assets</h2>
+<ul>
+<li><strong>Search</strong>: type in the search box to look across names, tags, serial numbers, makers, models,
+  departments, users and tags. Press <code>/</code> to jump to the search box.</li>
+<li><strong>Filters</strong>: type (or a whole group), status, environment and location. <strong>Reset</strong> clears them.</li>
+<li><strong>Status pills</strong> under the filters show how many assets have each status; click one to filter by it.</li>
+<li><strong>Columns</strong>: choose which of the 21 asset details the table shows (purchase date, cost, supplier and warranty end
+  start hidden). Your choice is remembered.</li>
+<li><strong>Sort</strong>: click a column heading.</li>
+<li><strong>Pages</strong>: choose 25, 50, 100 or 250 rows per page at the bottom.</li>
+</ul>
+<p>Click a row to see all of an asset's details, including its hardware lifecycle status.</p>
+<h2 id="adding-and-changing-assets">Adding and changing assets</h2>
+<img alt="The asset form" src="images/03-add-asset.png" loading="lazy" /><p class="figure-caption">The asset form</p>
+<ul>
+<li>(editor) <strong>Add Configuration Item</strong> (menu) or <strong>Add Asset</strong> (top bar) opens the form. <strong>Add Database</strong> opens
+  the same form with the type set to Database. Viewers can open an asset to see its details but not save it.</li>
+<li>Only <strong>Asset Name</strong> is required. The asset tag and the serial number (per maker) must each belong to one
+  asset only.</li>
+<li><strong>Purchase &amp; Warranty</strong> (optional): purchase date, cost, supplier, PO / invoice number and warranty end. The asset's
+  details show the warranty in green while it runs, amber in its last month, red in its last week and grey once ended.
+  Scans and Intune / Google imports never change these.</li>
+<li><strong>Imported By</strong> (section 5, filled in by ITAM, not editable): where the asset came from (Microsoft Intune, Google
+  Workspace, a network scan or a CSV file), who imported it (a user name, or <em>Scheduled run (automatic)</em>) and when,
+  with what the source reported (for example Intune's compliance and last check-in). Each Intune or Google import
+  refreshes it; a CSV file only marks the assets it adds. Assets added by hand say so. <strong>Notes</strong> are only ever what
+  people write: imports never change them.</li>
+<li><strong>+ Add New</strong> beside a dropdown adds a new value, such as a new location or CI type. A new CI type asks which
+  dashboard group it belongs to.</li>
+<li>(editor) <strong>Edit</strong> on a row changes an asset.</li>
+<li>(editor) <strong>More → Decommission</strong> retires an asset. It stays in the inventory with status Decommissioned, so its
+  history is kept. The edit form has a <strong>Decommission</strong> button too.</li>
+<li><strong>More → Delete permanently</strong> (admin) removes it for good, after a confirmation. It is also in the edit form
+  and in the asset's details.</li>
+</ul>
+<p>When the inventory is empty, the list offers <strong>+ Add asset</strong>. To import a CSV file or load sample data, use
+<strong>Settings → Import &amp; Export</strong> or <strong>Settings → Config CI &amp; Taxonomy</strong>.</p>
+<h2 id="software-licences">Software licences</h2>
+<img alt="Software licences" src="images/06-software-licences.png" loading="lazy" /><p class="figure-caption">Software licences</p>
+<p><strong>Software Licences</strong> in the menu (or the dashboard tile) lists every licence with:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software Title</td>
+<td>Name and publisher</td>
+</tr>
+<tr>
+<td>Seats</td>
+<td>Follows how the licence is counted: per device, <strong>3 of 10</strong> devices in use (red when over); per user, per core or concurrent users, the number bought (use is checked in the publisher's portal); a site licence shows <strong>Unlimited</strong></td>
+</tr>
+<tr>
+<td>Purchased</td>
+<td>Date bought</td>
+</tr>
+<tr>
+<td>Expiry Date</td>
+<td>When it runs out</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><strong>Active</strong>, <strong>Warning</strong> (needs renewing within a month), <strong>Expired</strong> or <strong>Discontinued</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The menu count turns <strong>amber</strong> when a licence expires within a month and <strong>red</strong> within a week (or once
+expired).</p>
+<ul>
+<li><strong>Licence details &amp; seats</strong> opens the full licence screen (<strong>Settings → Software Licences</strong>): seats bought and in
+  use, how it is billed and licensed, cost, compliance, <strong>Edit</strong> (editor) and <strong>Delete</strong> (admin).</li>
+<li><strong>+ Add Software Licence</strong> (editor) adds one. The fields are explained in the
+  <a href="02-Installation-and-Configuration.html#software-licences">Installation &amp; Configuration Guide</a>.</li>
+<li>To renew a licence, edit it and give it the new expiry date.</li>
+<li>At the top of the licence screen, <strong>Subscriptions / Year</strong> adds up current subscriptions per year, and
+  <strong>One-off Purchases</strong> adds up one-time purchases bought this year.</li>
+<li><strong>Installed on</strong>: in the licence form, type part of an asset name and choose the assets the licence is
+  installed on (<strong>+ Add all shown</strong> adds every match at once; ✕ takes one off). Decommissioned assets stay listed
+  but use no seat.</li>
+<li><strong>Compliance</strong> compares the seats with the assets chosen under <strong>Installed on</strong>, only for licences counted per
+  device: more assets than seats is <strong>Out of Compliance</strong>, half or fewer is <strong>Underutilized</strong>. A <strong>site / unlimited</strong>
+  licence has no seat count (the seats box shows Unlimited and the cost is the site licence price) and is always
+  <strong>Compliant</strong>. Others show <strong>Not measured</strong>; hover over it for why.</li>
+<li><strong>Licence key</strong>: the eye beside it shows a saved key (admin; each look is in the change log).</li>
+</ul>
+<h2 id="alerts-and-messages">Alerts and messages</h2>
+<img alt="The alert bell" src="images/05-alert-bell.png" loading="lazy" /><p class="figure-caption">The alert bell</p>
+<p><strong>The alert bell</strong> shows:
+- licences that expire soon (amber), or within a week or already expired (red);
+- warranties that end within 30 days (amber), within a week (red), or ended in the last 30 days (amber); click the
+  asset name to open it. Decommissioned assets are left out;
+- scheduled runs that left devices to review, each with a <strong>Review</strong> button: network discovery for editors
+  and administrators, Intune and Google for administrators;
+- red error messages from this session (see Messages below).</p>
+<p>The number on the bell counts all of these. It is <strong>red</strong> when anything urgent is there (an error message, or
+a licence in its last week or expired, a warranty in its last week) and <strong>amber</strong> when only licence or warranty warnings are left; with nothing to show
+it is hidden. Red items are listed first. Green messages are never counted.</p>
+<p><strong>Messages</strong>
+- Green and grey messages close by themselves; click one to close it sooner.
+- <strong>Red error messages stay until you press OK.</strong>
+- Each error is also kept under the bell in <strong>Recent messages</strong> (the last 20), so you can read it again.
+  <strong>Clear</strong> empties that list and takes them off the bell's number.</p>
+<h2 id="importing-and-exporting">Importing and exporting</h2>
+<p>Everything is in <strong>Settings → Import &amp; Export</strong> (editor). Viewers cannot export.</p>
+<img alt="Import and export" src="images/07-import-export.png" loading="lazy" /><p class="figure-caption">Import and export</p>
+<p><strong>Assets</strong>
+- <strong>Export ITAM to CSV</strong>: the asset list, following the filters set on the dashboard.
+- <strong>Download CSV Template</strong>: an empty file with the right columns.
+- <strong>Bulk CI CSV Import</strong> (editor):
+  1. Choose your file.
+  2. ITAM checks every row and shows which assets will be <strong>added</strong> and which <strong>updated</strong> (matched by asset
+     name), and any rows with problems. An updated row lists each change (old → new), or <strong>No changes</strong>.
+     - An update only changes what the row gives: a <strong>blank cell</strong>, or a column the file does not have, <strong>keeps</strong>
+       the saved value, so a file with just a few columns adds or corrects those and leaves the rest alone.
+     - The purchase columns are <code>purchase_date</code>, <code>purchase_cost</code>, <code>supplier</code>, <code>po_invoice_number</code> and <code>warranty_end</code>
+       (dates written <code>2026-12-31</code>; headings such as <em>cost</em>, <em>warranty</em> or <em>invoice</em> are recognised too).
+     - To empty a field on purpose, put a single <strong>-</strong> in the cell. CI type, status, environment and location always
+       have a value, so they cannot be cleared.
+  3. Press <strong>Commit Valid Rows to SQLite</strong> to save. Rows with problems are left out.</p>
+<p><strong>Licences</strong>
+- <strong>Download CSV Template</strong> (Software Licences): the columns plus an example row. Rows whose name starts with <code>EXAMPLE</code> are always
+  skipped.
+- <strong>Export Licences to CSV</strong>: every licence. Licence keys are never exported.
+- <strong>Bulk Licences CSV Import</strong> (editor): shows what it will add, what it will update (matched by name) and which rows
+  have problems, then imports when you confirm.
+  - <strong>A blank cell keeps the saved value</strong>, so you can export, edit in Excel and import again.
+  - Dates are written <code>2026-12-31</code>; <code>renewal_required</code> is <code>yes</code> or <code>no</code>; <code>license_status</code> is <code>Active</code> or
+    <code>Discontinued</code>.
+  - <code>one_time_purchase</code> is <code>yes</code> for software paid for once. Such a row must leave <code>expiration_date</code> and
+    <code>renewal_required</code> empty.
+  - The last columns are <code>billing_period</code> (<code>Monthly</code>, <code>Yearly</code>, <code>Every 2 years</code> or <code>Every 3 years</code>),
+    <code>licensed_per</code> (<code>Per device</code>, <code>Per user</code>, <code>Per core</code>, <code>Concurrent users</code> or <code>Site / unlimited</code>),
+    <code>supplier</code>, <code>po_invoice_number</code>, <code>agreement_number</code>, <code>auto_renews</code> (<code>yes</code> or <code>no</code>),
+    <code>owner_cost_centre</code> and <code>installed_on</code> (the asset names it is installed on, separated by <code>;</code>; blank keeps the
+    saved list and a single <code>-</code> clears it; a name that is not an asset is shown as an error). Older CSV files
+    without them still import.</p>
+<p><strong>Hardware reference table</strong>: see <a href="#hardware-models-and-lifecycle">Hardware models and lifecycle</a>.</p>
+<p>Formulas are made harmless in every export, so a cell starting with <code>=</code> cannot run in Excel.</p>
+<h2 id="reviewing-discovered-devices">Reviewing discovered devices</h2>
+<p>(editor) After a network scan, found devices wait for review. Administrators open it from <strong>Settings →
+Discovery → Staged Devices → Review &amp; Import to Inventory</strong>; after a scheduled scan, editors and
+administrators can also open it with <strong>Review</strong> under the alert bell. The review compares the devices with the
+inventory before anything changes:</p>
+<ul>
+<li><strong>NEW</strong> (green): not in the inventory; it will be added.</li>
+<li><strong>CHANGED</strong> (amber): already in the inventory, but the make, model or OS differs. You see both values and
+  choose <strong>Keep old details</strong> (default) or <strong>Update the inventory</strong>. Only make, model and OS are ever updated.</li>
+<li><strong>SAME</strong>: already up to date. Hidden unless you tick the box to show them.</li>
+<li><strong>Red cells</strong>: a CI type, make or model that is new to the inventory. Tick the authorisation box to allow
+  them.</li>
+<li>The red <strong>X</strong> removes a device you do not want. A later scan finds it again if it is still on the network.</li>
+<li>
+<p><strong>Same as…</strong> (on a NEW device with a MAC address): the device is an asset you already have, for example a
+  phone that uses a private Wi-Fi MAC. Choose the asset: ITAM remembers this MAC address on it, and later scans
+  recognise the device instead of finding a new one. Phones keep one private MAC per Wi-Fi network, so this is
+  needed once per network; redo it after the phone is reset.</p>
+</li>
+<li>
+<p><strong>Network</strong> shows which scan each device came from; results stay until you import or clear them. When there is more
+  than one network, the <strong>Network</strong> filter shows just one, and <strong>Apply decisions</strong> then only acts on that network.</p>
+</li>
+<li><strong>Orange rows</strong> look like duplicates of another device found in the scan, and each says why. Tick <strong>Show only
+  the possible duplicates</strong> to check them. Before you apply, press the red <strong>X</strong> on any you do not want.</li>
+<li><strong>Same name:</strong> asset names are unique, so the later device is added as <code>name (IP address)</code>.</li>
+<li><strong>Same serial number</strong> from the same maker (for example a PC on both its dock and Wi-Fi): kept as one asset.</li>
+<li><strong>Same MAC address:</strong> probably one device on two addresses. Both are added unless you remove one.</li>
+</ul>
+<p>Nothing is written until you press <strong>Apply decisions</strong>. <strong>Clear Staging</strong> empties the list without touching
+the inventory.</p>
+<p>The Intune and Google reviews (admin: <strong>Review Intune devices</strong>, <strong>Review devices from Google</strong>) work like the
+asset CSV import: you see what would be added or updated first.</p>
+<h2 id="hardware-models-and-lifecycle">Hardware models and lifecycle</h2>
+<p><strong>Settings → Hardware &amp; Logs → Hardware Models</strong> lists each make and model, how many assets have it, its release,
+end-of-life and end-of-support dates, and whether it is still supported. Models in the built-in table show its
+approximate dates automatically; for the rest an editor or administrator presses <strong>Set dates</strong>. Open any
+asset to see its lifecycle status. A model with only a release date (a new product) shows as Supported.</p>
+<p>(editor) <strong>Export Reference Table (CSV)</strong> and <strong>Import Reference Table (CSV)</strong> let you add models to the
+reference table or correct its dates in Excel: see the
+<a href="02-Installation-and-Configuration.html#hardware-models-and-lifecycle">Installation &amp; Configuration Guide</a>.</p>
+<p>(editor) <strong>Download EOL/EOS Report (CSV)</strong> saves the list as a report (Make, Model, CIs, Released, End of life, End of support, Status,
+Source). It follows the search box and status filter, so you can export, for example, only the models past end
+of life.</p>
+<h2 id="change-log">Change log</h2>
+<p>(admin) <strong>Change Log Ledger</strong> (menu) records every change: who did it, when, and what. You can search it, filter by
+action and date, and export it to CSV. Passwords and keys are never written to it.</p>
+<h2 id="your-own-settings">Your own settings</h2>
+<ul>
+<li><strong>Settings → Style &amp; Appearance</strong>:</li>
+<li>light, dark or Windows theme;</li>
+<li>font (<strong>Scan PC Fonts</strong> lists the fonts on your PC);</li>
+<li>text size (80–150%) and bold text;</li>
+<li>a live preview of your choices.</li>
+<li><strong>Your name</strong> in the top bar or <strong>Settings → Users &amp; Auth</strong>: your profile and <strong>Change My Local Password</strong>.
+  You need your current password to change it. Microsoft and Google accounts change their password with
+  Microsoft or Google.</li>
+</ul>
+<div class="pager"><a href="02-Installation-and-Configuration.html">&larr; 2. Installation &amp; Configuration</a><a href="04-Troubleshooting.html">4. Troubleshooting &rarr;</a></div>
+</main>
+<footer>CJW-Apps ITAM 2.7.0 · CJW Apps · CJW-Apps@outlook.com · apps.cwink.com</footer>
+</body>
+</html>
