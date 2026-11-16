@@ -10,7 +10,7 @@ hardware and software licences for small and growing organisations, on
 stored locally.
 
 **Get it:** Microsoft Store (Windows): coming soon ·
-Direct download and purchase, for organisations where the Microsoft Store is blocked: coming soon
+Direct Download and purchase, for organisations where the Microsoft Store is blocked: coming soon
 
 **Guides:** [Getting Started](guides/01-Getting-Started.html) ·
 [Installation & Configuration](guides/02-Installation-and-Configuration.html) ·
