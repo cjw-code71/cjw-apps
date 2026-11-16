@@ -53,7 +53,7 @@ Direct Download and purchase, for organisations where the Microsoft Store is blo
 
 - **Free:** everything above for up to 200 assets. Software licences
   and decommissioned assets are not counted.
-- **ITAM Pro:** no asset limit. £45 a month or £450 a year, with a
+- **ITAM Pro:** no asset limit. £44.99 a month or £454.99 a year, with a
   30-day free trial, through the Microsoft Store.
 - If Pro ends, nothing is deleted or locked. Only adding new assets
   pauses.
