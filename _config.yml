@@ -1,8 +1,23 @@
 title: CJW Apps
 description: Apps that keep your data on your own device
+url: https://apps.cwink.com
 theme: jekyll-theme-minimal
+plugins:
+  - jekyll-sitemap
 defaults:
   - scope:
       path: ""
     values:
       layout: default
+  - scope:
+      path: "google49bc4e22fd3ccc02.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "google59108feb990555a8.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "README.md"
+    values:
+      sitemap: false
