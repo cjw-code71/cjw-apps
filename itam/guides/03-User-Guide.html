@@ -281,17 +281,23 @@ inventory before anything changes:</p>
   needed once per network; redo it after the phone is reset.</p>
 </li>
 <li>
-<p><strong>Network</strong> shows which scan each device came from; results stay until you import or clear them. When there is more
-  than one network, the <strong>Network</strong> filter shows just one, and <strong>Apply decisions</strong> then only acts on that network.</p>
+<p><strong>Kept scans:</strong> every scan, by hand or scheduled, is kept as its own list: the last 5 of each network. Above the
+  staged devices, <strong>Scan</strong> shows <em>Newest scan of each network</em> or any kept scan, with its date, network, how it was
+  started and how many devices still wait. <strong>Review &amp; Import</strong> works on the scan chosen there, so you can still import
+  from an older scan. <strong>Remove this scan</strong> forgets one; a sixth scan of a network removes its oldest.</p>
 </li>
+<li>A scheduled scan adds nothing by itself: its devices wait in the kept scan (the bell shows how many), unless
+  <strong>Import new devices automatically</strong> is ticked, which adds only the clearly new devices.</li>
+<li><strong>Network</strong> shows which scan each device came from. When there is more than one network, the <strong>Network</strong> filter
+  shows just one, and <strong>Apply decisions</strong> then only acts on that network.</li>
 <li><strong>Orange rows</strong> look like duplicates of another device found in the scan, and each says why. Tick <strong>Show only
   the possible duplicates</strong> to check them. Before you apply, press the red <strong>X</strong> on any you do not want.</li>
 <li><strong>Same name:</strong> asset names are unique, so the later device is added as <code>name (IP address)</code>.</li>
 <li><strong>Same serial number</strong> from the same maker (for example a PC on both its dock and Wi-Fi): kept as one asset.</li>
 <li><strong>Same MAC address:</strong> probably one device on two addresses. Both are added unless you remove one.</li>
 </ul>
-<p>Nothing is written until you press <strong>Apply decisions</strong>. <strong>Clear Staging</strong> empties the list without touching
-the inventory.</p>
+<p>Nothing is written until you press <strong>Apply decisions</strong>. <strong>Clear All Scans</strong> forgets every kept scan without
+touching the inventory.</p>
 <p>The Intune and Google reviews (admin: <strong>Review Intune devices</strong>, <strong>Review devices from Google</strong>) work like the
 asset CSV import: you see what would be added or updated first.</p>
 <h2 id="hardware-models-and-lifecycle">Hardware models and lifecycle</h2>
