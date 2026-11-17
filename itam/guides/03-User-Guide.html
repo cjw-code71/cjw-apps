@@ -82,6 +82,7 @@ use the same dates; CSV files write them <code>2027-12-31</code>.</p>
 <li><a href="#finding-assets">Finding assets</a></li>
 <li><a href="#adding-and-changing-assets">Adding and changing assets</a></li>
 <li><a href="#software-licences">Software licences</a></li>
+<li><a href="#finance">Finance</a></li>
 <li><a href="#alerts-and-messages">Alerts and messages</a></li>
 <li><a href="#importing-and-exporting">Importing and exporting</a></li>
 <li><a href="#reviewing-discovered-devices">Reviewing discovered devices</a> (editor)</li>
@@ -144,6 +145,24 @@ Click a tile to show that group.</p>
   history is kept. The edit form has a <strong>Decommission</strong> button too.</li>
 <li><strong>More → Delete permanently</strong> (admin) removes it for good, after a confirmation. It is also in the edit form
   and in the asset's details.</li>
+<li><strong>History</strong> (at the end of an asset's details) shows the last change: when, who (a user name, or <em>Scheduled run
+  (automatic)</em>), how (by hand, Edit together, CSV import, Microsoft Intune, Google Workspace or network scan) and each
+  field that changed, from its old value to the new one. <strong>View full history</strong> opens every change, newest first, with
+  a search box and <strong>Download CSV</strong> (one row per changed field). Saving without changing anything adds nothing. The
+  history of a deleted asset is kept too.</li>
+</ul>
+<h3 id="editing-several-assets-together">Editing several assets together</h3>
+<p>(editor) Tick the box at the start of each row (the box in the heading ticks the whole page; ticks stay when you
+change page). A bar shows how many are ticked: press <strong>Edit together...</strong>.</p>
+<ul>
+<li>Only the fields assets can share are offered: CI type, status, environment, location, department, user, make,
+  model, OS version, tags and the purchase and warranty fields. Name, asset tag, serial number, rack / position and
+  notes belong to one asset, so change them one asset at a time.</li>
+<li>Each field shows what the ticked assets hold now: <em>All: ...</em> or <em>Mixed</em>. <strong>Only ticked fields change</strong>; typing in a
+  field ticks it. Everything you leave unticked stays exactly as it is on every asset.</li>
+<li><strong>Tags (replace)</strong> sets the same tags on every asset. An empty text field that is ticked clears that field.</li>
+<li>Each asset is checked and saved on its own; any that cannot be changed (for example over the free version's limit)
+  are listed and stay ticked. Every change appears in each asset's History.</li>
 </ul>
 <p>When the inventory is empty, the list offers <strong>+ Add asset</strong>. To import a CSV file or load sample data, use
 <strong>Settings → Import &amp; Export</strong> or <strong>Settings → Config CI &amp; Taxonomy</strong>.</p>
@@ -202,6 +221,36 @@ expired).</p>
   <strong>Compliant</strong>. Others show <strong>Not measured</strong>; hover over it for why.</li>
 <li><strong>Licence key</strong>: the eye beside it shows a saved key (admin; each look is in the change log).</li>
 </ul>
+<h2 id="finance">Finance</h2>
+<p><strong>Finance</strong> in the side menu shows what IT costs, for anyone signed in. At the top choose:</p>
+<ul>
+<li><strong>Year</strong> to look at (this year, earlier years, and next year as a forecast).</li>
+<li><strong>Years are</strong> <em>Financial years</em> or <em>Calendar years</em>, and the month the <strong>financial year starts</strong> (April at first). A
+  financial year is named after the year it starts in, for example <em>2026/27</em>.</li>
+<li><strong>Write hardware off over</strong> 3, 4 or 5 years, and <strong>Renewals in the next</strong> 3, 6 or 12 months.</li>
+<li>(admin) <strong>Save as default</strong> keeps your choice of years and write-off for everyone.</li>
+</ul>
+<p>The page shows:</p>
+<ul>
+<li><strong>Totals for the year</strong>: hardware bought, software, total IT spend, hardware write-off (depreciation) and what the
+  hardware is still worth at the end of the year.</li>
+<li><strong>Cost by year</strong>: every year side by side (hardware, software, total, write-off, value at year end). Click a year to
+  see it in detail.</li>
+<li><strong>By department / cost centre</strong> (hardware by the asset's department, software by the licence's cost centre) and
+  <strong>hardware by type</strong>.</li>
+<li><strong>Renewals coming up</strong>, month by month: licence payments due (seats × price per seat) and warranties ending. Up to
+  30 days late is shown in red. Click a name to open it.</li>
+<li><strong>Unused licence seats</strong> and what they cost a year, assets <strong>due for replacement</strong> (older than the write-off years
+  within a year), and <strong>missing details</strong> (assets with no cost, purchase date or warranty date).</li>
+<li>The hardware bought and the software costs of the year, item by item.</li>
+</ul>
+<p><strong>CSV</strong> saves a table for a spreadsheet; <strong>Print</strong> prints just the report (or saves it as a PDF).</p>
+<p>How the figures are worked out: hardware counts in the year of its purchase date. A subscription counts for the part
+of the year it ran, from its purchase date (or the day it was added) until it expired without renewal or was
+discontinued; current subscriptions are expected to carry on, so later years are a forecast. A one-off licence counts
+in the year it was bought. The write-off is straight line from the purchase date; decommissioned assets count as fully
+written off. Everything comes from today's records, so fill in the purchase details (<strong>Edit together</strong> can do several
+assets at once).</p>
 <h2 id="alerts-and-messages">Alerts and messages</h2>
 <img alt="The alert bell" src="images/05-alert-bell.png" loading="lazy" /><p class="figure-caption">The alert bell</p>
 <p><strong>The alert bell</strong> shows:
@@ -238,7 +287,8 @@ it is hidden. Red items are listed first. Green messages are never counted.</p>
   3. Check the rows. <strong>Untick</strong> a row to leave it out; <strong>Leave out rows with warnings</strong> does that for every row with a
      warning, and <strong>Show only rows with warnings or errors</strong> hides the rest. <strong>Edit</strong> opens a row's main details:
      change them and press <strong>Check and keep</strong>, and ITAM checks the row again (a fixed row with problems can then be
-     imported).
+     imported). Rows that match what ITAM already holds are not listed: they are counted under <strong>No Change</strong> (the
+     licence import does the same).
   4. Press <strong>Commit</strong> to save the ticked rows. Rows with problems are never imported. Intune and Google reviews work
      the same way.</p>
 <p><strong>Licences</strong>
@@ -312,8 +362,11 @@ reference table or correct its dates in Excel: see the
 Source). It follows the search box and status filter, so you can export, for example, only the models past end
 of life.</p>
 <h2 id="change-log">Change log</h2>
-<p>(admin) <strong>Change Log Ledger</strong> (menu) records every change: who did it, when, and what. You can search it, filter by
-action and date, and export it to CSV. Passwords and keys are never written to it.</p>
+<p>(admin) <strong>Change Log Ledger</strong> (menu) records every change: who did it, when, and what; an asset update lists the
+fields, for example <em>User: John Doe -&gt; Jane Smith</em>. You can search it, filter by action and date, and export it to
+CSV. Passwords and keys are never written to it. The log is trimmed when it grows large; each asset's <strong>History</strong> is
+kept separately for the time chosen in <strong>Settings → Hardware &amp; Logs → Keep asset history</strong> (1, 2 or 5 years, or
+forever; 2 years at first).</p>
 <h2 id="your-own-settings">Your own settings</h2>
 <ul>
 <li><strong>Settings → Style &amp; Appearance</strong>:</li>
