@@ -392,9 +392,15 @@ ITAM signs everybody out after 30 minutes without mouse or keyboard use. An admi
 choose Never, in <strong>Settings → Server &amp; Access → Automatic sign-out</strong>.</p>
 <p><strong>I have to sign in every time I reopen the window</strong>
 ITAM keeps you signed in when its window is closed and opened again, until the automatic sign-out time has passed.
-If you are asked to sign in every time, the browser is deleting ITAM's sign-in when it closes. In Microsoft Edge open
-<strong>Settings → Privacy, search and services → Clear browsing data on close → Cookies and other site data</strong>, and under
-<strong>Do not clear</strong> add <code>http://127.0.0.1</code>. (Or leave it: signing in each time is safe, just less convenient.)</p>
+ITAM's own window uses its own Edge profile, apart from your normal browsing, so your browser's settings and
+extensions do not affect it. If you open ITAM in a normal browser tab instead and are asked to sign in every time,
+that browser is deleting ITAM's sign-in when it closes: in Microsoft Edge open <strong>Settings → Privacy, search and
+services → Clear browsing data on close → Cookies and other site data</strong>, and under <strong>Do not clear</strong> add
+<code>http://127.0.0.1</code>.</p>
+<p><strong>ITAM looks different in a browser tab (always dark, grey icons)</strong>
+A browser extension such as a dark-mode or colour changer is restyling the page. ITAM's own window (from the Start
+menu or the icon near the clock) has no extensions, so use that, or turn the extension off for <code>127.0.0.1</code>. ITAM has
+its own Light, Dark and System themes at the top of the screen.</p>
 <p><strong>I closed the window: is ITAM still running?</strong>
 Yes. Look for the ITAM icon near the clock (it may be under the <strong>^</strong> arrow). Click it to open the window again, or
 right-click it and choose <strong>Quit ITAM</strong> to stop the program.</p>
