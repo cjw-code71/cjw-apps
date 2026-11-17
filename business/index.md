@@ -17,7 +17,7 @@ title: CJW Apps — Business
         <div class="platform">Windows</div>
       </div>
     </div>
-    <p>IT Asset Management: a register of your hardware and software licences, with network discovery, Microsoft Intune and Google Workspace imports, and warranty and licence alerts. Free for up to 200 assets; ITAM Pro has no limit.</p>
+    <p>IT Asset Management: a register of your hardware and software licences, with network discovery and warranty and licence alerts. Free for up to 100 assets; ITAM Pro has no limit and adds Microsoft Intune and Google Workspace imports.</p>
     <div class="card-actions">
       <span class="badge">Microsoft Store: coming soon</span>
       <span class="badge" title="Download and buy directly, for organisations where the Microsoft Store is blocked">Direct Download: coming soon</span>

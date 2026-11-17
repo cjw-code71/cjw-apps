@@ -62,8 +62,9 @@ On the PC that runs ITAM. Nothing is sent to us. Make backups in
 **Settings → Backups & Storage**, to a folder of your choice.
 
 **What does the free version include?**
-Everything, for up to 200 assets. Software licences and decommissioned
-assets are not counted. ITAM Pro removes the limit.
+Up to 100 assets, with network discovery and CSV imports. Software
+licences and decommissioned assets are not counted. ITAM Pro removes the
+limit and adds Microsoft Intune and Google Workspace device imports.
 
 **How do I get Pro, and how do I cancel it?**
 In the Microsoft Store copy, the built-in `admin` account presses

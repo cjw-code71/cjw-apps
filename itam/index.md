@@ -30,7 +30,7 @@ Direct Download and purchase, for organisations where the Microsoft Store is blo
 
 - Agentless network discovery (ping, WMI, SSH, SNMP): nothing to
   install on the devices.
-- Microsoft Intune and Google Workspace device imports, on demand or on
+- Microsoft Intune and Google Workspace device imports (ITAM Pro), on demand or on
   a schedule.
 - Every import is reviewed first: you see what would be added or
   changed before anything is saved.
@@ -51,9 +51,11 @@ Direct Download and purchase, for organisations where the Microsoft Store is blo
 
 ## Free and Pro
 
-- **Free:** everything above for up to 200 assets. Software licences
-  and decommissioned assets are not counted.
-- **ITAM Pro:** no asset limit. £44.99 a month or £454.99 a year, with a
+- **Free:** up to 100 assets, with network discovery, CSV imports,
+  licences, alerts, roles and backups. Software licences and
+  decommissioned assets are not counted.
+- **ITAM Pro:** no asset limit, plus Microsoft Intune and Google
+  Workspace device imports. £44.99 a month or £454.99 a year, with a
   30-day free trial, through the Microsoft Store.
 - If Pro ends, nothing is deleted or locked. Only adding new assets
   pauses.
