@@ -106,7 +106,7 @@ piece of IT you own, and keeps it up to date for you.</p>
 </tr>
 <tr>
 <td>Stop typing it all in</td>
-<td>Agentless network scans, Microsoft Intune and Google Workspace imports, and CSV import</td>
+<td>Agentless network scans and CSV import, with a review before anything is saved; Microsoft Intune and Google Workspace imports with ITAM Pro</td>
 </tr>
 <tr>
 <td>Stay licence-compliant</td>
@@ -115,6 +115,18 @@ piece of IT you own, and keeps it up to date for you.</p>
 <tr>
 <td>Plan replacements</td>
 <td>End-of-life and end-of-support dates for each hardware model</td>
+</tr>
+<tr>
+<td>Know what IT costs</td>
+<td>A <strong>Finance</strong> view: spend by year, hardware write-off, renewals coming up and unused licence seats</td>
+</tr>
+<tr>
+<td>See who changed what</td>
+<td>A <strong>History</strong> on every asset: each field from its old value to the new one, who changed it and how</td>
+</tr>
+<tr>
+<td>Change many assets at once</td>
+<td><strong>Edit together</strong>: tick assets and set a location, department, user, status and more in one go</td>
 </tr>
 <tr>
 <td>Share it with colleagues</td>
@@ -170,6 +182,9 @@ is ever deleted or locked: only adding new assets pauses at the limit.</p>
 <li>The <strong>ITAM icon</strong> appears in the notification area near the clock (it may be under the <strong>^</strong> arrow). Closing the
   window does <strong>not</strong> stop ITAM: backups and scheduled scans carry on. Click the icon to open the window again,
   or right-click it and choose <strong>Quit ITAM</strong> to stop the program.</li>
+<li>The window uses <strong>its own Microsoft Edge profile</strong>, apart from your everyday browsing. Your browser's extensions
+  (such as dark-mode add-ons) and "clear cookies when closing" settings do not affect it, so it stays signed in until
+  the <a href="02-Installation-and-Configuration.html#automatic-sign-out">automatic sign-out</a> time passes.</li>
 <li>The first time, Windows Defender Firewall may ask whether ITAM may use the network. Choose <strong>Private
   networks</strong>. This is only needed for network scans and for colleagues to connect.</li>
 </ul>
@@ -196,7 +211,7 @@ ITAM. Create named accounts for everyday use (see step 6).</p>
 <tbody>
 <tr>
 <td><strong>Left menu</strong></td>
-<td>Views (all assets, servers and computers, network devices, databases, software licences) with counts; add assets and licences; the change log, Settings and About</td>
+<td>Views (all assets, servers and computers, network devices, databases, software licences) with counts; <strong>Finance</strong>; add assets and licences; the change log, Settings and About</td>
 </tr>
 <tr>
 <td><strong>Top bar</strong></td>
@@ -212,7 +227,7 @@ ITAM. Create named accounts for everyday use (see step 6).</p>
 </tr>
 <tr>
 <td><strong>Asset table</strong></td>
-<td>One row per asset. Click a row for its details; <strong>Edit</strong> and <strong>More</strong> change it</td>
+<td>One row per asset. Click a row for its details; <strong>Edit</strong> and <strong>More</strong> change it. Tick several rows and press <strong>Edit together...</strong> to change them in one go</td>
 </tr>
 </tbody>
 </table>
@@ -263,18 +278,27 @@ the top of the screen for everyone.</p>
 <td><strong>Settings → Discovery (Agentless)</strong></td>
 </tr>
 <tr>
-<td><strong>Microsoft Intune</strong></td>
+<td><strong>Microsoft Intune</strong> (Pro)</td>
 <td>Laptops and phones Intune already manages</td>
 <td><strong>Settings → Integrations</strong></td>
 </tr>
 <tr>
-<td><strong>Google Workspace</strong></td>
+<td><strong>Google Workspace</strong> (Pro)</td>
 <td>Chromebooks, phones and computers Google already manages</td>
 <td><strong>Settings → Integrations</strong></td>
 </tr>
 </tbody>
 </table>
-<p>Every import shows you what it will add or change <strong>before</strong> anything is saved.</p>
+<p>Every import shows you what it will add or change <strong>before</strong> anything is saved:</p>
+<ul>
+<li><strong>Untick</strong> a row to leave it out, or press <strong>Edit</strong> to fix a row with a problem; ITAM checks it again.</li>
+<li>Rows with problems are never imported. <strong>Leave out rows with warnings</strong> and <strong>Show only rows with warnings or
+  errors</strong> help with long files.</li>
+<li>Rows that match what ITAM already holds are not listed; they are counted under <strong>No Change</strong>.</li>
+<li>Network scans are kept for you to review: the last 5 of each network.</li>
+</ul>
+<img alt="Reviewing a CSV import" src="images/18-import-review.png" loading="lazy" /><p class="figure-caption">Reviewing a CSV import</p>
+<p>To add a single asset by hand, press <strong>Add Asset</strong>:</p>
 <img alt="Adding an asset" src="images/03-add-asset.png" loading="lazy" /><p class="figure-caption">Adding an asset</p>
 <p>Only <strong>Asset Name</strong> is required. Section 4, <strong>Purchase &amp; Warranty</strong>, is optional, but filling in the warranty end
 means ITAM warns you 30 days before it runs out.</p>
@@ -282,7 +306,9 @@ means ITAM warns you 30 days before it runs out.</p>
 <h3 id="step-4-add-your-software-licences-3-minutes">Step 4: Add your software licences (3 minutes)</h3>
 <p>Press <strong>Add Software Licence</strong> in the left menu. Enter the product, seats bought, cost, renewal date and how it is
 licensed (per device, per user, site licence...). Under <strong>Installed on</strong>, choose the assets that use it: ITAM then
-shows whether you are compliant.</p>
+shows whether you are compliant. Click a licence in the list on the dashboard to see all its details.</p>
+<p>Many licences at once: <strong>Settings → Import &amp; Export → Bulk Licences CSV Import</strong> opens the same kind of review as
+assets.</p>
 <img alt="Software licences" src="images/06-software-licences.png" loading="lazy" /><p class="figure-caption">Software licences</p>
 <h3 id="step-5-add-your-colleagues-2-minutes">Step 5: Add your colleagues (2 minutes)</h3>
 <p><strong>Settings → Users &amp; Auth</strong></p>
@@ -295,6 +321,16 @@ shows whether you are compliant.</p>
 <p>Give each person a role: <strong>Viewer</strong> (look and search), <strong>Editor</strong> (also add, change, import and export) or
 <strong>Administrator</strong> (everything, including settings).</p>
 <img alt="Users and roles" src="images/08-users.png" loading="lazy" /><p class="figure-caption">Users and roles</p>
+<h3 id="step-6-look-at-your-costs-1-minute">Step 6: Look at your costs (1 minute)</h3>
+<p>Press <strong>Finance</strong> in the left menu. It adds up what your hardware and software cost each year, writes the hardware
+off over 3, 4 or 5 years, and lists the renewals and warranties coming up. Choose whether your <strong>years are
+financial or calendar years</strong> and the month your financial year starts; an administrator can press <strong>Save as
+default</strong> to keep that for everyone.</p>
+<img alt="Finance" src="images/15-finance.png" loading="lazy" /><p class="figure-caption">Finance</p>
+<p>The figures come from each asset's <strong>Purchase &amp; Warranty</strong> details and each licence's cost. To fill them in for
+many assets at once, tick them in the asset table and press <strong>Edit together...</strong>. Tick only the fields to change;
+everything you leave unticked stays as it is on every asset.</p>
+<img alt="Editing several assets together" src="images/17-edit-together.png" loading="lazy" /><p class="figure-caption">Editing several assets together</p>
 <h3 id="want-to-explore-first">Want to explore first?</h3>
 <p><strong>Settings → Config CI &amp; Taxonomy → Load Sample Data</strong> adds ten example assets, four licences and a network.
 <strong>Remove Sample Data</strong> later takes away only the examples you have not changed.</p>
@@ -320,8 +356,16 @@ shows whether you are compliant.</p>
 <td><a href="02-Installation-and-Configuration.html#network-ports-and-protocols">Installation &amp; Configuration: Network ports and protocols</a></td>
 </tr>
 <tr>
-<td>Bring in Intune or Google Workspace devices</td>
+<td>Bring in Intune or Google Workspace devices (Pro)</td>
 <td><a href="02-Installation-and-Configuration.html#microsoft-intune">Microsoft Intune</a> · <a href="02-Installation-and-Configuration.html#google-workspace">Google Workspace</a></td>
+</tr>
+<tr>
+<td>See an asset's history, or edit several assets together</td>
+<td><a href="03-User-Guide.html">User Guide: Assets</a></td>
+</tr>
+<tr>
+<td>Understand the Finance figures</td>
+<td><a href="03-User-Guide.html#finance">User Guide: Finance</a></td>
 </tr>
 <tr>
 <td>Learn the day-to-day screens</td>

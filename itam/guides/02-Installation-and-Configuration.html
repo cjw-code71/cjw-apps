@@ -82,13 +82,15 @@ looks after. New to ITAM? Start with the <a href="01-Getting-Started.html">Getti
 <li><a href="#network-ports-and-protocols">Network ports and protocols</a></li>
 <li><a href="#where-itam-keeps-its-data">Where ITAM keeps its data</a></li>
 <li><a href="#network-access-and-https">Network access and HTTPS</a></li>
-<li><a href="#users-and-sign-in">Users and sign-in</a>: <a href="#roles">Roles</a> · <a href="#sign-in-with-microsoft">Microsoft</a> · <a href="#sign-in-with-google">Google</a> · <a href="#recovery-key">Recovery key</a></li>
+<li><a href="#users-and-sign-in">Users and sign-in</a>: <a href="#roles">Roles</a> · <a href="#automatic-sign-out">Automatic sign-out</a> · <a href="#sign-in-with-microsoft">Microsoft</a> · <a href="#sign-in-with-google">Google</a> · <a href="#recovery-key">Recovery key</a></li>
 <li><a href="#backups">Backups</a></li>
 <li><a href="#company-name-ci-types-and-dashboard-groups">Company name, CI types and dashboard groups</a></li>
 <li><a href="#software-licences">Software licences</a></li>
-<li><a href="#agentless-network-discovery">Agentless network discovery</a>: <a href="#windows-logins-wmi">Windows logins</a> · <a href="#snmp-v1v2c">SNMP</a> · <a href="#snmpv3-network-devices">SNMPv3</a> · <a href="#schedules">Schedules</a></li>
-<li><a href="#microsoft-intune">Microsoft Intune</a> · <a href="#google-workspace">Google Workspace</a></li>
+<li><a href="#agentless-network-discovery">Agentless network discovery</a>: <a href="#4-kept-scans">Kept scans</a> · <a href="#windows-logins-wmi">Windows logins</a> · <a href="#snmp-v1v2c">SNMP</a> · <a href="#snmpv3-network-devices">SNMPv3</a> · <a href="#schedules">Schedules</a></li>
+<li><a href="#microsoft-intune">Microsoft Intune</a> · <a href="#google-workspace">Google Workspace</a> (ITAM Pro)</li>
 <li><a href="#hardware-models-and-lifecycle">Hardware models and lifecycle</a></li>
+<li><a href="#asset-history-and-the-change-log">Asset history and the change log</a></li>
+<li><a href="#finance-settings">Finance settings</a></li>
 <li><a href="#restart-shut-down-and-factory-reset">Restart, shut down and factory reset</a></li>
 </ol>
 <blockquote>
@@ -165,14 +167,24 @@ in, and others connect to it with their browser.</p>
 <h3 id="starting-itam-with-windows">Starting ITAM with Windows</h3>
 <p>To have ITAM start when you sign in: press <strong>Windows + R</strong>, type <code>shell:startup</code> and press Enter. Then open the
 Start menu, find <strong>CJW-Apps ITAM</strong> under <strong>All apps</strong>, and drag it into that folder.</p>
+<h3 id="itams-own-window">ITAM's own window</h3>
+<p>ITAM opens in a Microsoft Edge (or Google Chrome) window of its own, with <strong>its own browser profile</strong>, kept in ITAM's
+data folder (<code>Window profile</code>). It has no extensions, no sync and no history shared with your everyday browsing, so:</p>
+<ul>
+<li>browser extensions (dark-mode add-ons, ad blockers, colour changers) cannot restyle or break ITAM;</li>
+<li>a browser set to clear cookies when it closes does not sign you out of ITAM's window;</li>
+<li>people who open ITAM in a normal browser tab are not affected by this; their own browser settings apply.</li>
+</ul>
 <h3 id="free-version-and-pro">Free version and Pro</h3>
 <p>ITAM is free for up to <strong>100 active assets</strong> (software licences and decommissioned assets do not
 count), including network scans and CSV imports. <strong>ITAM Pro</strong> removes the limit and adds the <strong>Microsoft Intune</strong> and
 <strong>Google Workspace</strong> device imports (Settings → Integrations): a monthly or yearly subscription with a 30-day free trial, paid through the
 Microsoft Store.</p>
 <ul>
-<li>A banner appears from 90 assets. Only the built-in <code>admin</code> account can <strong>Upgrade to Pro</strong>, <strong>Cancel Pro</strong> (in
-  <strong>About</strong>) or <strong>Recover purchase</strong>.</li>
+<li>A banner appears from 90 assets. Only the built-in <code>admin</code> account can <strong>Upgrade to Pro</strong> (banner, <strong>About</strong> or
+  <strong>Settings → Integrations</strong>), <strong>Cancel Pro</strong> (in <strong>About</strong>) or <strong>Recover purchase</strong>.</li>
+<li>Without Pro, <strong>Settings → Integrations</strong> shows the Intune and Google Workspace cards with a <strong>PRO</strong> label. A link
+  saved earlier stays saved, and the assets it added stay; only new imports pause.</li>
 <li>Without Pro nothing is deleted or locked: viewing, editing, exporting and backups all work; only adding new assets
   pauses.</li>
 <li>ITAM checks Pro with the Microsoft Store. If the Store cannot be reached, Pro carries on for 7 days, then shows
@@ -381,7 +393,7 @@ CJW Apps.</p>
 </ul>
 <hr />
 <h2 id="where-itam-keeps-its-data">Where ITAM keeps its data</h2>
-<p>ITAM keeps its data in <code>%LOCALAPPDATA%\CJW-Apps-ITAM</code>, inside the app's own storage. The folder holds the database (<code>itam_local.db</code>), the log file (<code>itam.log</code>) and the default <code>backups</code> folder.
+<p>ITAM keeps its data in <code>%LOCALAPPDATA%\CJW-Apps-ITAM</code>, inside the app's own storage. The folder holds the database (<code>itam_local.db</code>), the log file (<code>itam.log</code>), the default <code>backups</code> folder and the <code>Window profile</code> of ITAM's own window.
 <strong>Settings → Backups &amp; Storage</strong> shows the database's exact path and size.</p>
 <p>Passwords and keys you save in ITAM (client secrets, scan logins, API keys) are encrypted with Windows. They
 only work for the <strong>same Windows user on the same PC</strong>. If you move the database to another PC, enter them
@@ -436,7 +448,9 @@ another program has the port), it shows a message saying why.</p>
 <li>The person signs in with the username (or the e-mail address) and is asked to choose their own password.</li>
 </ol>
 <ul>
-<li><strong>Reset PW</strong> gives someone a new temporary password.</li>
+<li><strong>Reset PW</strong> opens a window for a new temporary password: type it twice (the eye shows what you typed). For your
+  own account, ITAM asks for your current password first. Browsers do not fill these boxes in for you, so a saved
+  password cannot slip in by mistake.</li>
 <li><strong>E-mail</strong> adds, changes or removes the address they can sign in with.</li>
 <li>Five wrong passwords lock a username for 15 minutes; twenty wrong attempts from one address lock that
   address. Lockouts are written to the change log.</li>
@@ -475,6 +489,12 @@ Google accounts take a role too.</p>
 <li>New local accounts, invites and people who sign in with Microsoft in organisation mode start as <strong>Viewer</strong>.</li>
 <li>Accounts from before roles existed ("User") became <strong>Editors</strong>, so they keep what they could do.</li>
 </ul>
+<h3 id="automatic-sign-out">Automatic sign-out</h3>
+<p><strong>Settings → Server &amp; Access → Automatic sign-out</strong>: after 15 or 30 minutes (the default), or 1, 2, 4 or 8 hours
+without using ITAM, everyone is signed out, so a window left open on an empty desk does not stay signed in.
+<strong>Never</strong> is possible but not advised when ITAM is shared on the network. Press <strong>Save</strong> to apply.</p>
+<p>Background updates of an open page (the alert bell, scan progress) do not count as using ITAM. Closing and opening
+ITAM's own window within that time keeps you signed in.</p>
 <h3 id="sign-in-with-microsoft">Sign in with Microsoft</h3>
 <p>Lets people use their Microsoft account: personal (Outlook, Hotmail, Live) or work/school. They sign in on
 Microsoft's own page, so ITAM never sees the password, and two-step sign-in, PINs and Windows Hello work.</p>
@@ -612,11 +632,14 @@ notes, and these:</p>
     left out, and so are Expired ones until they are renewed with a new expiry date.</li>
 <li><strong>One-off Purchases</strong> (with the year): one-time purchases bought this calendar year. Older ones are not
     counted.</li>
-<li><strong>Many at once</strong>: <strong>Settings → Import &amp; Export</strong> has a licence CSV template, export and import. See the
+<li><strong>Many at once</strong>: <strong>Settings → Import &amp; Export</strong> has a licence CSV template, export and import. The import
+  opens a review: what each row adds or updates (matched by name, with each change shown old → new), which rows
+  have problems, and how many need <strong>No Change</strong>. Untick rows to leave them out, or <strong>Edit</strong> a row to fix it. See the
   <a href="03-User-Guide.html#importing-and-exporting">User guide</a>.</li>
-<li><strong>Google Workspace licences</strong> come in with their seat count only; add the dates yourself. See
-  <a href="#google-licences-dates">Google licences: dates</a>.</li>
 </ul>
+<p><img alt="Reviewing a licence import" src="images/19-licence-import-review.png" />
+- <strong>Google Workspace licences</strong> come in with their seat count only; add the dates yourself. See
+  <a href="#google-licences-dates">Google licences: dates</a>.</p>
 <hr />
 <h2 id="agentless-network-discovery">Agentless network discovery</h2>
 <p>ITAM can scan your own networks and find devices without installing anything on them.
@@ -648,13 +671,23 @@ the existing network. Each login shows as a badge on the network; the <strong>×
 <li><strong>Database servers</strong>: SQL Server, Oracle, MySQL/MariaDB, PostgreSQL, Redis and MongoDB, recognised from their
   ports and, where possible, a harmless greeting. ITAM never logs in to a database.</li>
 </ul>
-<p>Found devices are <strong>staged</strong>. Nothing goes into the inventory until an administrator reviews it (see the
-<a href="03-User-Guide.html#reviewing-discovered-devices">User guide</a>), unless <strong>Auto-Sync</strong> or a schedule adds the
-clearly safe ones.</p>
+<p>Found devices are <strong>staged</strong> in a kept scan. Nothing goes into the inventory until an administrator reviews it (see
+the <a href="03-User-Guide.html#reviewing-discovered-devices">User guide</a>), unless <strong>Import new devices automatically</strong> is on.</p>
+<h3 id="4-kept-scans">4. Kept scans</h3>
+<img alt="Kept scans waiting for review" src="images/20-kept-scans.png" loading="lazy" /><p class="figure-caption">Kept scans waiting for review</p>
+<p>Every scan, by hand or scheduled, is kept as its own list: <strong>the last 5 of each network</strong>. A sixth scan of a network
+removes its oldest.</p>
+<ul>
+<li><strong>Scan</strong> chooses what the list shows: <em>Newest scan of each network</em> (the default) or any kept scan, with its date,
+  network, how it was started and how many devices still wait.</li>
+<li><strong>Review &amp; Import to Inventory</strong> works on the scan chosen there, so you can still import from an older scan.</li>
+<li><strong>Remove this scan</strong> forgets one scan; <strong>Clear All Scans</strong> forgets them all. Neither touches the inventory.</li>
+</ul>
 <h3 id="options">Options</h3>
 <ul>
-<li><strong>Auto-Sync Discovered Hosts to ITAM</strong>: after each scan, adds new devices whose CI type, make and model are
-  already in your inventory. Anything unfamiliar waits for review.</li>
+<li><strong>Import new devices automatically</strong> (off by default): after each scan, by hand or scheduled, adds new devices
+  whose CI type, make and model are already in your inventory. Anything unfamiliar, and any change to an existing
+  asset, waits for review. Off: every scan waits for review.</li>
 <li><strong>Skip Devices Managed by Microsoft Intune / Google Workspace</strong> (on by default): when Intune or Google
   Workspace is linked, devices it manages are left alone, matched by MAC address (and by computer name). The
   same PC is not reported twice or sent a Windows login. MAC addresses you linked to such a device with
@@ -743,12 +776,15 @@ too. For the fullest results, run the scan from a PC on that VLAN.</p>
 <p>Use a <strong>read-only</strong> SNMPv3 user; ITAM only ever reads. The CSV holds passwords in plain text, so keep it in a
 folder only administrators can open.</p>
 <h3 id="schedules">Schedules</h3>
-<p>Discovery, Intune and Google Workspace each have a <strong>Schedule</strong> box:
+<p>Discovery, Intune and Google Workspace each have a <strong>Schedule</strong> box (the Intune and Google schedules are part of
+ITAM Pro):
 - <strong>Off</strong>, every <strong>1, 2, 4, 6 or 12 hours</strong> from a chosen time, <strong>daily</strong> at a time, or <strong>weekly</strong> on a day at a
   time.
 - <strong>Run now</strong> starts a run straight away. The box shows the next run and the last result.</p>
 <p>What a scheduled run does by itself:
-- <strong>Discovery</strong>: scans every active network and adds the clearly new devices (known type, make and model).
+- <strong>Discovery</strong>: scans every active network. The devices wait in a <a href="#4-kept-scans">kept scan</a> for review, and the
+  alert bell says how many; only with <strong>Import new devices automatically</strong> on are the clearly new devices (known
+  type, make and model) added by themselves.
 - <strong>Intune / Google</strong>: adds new devices of a known type, make and model, and updates existing ones when their
   type, make and model stay the same. These updates keep the tag, department, location, environment and rack
   you set in ITAM.</p>
@@ -760,6 +796,10 @@ starts again. Every run is written to the change log.</p>
 <img alt="Settings: Integrations" src="images/11-integrations.png" loading="lazy" /><p class="figure-caption">Settings: Integrations</p>
 <p>Brings in the devices Intune manages (Windows, Mac, iPhone, iPad, Android). The link is read-only; nothing
 is changed in Microsoft. <strong>Settings → Integrations → Microsoft Intune</strong></p>
+<blockquote>
+<p><strong>ITAM Pro.</strong> The Intune and Google Workspace device imports, and their schedules, are part of ITAM Pro (or its
+30-day free trial). The free version keeps network scans and CSV imports. Sign-in with Microsoft or Google is free.</p>
+</blockquote>
 <p>You need a Microsoft 365 tenant with Intune (for example Microsoft 365 Business Premium) and a Global
 Administrator account in it.</p>
 <p><strong>In the Entra admin center</strong>, using an app registration (the one you use for Microsoft sign-in is fine):
@@ -792,8 +832,8 @@ forget</strong>). Assets already imported stay.</p>
 <hr />
 <h2 id="google-workspace">Google Workspace</h2>
 <p>Brings in Chromebooks, managed phones and tablets, Windows/Mac/Linux computers and licence seat counts from
-Google Workspace. The link is read-only; nothing is changed in Google. <strong>Settings → Integrations → Google
-Workspace</strong></p>
+Google Workspace (<strong>ITAM Pro</strong>). The link is read-only; nothing is changed in Google. <strong>Settings → Integrations →
+Google Workspace</strong></p>
 <p>You need a Google Workspace account with super administrator rights, on a domain you have verified in the
 Google Admin console. Gmail does not need to be switched on for the domain.</p>
 <p><strong>In the Google Cloud console</strong> (console.cloud.google.com), signed in as the Workspace super administrator:
@@ -905,6 +945,39 @@ end-of-support dates. Every asset of a model shows that model's dates.</p>
     built-in entry for the same model. Their Source shows <strong>Reference table (your entry)</strong>.</li>
 <li>The model name must be at least 4 letters or digits, and it matches whole words, as the built-in entries do.</li>
 </ul>
+<hr />
+<h2 id="asset-history-and-the-change-log">Asset history and the change log</h2>
+<img alt="An asset's full history" src="images/16-asset-history.png" loading="lazy" /><p class="figure-caption">An asset's full history</p>
+<p>ITAM records two things:</p>
+<ul>
+<li><strong>Each asset's History</strong>: every change to the asset, field by field from the old value to the new one, with who made
+  it and how (by hand, Edit together, CSV import, Intune, Google Workspace, network scan or a scheduled run). Open an
+  asset and press <strong>View full history</strong>; <strong>Download CSV</strong> saves it.</li>
+<li><strong>The Change Log Ledger</strong> (left menu, administrators): every action in ITAM, including sign-ins, settings and
+  imports.</li>
+</ul>
+<p><strong>Settings → Hardware &amp; Logs</strong>:</p>
+<ul>
+<li><strong>Keep asset history</strong>: 1, 2 (the default) or 5 years, or forever. Older history is removed once a day. It is kept
+  apart from the change log, so trimming the log never removes it.</li>
+<li><strong>Max Log Storage Boundary (MB)</strong>: how large the change log may grow before its oldest entries are trimmed.
+  <strong>Run Rotator Now</strong> trims it straight away.</li>
+</ul>
+<p>Passwords and keys are never written to the history or the log.</p>
+<hr />
+<h2 id="finance-settings">Finance settings</h2>
+<p><strong>Finance</strong> in the left menu works out IT spend, hardware write-off (straight line) and renewals from the assets'
+<strong>Purchase &amp; Warranty</strong> details and the licences' costs. Anyone signed in can open it; see the
+<a href="03-User-Guide.html#finance">User Guide</a> for what each figure means.</p>
+<p>At the top of the page, choose:</p>
+<ul>
+<li><strong>Years are</strong>: <em>Financial years</em> or <em>Calendar years</em>, and the month the <strong>financial year starts</strong> (April at first).</li>
+<li><strong>Write hardware off over</strong>: 3, 4 or 5 years.</li>
+<li><strong>Renewals in the next</strong>: 3, 6 or 12 months.</li>
+</ul>
+<p>These choices apply to your own view. An administrator can press <strong>Save as default</strong> to make them the starting point
+for everyone. The currency is the one chosen on the Software Licences screen.</p>
+<hr />
 <h2 id="restart-shut-down-and-factory-reset">Restart, shut down and factory reset</h2>
 <p>Only the built-in <code>admin</code> account sees <strong>Shutdown/Reset</strong> in the top bar (<strong>Settings → Power</strong>):
 - <strong>Restart</strong>: applies network and port changes. Nothing is lost.
