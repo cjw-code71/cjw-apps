@@ -4,7 +4,7 @@ title: CJW Apps — Privacy Policy
 
 # CJW Apps — Privacy Policy
 
-*Last updated 20 October 2026*
+*Last updated 19 November 2026*
 
 This policy covers the apps published by CJW Apps:
 [Audiobook Library](audiobook-library/), [eBook AI Reader](ebook-ai-reader/)
@@ -47,8 +47,52 @@ privacy policies apply to your storage with them. You can disconnect an
 account in an app at any time, and remove CJW Apps' access in your
 Microsoft or Google account settings.
 
-The apps' use of information received from Google APIs adheres to the
-[Google API Services User Data
+## Google user data
+
+This section describes exactly how Audiobook Library, eBook AI Reader and
+eBook Library handle data from your Google Account when you connect Google
+Drive (permission: "See, edit, create and delete all of your Google Drive
+files").
+
+**Data accessed.** Your Google Account's name and email address (only to
+show which account is connected); the names, folders, sizes, dates and IDs
+of the files and folders in the Drive folder you choose and its subfolders;
+and the contents of the book and audiobook files in it (for example audio,
+e-book text, tags, covers and chapters). The apps do not access your other
+Google services, such as Gmail, Contacts or Photos.
+
+**Data use.** Only to provide the features you use: building your library
+from the folder you chose, showing covers and details, playing, streaming
+and opening books, downloading books for offline use when you ask, and,
+only when you ask and confirm, saving edited details, cover and chapters
+back into a book's original file in your Drive. The apps never delete,
+share or change the sharing permissions of your Drive files. Google user
+data is not used for advertising, profiling, lending decisions or any other
+purpose, and is not used to develop, improve or train AI or machine
+learning models. Reading aloud in eBook AI Reader uses voices that run on
+your device; book text is not sent to any AI service.
+
+**Data transfer.** None. Google user data goes only between your device and
+Google. It is not sent to us, as we run no servers, and it is not shared
+with, transferred or sold to anyone else, including advertisers, data
+brokers or AI services.
+
+**Data protection.** All connections to Google use encrypted HTTPS. Sign-in
+is on Google's own page, so the apps never see your password. The access
+tokens Google issues are kept only on your device, in the system's secure
+storage provided by Windows or Android, encrypted for your user account.
+
+**Data retention and deletion.** What the apps keep (your library details,
+covers, positions and any books you download for offline use) stays only on
+your device for as long as you use the app. Choosing Disconnect in the app
+deletes the stored Google sign-in tokens; removing a book or source deletes
+what the app kept for it; uninstalling the app deletes everything it
+stored. You can also remove CJW Apps' access at any time in your Google
+Account under Security > Your connections to third-party apps and services.
+To ask a question about your data, email the contact address below.
+
+**Limited Use.** The apps' use and transfer of information received from
+Google APIs adheres to the [Google API Services User Data
 Policy](https://developers.google.com/terms/api-services-user-data-policy),
 including the Limited Use requirements.
 
