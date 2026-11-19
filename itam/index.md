@@ -1,5 +1,6 @@
 ---
-title: CJW-Apps ITAM
+title: CJW-Apps ITAM - IT Asset Management (ITAM) software for Windows
+description: CJW-Apps ITAM is IT asset management (ITAM) software for Windows that keeps your hardware and software licence register on your own PC. Free for up to 100 assets.
 ---
 
 # <img class="title-icon app-icon plain" src="../assets/icons/itam.png" alt="" width="60" height="60">CJW-Apps ITAM

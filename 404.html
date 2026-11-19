@@ -1,0 +1,15 @@
+---
+title: Page not found
+sitemap: false
+---
+<script>
+  // Addresses on this site are lower-case: send /ITAM, /Privacy.html etc. to the right page.
+  (function () {
+    var path = window.location.pathname, lower = path.toLowerCase();
+    if (path !== lower) window.location.replace(lower + window.location.search + window.location.hash);
+  })();
+</script>
+
+<h1>Page not found</h1>
+<p>Sorry, that page isn't here. Try the <a href="/">home page</a>, or
+<a href="/itam/">CJW-Apps ITAM</a>, <a href="/entertainment/">the book apps</a> or <a href="/support.html">Support</a>.</p>
