@@ -1,5 +1,5 @@
 ---
-title: CJW Apps
+title: CJW Apps - Audiobook, eBook and IT Asset Management Apps
 ---
 
 <div class="hero">

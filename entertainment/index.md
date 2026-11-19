@@ -1,5 +1,5 @@
 ---
-title: CJW Apps — Entertainment
+title: CJW Apps - Audiobook and eBook Apps for Android and Windows
 ---
 
 <div class="hero">

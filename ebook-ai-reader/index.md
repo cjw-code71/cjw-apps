@@ -1,5 +1,5 @@
 ---
-title: eBook AI Reader
+title: eBook AI Reader - eBook Reader That Reads Aloud, Android and Windows
 ---
 
 # eBook AI Reader
