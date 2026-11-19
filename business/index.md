@@ -1,5 +1,5 @@
 ---
-title: CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management
+title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
 ---
 
 <div class="hero">
