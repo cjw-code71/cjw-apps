@@ -24,6 +24,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../audiobook-library/">More about it</a>
+      <a class="btn ghost" href="../audiobook-library/guide.html">User guide</a>
       <a class="btn ghost" href="../audiobook-library/privacy.html">Privacy policy</a>
     </div>
   </div>
@@ -42,6 +43,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../ebook-ai-reader/">More about it</a>
+      <a class="btn ghost" href="../ebook-ai-reader/guide.html">User guide</a>
       <a class="btn ghost" href="../ebook-ai-reader/voices.html">Hear the voices</a>
       <a class="btn ghost" href="../ebook-ai-reader/privacy.html">Privacy policy</a>
     </div>
@@ -61,6 +63,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../ebook-library/">More about it</a>
+      <a class="btn ghost" href="../ebook-library/guide.html">User guide</a>
       <a class="btn ghost" href="../ebook-library/privacy.html">Privacy policy</a>
     </div>
   </div>

@@ -15,6 +15,9 @@ reader. For Android and Windows.
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9P23H7S4TF02) (listed as "eBook Library Bookshelf")
 - **Android:** coming soon to Google Play
 
+New to the app? The [user guide](guide.html) shows how to set it up and
+use it on Windows and Android.
+
 ## Screenshots
 
 Windows, with free classics from Project Gutenberg.
@@ -56,5 +59,5 @@ Windows, with free classics from Project Gutenberg.
 No account, no ads, no tracking. You sign in to Microsoft or Google on
 their own pages, and your books and reading stay on your device.
 
-[Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) ·
+[User guide](guide.html) · [Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) ·
 [All apps](../)

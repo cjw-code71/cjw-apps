@@ -16,6 +16,9 @@ thousands of files. For Android and Windows.
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NTCNMVBPCNG) (listed as "Audiobook Library Player")
 - **Android:** coming soon to Google Play
 
+New to the app? The [user guide](guide.html) shows how to set it up and
+use it on Windows and Android.
+
 ## Screenshots
 
 Windows, with free LibriVox audiobooks.
@@ -64,5 +67,5 @@ Windows, with free LibriVox audiobooks.
 No account, no ads, no tracking. You sign in to Microsoft or Google on
 their own pages, and your files are only changed when you ask.
 
-[Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) ·
+[User guide](guide.html) · [Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) ·
 [All apps](../)
