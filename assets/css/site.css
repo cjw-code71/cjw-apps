@@ -98,12 +98,10 @@ tr:last-child td { border-bottom: 0; }
 .icon-row a:hover { color: var(--accent); }
 .icon-row img { width: 30px; height: 30px; border-radius: 7px; }
 
-.app-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-.app-list li { display: grid; gap: 2px; }
-.app-list a { display: inline-flex; align-items: center; gap: 8px; color: var(--text); text-decoration: none; font-weight: 600; }
-.app-list a:hover { color: var(--accent); }
-.app-list img { width: 30px; height: 30px; border-radius: 7px; }
-.app-list span { color: var(--muted); font-size: .93rem; padding-left: 38px; }
+/* the book apps on the home page: the same icon links as ITAM's, each with a line about it */
+.app-list { display: grid; gap: 2px; }
+.app-list .icon-row a { gap: 10px; }
+.card .app-list .app-note { color: var(--muted); font-size: .93rem; margin: 0 0 10px 40px; }
 
 /* ---- buttons and badges */
 .btn { display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; font-size: .93rem; padding: 8px 15px; border-radius: 9px; border: 1px solid transparent; }

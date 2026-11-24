@@ -13,11 +13,14 @@ title: CJW Apps - Audiobook, eBook and IT Asset Management Apps
     <p class="eyebrow">Entertainment</p>
     <h2><a href="entertainment/">For people with a lot of books</a></h2>
     <p>Audiobooks and ebooks on Android and Windows. Your library stays on your device.</p>
-    <ul class="app-list">
-      <li><a href="audiobook-library/"><img src="assets/icons/audiobook-library.png" alt="" width="30" height="30">Audiobook Library</a><span>Your audiobooks from OneDrive, Google Drive or your device, with a player made for audiobooks.</span></li>
-      <li><a href="ebook-ai-reader/"><img src="assets/icons/ebook-ai-reader.png" alt="" width="30" height="30">eBook AI Reader</a><span>Read your ebooks, or have them read aloud by natural voices that work offline.</span></li>
-      <li><a href="ebook-library/"><img src="assets/icons/ebook-library.png" alt="" width="30" height="30">eBook Library</a><span>All your ebooks in one tidy library, with a comfortable reader.</span></li>
-    </ul>
+    <div class="app-list">
+      <div class="icon-row"><a href="audiobook-library/"><img src="assets/icons/audiobook-library.png" alt="" width="30" height="30">Audiobook Library</a></div>
+      <p class="app-note">Your audiobooks from OneDrive, Google Drive or your device, with a player made for audiobooks.</p>
+      <div class="icon-row"><a href="ebook-ai-reader/"><img src="assets/icons/ebook-ai-reader.png" alt="" width="30" height="30">eBook AI Reader</a></div>
+      <p class="app-note">Read your ebooks, or have them read aloud by natural voices that work offline.</p>
+      <div class="icon-row"><a href="ebook-library/"><img src="assets/icons/ebook-library.png" alt="" width="30" height="30">eBook Library</a></div>
+      <p class="app-note">All your ebooks in one tidy library, with a comfortable reader.</p>
+    </div>
     <p class="platform">Android and Windows · Free to start, optional one-off Pro</p>
     <div class="card-actions"><a class="btn" href="entertainment/">See the Entertainment apps</a></div>
   </div>
