@@ -62,7 +62,8 @@ a month with a 30-day free trial.
 
 <p><a class="btn" href="https://apps.microsoft.com/detail/9N828LN3WS8V">Get it from the Microsoft Store</a>
 <a class="btn ghost" href="store/">Editions and prices</a>
-<a class="btn ghost" href="guides/">Guides</a></p>
+<a class="btn ghost" href="guides/">Guides</a>
+{% if site.g2_url != "" %}<a class="btn ghost" href="{{ site.g2_url }}">Listed on G2</a>{% endif %}</p>
 
 ## Download version
 

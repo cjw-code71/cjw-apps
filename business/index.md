@@ -53,4 +53,6 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
   </div>
 </div>
 
+{% if site.g2_url != "" %}<p><a class="btn ghost" href="{{ site.g2_url }}">CJW-Apps ITAM is listed on G2</a></p>{% endif %}
+
 <p><a href="../itam/">Everything ITAM does</a> · <a href="../itam/privacy.html">Privacy policy</a> · <a href="../support.html">Support</a></p>
