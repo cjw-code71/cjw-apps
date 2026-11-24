@@ -65,12 +65,12 @@ footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85
 </head>
 <body>
 <header class="bar"><div class="inner">
-  <a class="brand" href="../" title="CJW-Apps ITAM on apps.cwink.com"><img src="images/itam-icon.png" alt="">CJW-Apps ITAM</a>
+  <a class="brand" href="index.html"><img src="images/itam-icon.png" alt="">CJW-Apps ITAM</a>
   <nav aria-label="Guides"><a href="index.html" class="">Contents</a><a href="01-Getting-Started.html" class="">1. Getting Started</a><a href="02-Installation-and-Configuration.html" class="">2. Installation &amp; Configuration</a><a href="03-User-Guide.html" class="here">3. User Guide</a><a href="04-Troubleshooting.html" class="">4. Troubleshooting</a></nav>
 </div></header>
 <main>
 <h1 id="user-guide">User Guide</h1>
-<p><em>CJW-Apps ITAM · Version 2.7.0 · For everyone who uses ITAM</em></p>
+<p><em>CJW-Apps ITAM · Version 2.8.0 · For everyone who uses ITAM</em></p>
 <p>Day-to-day use of ITAM. What you can do depends on your role (see the
 <a href="02-Installation-and-Configuration.html#roles">Installation &amp; Configuration Guide</a>): <strong>Viewers</strong> look, <strong>Editors</strong> also add, change, import and export,
 and <strong>Administrators</strong> do the rest. Actions are marked <strong>(editor)</strong> or <strong>(admin)</strong> below; a button your role
@@ -81,12 +81,19 @@ use the same dates; CSV files write them <code>2027-12-31</code>.</p>
 <li><a href="#the-screen">The screen</a></li>
 <li><a href="#finding-assets">Finding assets</a></li>
 <li><a href="#adding-and-changing-assets">Adding and changing assets</a></li>
+<li><a href="#qr-labels">QR labels</a></li>
+<li><a href="#stocktake">Stocktake</a> (Pro)</li>
+<li><a href="#attachments">Attachments</a> (Pro)</li>
+<li><a href="#devices-given-out-and-loans">Devices given out and loans</a> (Education)</li>
+<li><a href="#disposal">Disposal</a> (Pro)</li>
 <li><a href="#software-licences">Software licences</a></li>
 <li><a href="#finance">Finance</a></li>
+<li><a href="#transfers-between-schools">Transfers between schools</a> (trust)</li>
 <li><a href="#alerts-and-messages">Alerts and messages</a></li>
 <li><a href="#importing-and-exporting">Importing and exporting</a></li>
 <li><a href="#reviewing-discovered-devices">Reviewing discovered devices</a> (editor)</li>
 <li><a href="#hardware-models-and-lifecycle">Hardware models and lifecycle</a></li>
+<li><a href="#data-check">Data Check</a></li>
 <li><a href="#change-log">Change log</a></li>
 <li><a href="#your-own-settings">Your own settings</a></li>
 </ul>
@@ -130,7 +137,9 @@ Click a tile to show that group.</p>
   the same form with the type set to Database. Viewers can open an asset to see its details but not save it.</li>
 <li>Only <strong>Asset Name</strong> is required. The asset tag and the serial number (per maker) must each belong to one
   asset only.</li>
-<li><strong>Purchase &amp; Warranty</strong> (optional): purchase date, cost, supplier, PO / invoice number and warranty end. The asset's
+<li><strong>Purchase &amp; Warranty</strong> (optional): purchase date, cost, replacement cost, supplier, PO / invoice number and warranty
+  end. <strong>Replacement cost</strong> is what it should cost to replace the asset; Finance uses it for replacements (blank: the
+  purchase cost). The asset's
   details show the warranty in green while it runs, amber in its last month, red in its last week and grey once ended.
   Scans and Intune / Google imports never change these.</li>
 <li><strong>Imported By</strong> (section 5, filled in by ITAM, not editable): where the asset came from (Microsoft Intune, Google
@@ -166,6 +175,111 @@ change page). A bar shows how many are ticked: press <strong>Edit together...</s
 </ul>
 <p>When the inventory is empty, the list offers <strong>+ Add asset</strong>. To import a CSV file or load sample data, use
 <strong>Settings → Import &amp; Export</strong> or <strong>Settings → Config CI &amp; Taxonomy</strong>.</p>
+<h2 id="qr-labels">QR labels</h2>
+<p>Each asset can have a label with a <strong>QR code</strong>. Scanning it with a phone or tablet camera opens the asset in ITAM
+(sign in first if asked). The label also shows the asset tag (or the name, if there is no tag), the name and, if you
+like, the school, the room and your organisation's name.</p>
+<p><strong>To print labels</strong>, press <strong>Print QR Labels</strong> in the side menu. You can also tick assets in the list and press
+<strong>Print labels...</strong>, or open an asset and press <strong>Print label</strong>. Then choose:
+- <strong>Labels for</strong>: the ticked assets, every asset you can see, or one school. If the school has rooms, you can choose
+  one <strong>Room</strong>. Decommissioned assets are only printed when you tick them.
+- <strong>Label sheet</strong>: the A4 sheet you have, for example 21 per sheet (63.5 × 38.1 mm, Avery L7160 or similar).
+- <strong>Start at label</strong>: to use the rest of a sheet you have already started. 1 is the top-left label, counting across.</p>
+<p><strong>Open labels to print</strong> opens the labels in a new window and the print window appears. Choose A4, scale 100%
+(actual size) and no margins. The first time, tick <strong>Draw the label edges</strong> and print on plain paper. Hold it against
+a label sheet to check the labels line up.</p>
+<p><strong>The address in the QR codes.</strong> The QR code holds the address that phones and other computers use for ITAM, for
+example <code>https://itam-server:5443</code>. At first this is this PC's name on the network port. An administrator who can
+see every school can change it with <strong>Change</strong> in the label window. Labels already printed keep the address they
+were printed with, so choose it before you print many. Phones must be on a network that can reach ITAM (see Network
+access in the Installation &amp; Configuration Guide).</p>
+<h2 id="stocktake">Stocktake</h2>
+<p><em>ITAM Pro and above.</em> A stocktake checks that the assets of a school (or site), or of one room, are really there.
+Staff walk round with a phone, scan each asset's QR label and press <strong>Found here</strong>.</p>
+<p><strong>Before you start</strong>
+- Turn on network access, so phones on your Wi-Fi can reach ITAM (see
+  <a href="02-Installation-and-Configuration.html#network-access-and-https">Network access and HTTPS</a>).
+- Print QR labels and stick them on the assets (see <a href="#qr-labels">QR labels</a>).
+- <strong>Choose one browser on each phone and keep to it.</strong> Each browser has its own sign-in.
+  - <strong>Edge (recommended):</strong> open Edge and sign in to ITAM. Scan labels with Edge's own QR scanner (the camera icon in
+    the search bar). The label opens in Edge, whichever browser is the phone's default.
+  - <strong>The phone's camera app:</strong> it opens labels in the phone's <strong>default</strong> browser (Safari on most iPhones). Sign in
+    to ITAM in that browser.</p>
+<p><strong>Start a stocktake</strong> (editor). Press <strong>Stocktake</strong> in the side menu. Choose the school (in a trust) and, if you like,
+one room, then press <strong>Start stocktake</strong>. The assets there now (not decommissioned) are the list to find.</p>
+<p><strong>Check with a phone.</strong> The stocktake shows a QR code: scan it with the phone and sign in. The phone now shows the
+stocktake page and remembers it. Then scan each asset's label. The asset opens on the stocktake page: press
+<strong>Found here</strong>. Several people can check the same stocktake at once.
+- For a whole school, choose <strong>I am in</strong> (the room you are in) as you go. An asset that ITAM has in another room is
+  marked <strong>Wrong room</strong>. Press <strong>Found here, and record it in ...</strong> to change its room in ITAM (<strong>Moved here</strong>).
+- No label? Type the asset tag or serial number and press <strong>Found</strong>.
+- A label or tag that ITAM does not know is listed as <strong>Unknown</strong>. An asset of another school, or a decommissioned
+  one, is <strong>Not expected</strong>.
+- Pressed it by mistake? Open <strong>Marked</strong> on the phone and press <strong>Undo</strong>.
+- <strong>Stop checking on this phone</strong> at the bottom goes back to using labels to open assets in ITAM.</p>
+<p><strong>Follow and finish it.</strong> In <strong>Stocktake</strong> on the computer, open the stocktake to see what is found, still to find,
+in another room, not expected or unknown. Filter the list with <strong>Show</strong>, or press <strong>Download CSV</strong>. When you have
+finished, press <strong>Close stocktake</strong>: everything not found is marked <strong>Missing</strong>, and nothing more can be marked.
+<strong>Remove</strong> deletes an open stocktake started by mistake. A closed stocktake is kept as a record.</p>
+<p>Every asset found gets today's date as <strong>Last Verified</strong> in its details. A room change made in a stocktake is in the
+asset's History.</p>
+<h2 id="attachments">Attachments</h2>
+<p><em>ITAM Pro and above.</em> Keep files and photos with an asset or a software licence: invoices, orders, quotes, contracts,
+warranty and disposal certificates, photos of the asset or its damage.</p>
+<p><strong>Add files</strong> (editor). Open the asset (or the licence from <strong>Software Licences</strong>). In <strong>Attachments</strong>, choose the
+<strong>Kind</strong> if you like (left on automatic, a photo is a Photo and anything else is Other), add a <strong>Note</strong>, then press
+<strong>Add files...</strong> and choose one or more files. On a phone or tablet you can take a photo straight away.
+- Files can be up to <strong>5 MB</strong> each. Photos are made smaller before they are sent (longest side 1600 pixels), so phone
+  photos are fine.
+- ITAM keeps PDF, photos (JPEG, PNG, WebP), Word, Excel, PowerPoint, Outlook (.msg), e-mail (.eml), text and CSV
+  files. Other files are refused; save them as a PDF first.
+- Up to 50 files per asset or licence.</p>
+<p><strong>Open or remove.</strong> Click a file's name: photos and PDFs open in the browser, other files are downloaded. <strong>Remove</strong>
+takes it off (it stays in earlier backups). Adding and removing files is written in the asset's History and the
+change log.</p>
+<p><strong>Who sees them.</strong> Everyone who can see the asset or licence sees its files. <strong>Invoice</strong>, <strong>Order</strong>, <strong>Quote</strong> and
+<strong>Contract</strong> files hold prices, so they are only shown to people with the <strong>Can see costs</strong> tick. In a trust, a
+school can add files to its own licences; files on a licence shared with other schools are added by trust IT.</p>
+<p>Deleting an asset or a licence also removes its files. The files are kept beside the database and copied with each
+full backup (see Backups in the Installation &amp; Configuration Guide).</p>
+<h2 id="devices-given-out-and-loans">Devices given out and loans</h2>
+<p><em>ITAM Education and Education Trust.</em> Record who has a device: a member of staff, or a pupil.</p>
+<p><strong>Give a device out</strong> (editor). Open the asset. In <strong>Who has it</strong>, choose <strong>Staff</strong> or <strong>Pupil</strong> and enter the name.
+For a pupil, add their year and class if you like. <strong>From</strong> is today unless you choose another date (for devices
+given out before you started using ITAM). Press <strong>Give out</strong>.
+- <strong>Pupils:</strong> school-owned devices only. ITAM keeps only the pupil's name, year and class, and only people who can
+  see that school see them.
+- <strong>A loan</strong> is a device given out with a <strong>Due back</strong> date. The asset shows <strong>On loan</strong> until it comes back.</p>
+<p><strong>When it comes back</strong>, open the asset and press <strong>It is back</strong> (add a note if something is missing). A loan's asset
+gets its old status back. The record stays under <strong>Earlier</strong>, and the asset's History shows who had it and when.</p>
+<p><strong>Devices Out</strong> in the side menu lists every device given out in your schools, late loans first. Loans past their
+due date also show on the bell for editors of that school.</p>
+<h2 id="disposal">Disposal</h2>
+<p><em>ITAM Pro and above.</em> Dispose of an asset with a clear record: why, who agreed, where it went, and proof that its
+data was destroyed.</p>
+<ol>
+<li><strong>Ask</strong> (editor). Open the asset. In <strong>Disposal</strong>, give the reason and press <strong>Ask to dispose of it</strong>. Untick
+   <strong>Holds data</strong> for things with no storage (a monitor, a keyboard). The asset shows <strong>Pending disposal</strong>. It must
+   not be given out or being transferred.</li>
+<li><strong>Approve</strong> (administrator of that school). The bell shows disposals to approve. Press <strong>Approve</strong>, or <strong>Reject</strong>
+   with a reason (the asset gets its old status back). An editor can <strong>Cancel</strong> before it is recorded.</li>
+<li><strong>Record</strong> (editor), once it has gone: how (recycled, sold, donated, returned, destroyed), the company or buyer,
+   the money received (only people with <strong>Can see costs</strong> see or enter it), the date, and how the data was
+   destroyed. The asset is <strong>Decommissioned</strong>, and it can no longer be deleted: it is the record.</li>
+<li><strong>Evidence.</strong> Data destruction shows <strong>Not verified</strong> until you add the certificate from the wiping or disposal
+   company in <strong>Attachments</strong> (kind: <strong>Certificate</strong>) and press <strong>Use as evidence</strong>. It then shows <strong>Verified</strong>.</li>
+</ol>
+<p><strong>Disposals</strong> in the side menu lists those waiting for approval, approved and not yet recorded, and disposed of,
+with how many still have no evidence. <strong>Download the disposal report (CSV)</strong> for your records or an auditor.</p>
+<p><strong>Bulk disposal</strong> (several assets of one school at once, for example a recycler's collection). Tick the assets in the
+asset list and press <strong>Dispose of...</strong>. Give the reason and say whether any of them hold data. They all become
+<strong>Pending disposal</strong> as one bulk disposal, shown at the top of <strong>Disposals</strong>:
+- an administrator presses <strong>Approve all</strong> (or <strong>Reject all</strong>);
+- an editor records them all at once with <strong>Record all</strong> (the money received is the total for the collection);
+- <strong>Add the certificate (once, for all)</strong> uploads the recycler's certificate one time and links it to every asset
+  in the collection: they all show <strong>Verified</strong>.</p>
+<p>Each asset still has its own disposal record, so you can also cancel or approve one asset on its own from its
+details. A certificate used as evidence cannot be removed.</p>
 <h2 id="software-licences">Software licences</h2>
 <img alt="Software licences" src="images/06-software-licences.png" loading="lazy" /><p class="figure-caption">Software licences</p>
 <p><strong>Software Licences</strong> in the menu (or the dashboard tile) lists every licence with:</p>
@@ -183,7 +297,7 @@ change page). A bar shows how many are ticked: press <strong>Edit together...</s
 </tr>
 <tr>
 <td>Seats</td>
-<td>Follows how the licence is counted: per device, <strong>3 of 10</strong> devices in use (red when over); per user, per core or concurrent users, the number bought (use is checked in the publisher's portal); a site licence shows <strong>Unlimited</strong></td>
+<td>Follows how the licence is counted: per device, <strong>3 of 10</strong> devices in use (red when over); per user, the named users against the seats once you add them (see <strong>Named users</strong> below), otherwise the number bought; per core or concurrent users, the number bought (use is checked in the publisher's portal); a site licence shows <strong>Unlimited</strong></td>
 </tr>
 <tr>
 <td>Purchased</td>
@@ -201,15 +315,53 @@ change page). A bar shows how many are ticked: press <strong>Edit together...</s
 </table>
 <p>The menu count turns <strong>amber</strong> when a licence expires within a month and <strong>red</strong> within a week (or once
 expired).</p>
+<p><strong>Renewing, cancelling and who looks after it.</strong> In the licence form (<strong>Edit</strong>):</p>
 <ul>
-<li><strong>Click a licence</strong> in the list to see all its details: seats and compliance, dates, cost per period and per
+<li><strong>Billed</strong> can be Monthly, <strong>Quarterly</strong>, Yearly, Every 2 years or Every 3 years. The cost per year and Finance
+  follow it.</li>
+<li><strong>Renews by itself</strong>: <strong>Yes</strong>, <strong>No</strong> or <strong>Not sure</strong>. Licences saved before this choice existed show <strong>Yes</strong> if
+  <em>Auto-renews</em> was ticked, and <strong>Not sure</strong> if it was not.</li>
+<li><strong>Notice to cancel (days)</strong>: how many days before the expiry date the supplier must be told, to stop it renewing
+  (for example 30 or 90; 0 means there is none). The form shows the <strong>cancel-by date</strong> under it. Unless Renews by
+  itself is <strong>No</strong>, the alert bell shows <em>Notice: cancel by ...</em> in <strong>amber</strong> from a month before that date and
+  <strong>red</strong> in the last week. After the cancel-by date it is too late to stop it, so that alert ends and the normal
+  expiry alert carries on.</li>
+<li><strong>Licence owner email</strong>: the person who decides whether it is renewed. <strong>Backup contact</strong>: who to ask when they are
+  away (a name or an email address).</li>
+</ul>
+<p><strong>Named users.</strong> For a licence bought <strong>per user</strong> (for example Adobe or Microsoft 365 when it is not linked), open
+the licence and use <strong>Named users</strong> near the bottom to list the people who use it:</p>
+<ul>
+<li>Type a name and an email address (optional) and press <strong>Add</strong>, or open <strong>Paste a list</strong> and paste one person a
+  line as <code>Name, email</code> (copied from Excel works too). Someone already on the licence is skipped.</li>
+<li>Once anyone is listed, <strong>Compliance</strong> counts them against the seats: more people than seats is <strong>Out of
+  Compliance</strong>, half or fewer is <strong>Underutilized</strong>. <strong>Remove</strong> takes someone off when they leave.</li>
+<li>
+<p>In a trust, each school adds and sees its own people (trust IT chooses the school, or <em>Trust IT</em>); the count is for
+  the whole licence. When a school leaves the trust, its named users move with the licence or are taken off, with
+  the licence.</p>
+</li>
+<li>
+<p><strong>Click a licence</strong> in the list to see all its details: seats and compliance, dates, cost per period and per
   year, supplier and PO, notes, and the assets it is installed on (click one to open it). <strong>Edit Licence</strong> (editor)
-  opens it for changes.</li>
+  opens it for changes.</p>
+</li>
 <li><strong>Licence details &amp; seats</strong> opens the full licence screen (<strong>Settings → Software Licences</strong>): seats bought and in
   use, how it is billed and licensed, cost, compliance, <strong>Edit</strong> (editor) and <strong>Delete</strong> (admin).</li>
 <li><strong>+ Add Software Licence</strong> (editor) adds one. The fields are explained in the
   <a href="02-Installation-and-Configuration.html#software-licences">Installation &amp; Configuration Guide</a>.</li>
-<li>To renew a licence, edit it and give it the new expiry date.</li>
+<li><strong>Orders</strong>: every licence keeps its orders, each with its own date, PO / invoice, supplier, seats, price per seat and
+  the dates it covers. Open a licence with <strong>Edit</strong> (editor): the boxes at the top show the <strong>latest order</strong>, and the
+  <strong>Orders</strong> list below shows them all, the current one highlighted.</li>
+<li><strong>Renew</strong> adds the next period with the same seats and price: change the price or seats if they went up, add the
+    new PO and press <strong>Save order</strong>.</li>
+<li><strong>Add order</strong> is for more seats bought part-way through; it ends with the current order.</li>
+<li><strong>Edit</strong> / <strong>Remove</strong> change or remove one order (a licence keeps at least one).</li>
+<li>The licence's seats, price and expiry come from the orders that run now, and its expiry date is the end of the
+    latest order. <strong>Finance</strong> counts each order at its own price for the dates it covers, so earlier years show what
+    was really paid.</li>
+<li>A licence CSV row with a PO the licence has no order for adds a new order (a renewal); a row with a PO it already
+    has changes that order.</li>
 <li>At the top of the licence screen, <strong>Subscriptions / Year</strong> adds up current subscriptions per year, and
   <strong>One-off Purchases</strong> adds up one-time purchases bought this year.</li>
 <li><strong>Installed on</strong>: in the licence form, type part of an asset name and choose the assets the licence is
@@ -230,6 +382,9 @@ expired).</p>
 <li><strong>Write hardware off over</strong> 1 to 10 years (3 at first), and, for this year, <strong>Renewals in the next</strong> 3, 6 or 12
   months.</li>
 <li>(admin) <strong>Save as default</strong> keeps your choice of years and write-off for everyone.</li>
+<li>(admin) <strong>Replacement ages</strong>: how many years each asset type is kept before it is replaced, for example Laptop 4,
+  Desktop 5, Switch 7. A type left on <em>Write-off period</em> is replaced when it is fully written off. The write-off
+  itself does not change.</li>
 </ul>
 <p>The figures for the year run across the top: total IT spend, hardware, software, hardware write-off (depreciation),
 what the hardware is still worth at the end of the year, and what is coming up. Below them, four tabs:</p>
@@ -239,13 +394,14 @@ what the hardware is still worth at the end of the year, and what is coming up. 
   the licence's cost centre) and <strong>hardware by type</strong>.</li>
 <li><strong>Coming up</strong> (this year only): renewals month by month in the next 3, 6 or 12 months: licence payments due (seats ×
   price per seat) and warranties ending. Up to 30 days late is shown in red. Click a name to open it. Below it, the
-  assets <strong>due for replacement</strong> within a year (older than the write-off years).</li>
+  assets <strong>due for replacement</strong> now or within a year (by their type's replacement age, or sooner when their model's
+  support ends, at their replacement cost).</li>
 <li><strong>Spend detail</strong>: the hardware bought and the software costs of the year, item by item.</li>
 <li><strong>Savings &amp; gaps</strong>: <strong>unused licence seats</strong> and what they cost a year, and <strong>missing details</strong> (assets with no cost,
   purchase date or warranty date).</li>
 </ul>
 <p><strong>Next year (forecast).</strong> Choose next year to plan ahead. Its hardware is the replacement of every asset that reaches
-the end of its write-off in that year, at what it cost (an estimate), and its software is the current subscriptions
+its replacement age in that year, at its replacement cost (or what it cost, if that is blank; an estimate), and its software is the current subscriptions
 carried on. The <strong>Due in</strong> tab (in place of Coming up) lists everything due in that year: each licence payment as it
 renews (a monthly licence as one line with its payments for the year), warranties ending, and the replacements.</p>
 <p><strong>Past years</strong> have no Coming up tab: renewals only matter from today on.</p>
@@ -256,6 +412,25 @@ discontinued; current subscriptions are expected to carry on, so next year is a 
 in the year it was bought. The write-off is straight line from the purchase date; decommissioned assets count as fully
 written off. Everything comes from today's records, so fill in the purchase details (<strong>Edit together</strong> can do several
 assets at once).</p>
+<h2 id="transfers-between-schools">Transfers between schools</h2>
+<p>In a trust (ITAM Education Trust), an asset that moves to another school is <strong>transferred</strong>. It is a move of where the
+asset is, not of who owns it.</p>
+<p><strong>Send an asset</strong> (editor). Open the asset and press <strong>Transfer to another school</strong> in the School box. Choose the
+school and add a note if you like, then press <strong>Send</strong>. The asset stays at your school, marked <em>On its way</em>, until the
+other school confirms it has arrived. You can send to any school in the trust that is not closing or inactive.</p>
+<p><strong>Receive an asset</strong> (editor). The bell and the <strong>Transfers</strong> button in the side menu show how many are waiting for
+your school. Open <strong>Transfers</strong> and press <strong>Receive</strong> when the asset arrives. Choose the room it goes to (or none) and
+press <strong>Confirm it has arrived</strong>. The asset is now at your school, and the school that sent it no longer sees it.</p>
+<p><strong>Cancel</strong> a transfer that has not been received yet. Either school can do this, for example if the asset is not
+coming after all. The asset stays where it was.</p>
+<p><strong>Moving at once.</strong> Trust IT (who can see every school), and Administrators who can see both schools, move the
+asset straight away: there is nothing to confirm. Editors always send it, even if they can see both schools. A move
+made on the asset form or by an import also counts as a transfer; only trust IT can move assets that way.</p>
+<p>While a transfer is waiting, the asset cannot be decommissioned or deleted. Cancel the transfer first.</p>
+<p><strong>The Transfers screen</strong> lists what is waiting for your school, what your school sent that has not been received yet,
+and recent transfers with who sent and received each one. The <strong>Report</strong> tab shows, for each of your schools, how
+many assets it received (In) and sent (Out) each month of the year you choose.</p>
+<p>Each step is in the asset's <strong>History</strong> (Transfer sent, Transferred, Transfer cancelled) and in the change log.</p>
 <h2 id="alerts-and-messages">Alerts and messages</h2>
 <img alt="The alert bell" src="images/05-alert-bell.png" loading="lazy" /><p class="figure-caption">The alert bell</p>
 <p><strong>The alert bell</strong> shows:
@@ -264,6 +439,7 @@ assets at once).</p>
   asset name to open it. Decommissioned assets are left out;
 - scheduled runs that left devices to review, each with a <strong>Review</strong> button: network discovery for editors
   and administrators, Intune and Google for administrators;
+- in a trust, transfers from other schools waiting for your school to receive (editors and administrators);
 - red error messages from this session (see Messages below).</p>
 <p>The number on the bell counts all of these. It is <strong>red</strong> when anything urgent is there (an error message, or
 a licence in its last week or expired, a warranty in its last week) and <strong>amber</strong> when only licence or warranty warnings are left; with nothing to show
@@ -308,12 +484,13 @@ it is hidden. Red items are listed first. Green messages are never counted.</p>
     <code>Discontinued</code>.
   - <code>one_time_purchase</code> is <code>yes</code> for software paid for once. Such a row must leave <code>expiration_date</code> and
     <code>renewal_required</code> empty.
-  - The last columns are <code>billing_period</code> (<code>Monthly</code>, <code>Yearly</code>, <code>Every 2 years</code> or <code>Every 3 years</code>),
+  - The last columns are <code>billing_period</code> (<code>Monthly</code>, <code>Quarterly</code>, <code>Yearly</code>, <code>Every 2 years</code> or <code>Every 3 years</code>),
     <code>licensed_per</code> (<code>Per device</code>, <code>Per user</code>, <code>Per core</code>, <code>Concurrent users</code> or <code>Site / unlimited</code>),
-    <code>supplier</code>, <code>po_invoice_number</code>, <code>agreement_number</code>, <code>auto_renews</code> (<code>yes</code> or <code>no</code>),
-    <code>owner_cost_centre</code> and <code>installed_on</code> (the asset names it is installed on, separated by <code>;</code>; blank keeps the
-    saved list and a single <code>-</code> clears it; a name that is not an asset is shown as an error). Older CSV files
-    without them still import.</p>
+    <code>supplier</code>, <code>po_invoice_number</code>, <code>agreement_number</code>, <code>auto_renews</code> (<code>yes</code>, <code>no</code> or <code>unknown</code>),
+    <code>owner_cost_centre</code>, <code>installed_on</code> (the asset names it is installed on, separated by <code>;</code>; blank keeps the
+    saved list and a single <code>-</code> clears it; a name that is not an asset is shown as an error), <code>notice_days</code> (days'
+    notice to cancel), <code>owner_email</code> and <code>backup_contact</code>. Older CSV files without them still import. Named users
+    are not in the CSV: paste them into the licence.</p>
 <p><strong>Hardware reference table</strong>: see <a href="#hardware-models-and-lifecycle">Hardware models and lifecycle</a>.</p>
 <p>Formulas are made harmless in every export, so a cell starting with <code>=</code> cannot run in Excel.</p>
 <h2 id="reviewing-discovered-devices">Reviewing discovered devices</h2>
@@ -357,21 +534,41 @@ touching the inventory.</p>
 asset CSV import: you see what would be added or updated first.</p>
 <h2 id="hardware-models-and-lifecycle">Hardware models and lifecycle</h2>
 <p><strong>Settings → Hardware &amp; Logs → Hardware Models</strong> lists each make and model, how many assets have it, its release,
-end-of-life and end-of-support dates, and whether it is still supported. Models in the built-in table show its
-approximate dates automatically; for the rest an editor or administrator presses <strong>Set dates</strong>. Open any
-asset to see its lifecycle status. A model with only a release date (a new product) shows as Supported.</p>
+end-of-sale, end-of-support and (optional) end-of-security-updates dates, and its status: <strong>Supported</strong>, <strong>Support
+ending soon</strong> (under 12 months), <strong>Unsupported</strong> or <strong>Unknown</strong>. <strong>End of support</strong> is the date that matters (or End
+of security updates, when that comes first): the status, warnings and Finance's replacement forecast follow it.
+Models in the reference table show their dates automatically; for the rest an editor or administrator presses
+<strong>Set dates</strong> (with the vendor bulletin link and the date you checked it, if you like). Open any asset to see its
+lifecycle status. A model with only a release date (a new product) shows as Supported.</p>
 <p>(editor) <strong>Export Reference Table (CSV)</strong> and <strong>Import Reference Table (CSV)</strong> let you add models to the
 reference table or correct its dates in Excel: see the
 <a href="02-Installation-and-Configuration.html#hardware-models-and-lifecycle">Installation &amp; Configuration Guide</a>.</p>
-<p>(editor) <strong>Download EOL/EOS Report (CSV)</strong> saves the list as a report (Make, Model, CIs, Released, End of life, End of support, Status,
-Source). It follows the search box and status filter, so you can export, for example, only the models past end
-of life.</p>
+<p>(editor) <strong>Download EOL/EOS Report (CSV)</strong> saves the list as a report (Make, Model, CIs, Released, End of sale, End of
+support, Status, Source, End of security updates, Vendor bulletin, Last checked). It follows the search box and status
+filter, so you can export, for example, only the unsupported models.</p>
+<p>Lifecycle information from EOSL.ai (CC BY 4.0) and endoflife.date (MIT). Always confirm dates against the vendor's
+bulletin.</p>
+<h2 id="data-check">Data Check</h2>
+<p><strong>Data Check</strong> (side menu) shows how complete your asset details are: the share of key details filled in on active
+assets, and how many assets are missing each one (asset tag, serial number, make, model, location, department, user,
+purchase date, cost and warranty end). Click a detail to list only the assets missing it; click an asset to open it and
+fill the gap. Decommissioned assets are left out. Cost is only checked for people with <strong>Can see costs</strong>, and school
+users see their own school's assets.</p>
 <h2 id="change-log">Change log</h2>
 <p>(admin) <strong>Change Log Ledger</strong> (menu) records every change: who did it, when, and what; an asset update lists the
-fields, for example <em>User: John Doe -&gt; Jane Smith</em>. You can search it, filter by action and date, and export it to
-CSV. Passwords and keys are never written to it. The log is trimmed when it grows large; each asset's <strong>History</strong> is
+fields, for example <em>User: John Doe -&gt; Jane Smith</em>. You can search it, filter by action, person and date, and export
+it to CSV (the export keeps your filters). Passwords and keys are never written to it.</p>
+<ul>
+<li><strong>Sign-ins</strong>: every sign-in (password, Microsoft or Google), failed sign-in, lock-out and sign-out is recorded, with
+  the computer it came from (<em>on this PC</em>, or <em>from 192.168.1.20</em> for another computer on the network). Signing out
+  automatically after the idle time is recorded too, the next time that browser is used. Choose <strong>Sign-ins and
+  sign-outs</strong> in the action list to see only these.</li>
+<li><strong>Person</strong>: choose someone to see only what they did. In <strong>Settings → Users &amp; Auth</strong>, the <strong>Log</strong> button beside a
+  user opens the change log for them.</li>
+<li>The action and person lists show what is in the log. The log is trimmed when it grows large; each asset's <strong>History</strong> is
 kept separately for the time chosen in <strong>Settings → Hardware &amp; Logs → Keep asset history</strong> (1, 2 or 5 years, or
-forever; 2 years at first).</p>
+forever; 2 years at first).</li>
+</ul>
 <h2 id="your-own-settings">Your own settings</h2>
 <ul>
 <li><strong>Settings → Style &amp; Appearance</strong>:</li>
@@ -385,6 +582,6 @@ forever; 2 years at first).</p>
 </ul>
 <div class="pager"><a href="02-Installation-and-Configuration.html">&larr; 2. Installation &amp; Configuration</a><a href="04-Troubleshooting.html">4. Troubleshooting &rarr;</a></div>
 </main>
-<footer>CJW-Apps ITAM 2.7.0 · CJW Apps · CJW-Apps@outlook.com · apps.cwink.com</footer>
+<footer>CJW-Apps ITAM 2.8.0 · CJW Apps · CJW-Apps@outlook.com · apps.cwink.com</footer>
 </body>
 </html>

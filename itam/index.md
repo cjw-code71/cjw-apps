@@ -57,7 +57,8 @@ Press a picture to see it full size.
 
 For starters and small businesses: install it from the Microsoft Store and
 start straight away. Free for up to 100 assets; ITAM Pro removes the limit
-and adds Microsoft Intune and Google Workspace device imports, from £44.99
+and adds Microsoft Intune and Google Workspace device imports, stocktakes,
+photos and files, and disposal records, from £44.99
 a month with a 30-day free trial.
 
 <p><a class="btn" href="https://apps.microsoft.com/detail/9N828LN3WS8V">Get it from the Microsoft Store</a>
@@ -86,6 +87,10 @@ the Pro, Education and Education Trust editions are a yearly licence key.
   with a warning before a warranty runs out.
 - Hardware lifecycle: end-of-life and end-of-support dates.
 - Search, filters and CSV import and export.
+- QR labels for A4 label sheets, and Data Check to find assets with
+  missing details.
+- Stocktakes with a phone or tablet, photos and files on assets and
+  licences, and disposal records with approval (ITAM Pro).
 
 ## Find it automatically
 

@@ -107,7 +107,8 @@ On the PC that runs ITAM. Nothing is sent to us. Make backups in
 
 Up to 100 assets, with network discovery and CSV imports. Software
 licences and decommissioned assets are not counted. ITAM Pro removes the
-limit and adds Microsoft Intune and Google Workspace device imports.
+limit and adds Microsoft Intune and Google Workspace device imports,
+stocktakes, photos and files, and disposal records.
 
 </details>
 <details markdown="1">

@@ -65,12 +65,12 @@ footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85
 </head>
 <body>
 <header class="bar"><div class="inner">
-  <a class="brand" href="../" title="CJW-Apps ITAM on apps.cwink.com"><img src="images/itam-icon.png" alt="">CJW-Apps ITAM</a>
+  <a class="brand" href="index.html"><img src="images/itam-icon.png" alt="">CJW-Apps ITAM</a>
   <nav aria-label="Guides"><a href="index.html" class="">Contents</a><a href="01-Getting-Started.html" class="">1. Getting Started</a><a href="02-Installation-and-Configuration.html" class="here">2. Installation &amp; Configuration</a><a href="03-User-Guide.html" class="">3. User Guide</a><a href="04-Troubleshooting.html" class="">4. Troubleshooting</a></nav>
 </div></header>
 <main>
 <h1 id="installation--configuration-guide">Installation &amp; Configuration Guide</h1>
-<p><em>CJW-Apps ITAM · Version 2.7.0 · For administrators</em></p>
+<p><em>CJW-Apps ITAM · Version 2.8.0 · For administrators</em></p>
 <p>This guide covers installing ITAM, connecting it to your network and services, and every setting an administrator
 looks after. New to ITAM? Start with the <a href="01-Getting-Started.html">Getting Started guide</a>.</p>
 <p>Everything in this guide is done in <strong>Settings</strong> (the cog in the top bar), by an account with the
@@ -87,7 +87,7 @@ looks after. New to ITAM? Start with the <a href="01-Getting-Started.html">Getti
 <li><a href="#company-name-ci-types-and-dashboard-groups">Company name, CI types and dashboard groups</a></li>
 <li><a href="#software-licences">Software licences</a></li>
 <li><a href="#agentless-network-discovery">Agentless network discovery</a>: <a href="#4-kept-scans">Kept scans</a> · <a href="#windows-logins-wmi">Windows logins</a> · <a href="#snmp-v1v2c">SNMP</a> · <a href="#snmpv3-network-devices">SNMPv3</a> · <a href="#schedules">Schedules</a></li>
-<li><a href="#microsoft-intune">Microsoft Intune</a> · <a href="#google-workspace">Google Workspace</a> (ITAM Pro)</li>
+<li><a href="#microsoft-intune">Microsoft Intune</a> · <a href="#google-workspace">Google Workspace</a> · <a href="#more-than-one-link">More than one link</a> (ITAM Pro)</li>
 <li><a href="#hardware-models-and-lifecycle">Hardware models and lifecycle</a></li>
 <li><a href="#asset-history-and-the-change-log">Asset history and the change log</a></li>
 <li><a href="#finance-settings">Finance settings</a></li>
@@ -153,7 +153,11 @@ in, and others connect to it with their browser.</p>
 <li>Start it from the Start menu, and sign in as described in <a href="01-Getting-Started.html#4-sign-in-for-the-first-time">Getting Started</a>.</li>
 </ol>
 <ul>
-<li><strong>Updates</strong> arrive through the Microsoft Store and keep your data.</li>
+<li><strong>Updates</strong> arrive through the Microsoft Store and keep your data. When an update needs to change the database,
+  ITAM first checks the database is healthy, then saves a copy and checks the copy, and only then upgrades it. The
+  copy (<code>itam_before_upgrade_...db</code>) is kept in the <code>backups</code> folder beside the data, and also in your own backup
+  folder when one is set; <strong>Backups</strong> lists it as <strong>Before upgrade</strong>, ready to restore. The last 5 are kept. If the
+  database is damaged, ITAM does not upgrade it and says so when it starts: restore your newest backup.</li>
 <li><strong>Free and Pro.</strong> Free for up to 100 assets; <strong>ITAM Pro</strong> has no limit and adds Intune and Google Workspace imports (see <a href="#free-version-and-pro">Free version and Pro</a>).</li>
 <li><strong>Uninstalling removes the data</strong> kept in the app's own storage, including backups left in the default folder.
   Keep backups in a folder of your own (<a href="#backups">Backups</a>).</li>
@@ -192,6 +196,58 @@ Microsoft Store.</p>
   again; press <strong>Recover purchase</strong> in <strong>About</strong> once the PC is online.</li>
 </ul>
 <img alt="About, with the edition and Pro buttons" src="images/14-about.png" loading="lazy" /><p class="figure-caption">About, with the edition and Pro buttons</p>
+<h3 id="running-itam-as-a-windows-service-download-version">Running ITAM as a Windows service (Download version)</h3>
+<p>On a server that nobody signs in to, ITAM can run as a <strong>Windows service</strong>: it starts with Windows, keeps running
+when nobody is signed in, and Windows restarts it if it stops (after 1, 1 and 5 minutes).</p>
+<ol>
+<li>Quit ITAM (tray icon → <strong>Quit ITAM</strong>).</li>
+<li>Open a Command Prompt <strong>as administrator</strong> in ITAM's folder and run <code>CJW_Apps_ITAM.exe --install-service</code>.</li>
+<li>ITAM copies its database to <code>C:\ProgramData\CJW-Apps-ITAM</code>, which only Windows (SYSTEM) and administrators
+   can open, and starts the service <strong>CJW-Apps ITAM</strong>.</li>
+</ol>
+<p>After that, opening ITAM as usual only opens the window to the service. <strong>Restart</strong> in Settings restarts the service;
+to stop it, use Windows Services (<code>services.msc</code>). Saved passwords and keys are re-encrypted so the service can read
+them. Check <strong>Settings → Backups</strong> afterwards: the default backup folder is now inside the data folder, so choose a
+folder on another drive or a NAS.</p>
+<p>To remove the service, run <code>CJW_Apps_ITAM.exe --uninstall-service</code> as administrator. The data stays in
+<code>C:\ProgramData\CJW-Apps-ITAM</code>, and ITAM keeps using it when an administrator starts it by hand.</p>
+<p>The Microsoft Store version does not run as a service.</p>
+<h3 id="licence-key-download-version">Licence key (Download version)</h3>
+<p>The Download version of ITAM (not the Microsoft Store one) uses a <strong>licence key</strong> from CJW Apps instead of a
+subscription. Without a key it is the free version (100 assets).</p>
+<ul>
+<li>Open <strong>About</strong>. Under <strong>Licence</strong>, paste the key (it starts with <code>ITAM1.</code>) and press <strong>Save key</strong>, or press
+  <strong>Open key file</strong> and choose the <code>.itamkey</code> file CJW Apps sent. Any administrator who sees every school can do
+  this. The edition (Pro, Education or Education Trust) switches on at once: no reinstall, nothing moved.</li>
+<li><strong>About</strong> shows the edition, your organisation's name and the end date. A banner warns administrators in the last
+  30 days. Enter the new key before the end date.</li>
+<li>The day after the end date ITAM is the free version again. Nothing is deleted or locked: viewing, editing,
+  exporting and backups all work; only adding beyond 100 assets and the paid features stop.</li>
+<li>An Education Trust key says how many schools can be <strong>in use</strong> (Onboarding, Active or Offboarding). Pending and
+  Inactive schools do not count, so a school joining later can be set up as Pending. <strong>Settings → Schools &amp; Rooms</strong>
+  shows how many are in use.</li>
+<li>The key works offline. It cannot be changed: a changed key is refused.</li>
+</ul>
+<h3 id="schools-joining-and-leaving-education-trust">Schools joining and leaving (Education Trust)</h3>
+<p>For an administrator who sees every school, in <strong>Settings → Schools &amp; Rooms</strong>.</p>
+<ul>
+<li><strong>A school joining.</strong> Add it as <strong>Pending</strong> (it does not use one of the licence's school places yet). Press
+  <strong>Onboarding checklist</strong> on its card: buildings and rooms, staff accounts, assets, an Intune or Google link, QR
+  labels, a first stocktake and staff training. Items ITAM can see are ticked by themselves; tick the others when
+  done (or when not needed). <strong>Set to Onboarding</strong>, then <strong>Set to Active</strong> when it goes live.</li>
+<li><strong>A school leaving.</strong> Set it to <strong>Offboarding</strong>: the <strong>Offboarding list</strong> opens. Give everything an outcome:</li>
+<li>each asset in use: <strong>Transferred</strong> to another school (moved at once), or <strong>Stays with the school</strong>, <strong>Sold</strong> or
+    <strong>Disposed</strong> (taken out of use, with the outcome in its notes and history). Tick several and apply one outcome.</li>
+<li>each licence shared with it: <strong>Moved to another school</strong>, <strong>Removed from this school</strong> (when other schools still
+    have it) or <strong>Ended</strong> (Discontinued).</li>
+<li>each user limited to it: <strong>Moved to another school</strong>, <strong>Access to this school removed</strong> (when they have other
+    schools) or <strong>Account deleted</strong>.</li>
+<li>Intune or Google links that send it new devices: choose another school for them in <strong>Integrations</strong>.</li>
+<li><strong>Close the school (Inactive)</strong> works only when every list is empty. A school cannot be set to Inactive any other
+  way while something is left. Everything about it, its history and the outcomes stay.</li>
+<li><strong>Schools joined and left (log)</strong> lists every change of a school's status, with who made it and a note, and can be
+  downloaded as a CSV. It is kept for good; the change log may be trimmed, this is not.</li>
+</ul>
 <hr />
 <h2 id="network-ports-and-protocols">Network ports and protocols</h2>
 <p>Use this chapter to set up firewalls, proxies and web filters. Only open what you use: a single-PC installation that
@@ -389,7 +445,7 @@ CJW Apps.</p>
 <li>No agent is installed on any device, and ITAM opens no remote shell or remote desktop.</li>
 <li>SSH and database ports are only checked, never logged in to.</li>
 <li>Only private address ranges (10.x, 172.16–31.x, 192.168.x, 169.254.x) can be scanned, each network a /24 or smaller.</li>
-<li>While <strong>Enable Agentless Network Discovery</strong> is off, ITAM sends nothing on your network.</li>
+<li>While <strong>Turn on network scans</strong> is off, ITAM sends nothing on your network.</li>
 </ul>
 <hr />
 <h2 id="where-itam-keeps-its-data">Where ITAM keeps its data</h2>
@@ -563,20 +619,35 @@ administrators can change the settings but cannot remove them.</p>
 <img alt="Settings: Backups &amp; Storage" src="images/12-backups.png" loading="lazy" /><p class="figure-caption">Settings: Backups &amp; Storage</p>
 <ol>
 <li><strong>Backup Target Directory / Location</strong>: choose a folder, ideally on another drive, a NAS or a synced folder.</li>
-<li><strong>Automated Backup Schedule</strong>: Daily, Weekly or Monthly at a set time, plus <strong>Keep Backups</strong> (how many to
-   keep). Backups run while ITAM is running.</li>
+<li><strong>Automated Backup Schedule</strong>: Daily, Weekly or Monthly at a set time. Backups run while ITAM is running.
+   <strong>Keep Backups</strong> is either <strong>the newest ones</strong> (a number; 0 keeps all) or <strong>daily for 2 weeks, weekly for 2
+   months, monthly for a year</strong>. With the second, a daily schedule keeps one backup for each of the last 14 days, one
+   for each week before that up to 8 weeks, and one for each month up to a year. The newest backup and the
+   <code>itam_prerestore_...db</code> safety copies are never deleted.</li>
 <li><strong>Create Full Database Backup</strong> makes a complete copy now (<code>itam_dbbackup_&lt;date&gt;_&lt;time&gt;.db</code>). It holds
    everything (assets, licences, users, settings, logins) and is safe to make while ITAM is in use.</li>
 </ol>
 <p>Full backups contain password hashes and encrypted logins: keep them as private as the database.</p>
+<p><strong>Attachments</strong> (files and photos on assets and licences, Pro) are kept in the <code>attachments</code> folder beside the
+database, not inside it. Each full backup also copies any new files into an <code>attachments</code> folder in the backup
+folder. Files are never removed from there, so a restore to an earlier date still finds them, and a restore copies
+back the files it needs.</p>
 <ul>
 <li><strong>Create Asset Only Backup</strong> writes a CSV of the assets only. It is handy for spreadsheets, but it cannot
   bring back users, settings or licences.</li>
 <li><strong>Restoring</strong>: press <strong>Restore...</strong> beside a full backup, check the summary, enter your password and type
   <code>RESTORE</code>. ITAM first saves the current data as <code>itam_prerestore_...db</code> (restore that to undo), then signs
   everyone out.</li>
+<li><strong>Restore to a date</strong>: choose a day and press <strong>Find backup</strong>. ITAM shows the newest full backup from that day or
+  before it, with what it holds; press <strong>Restore...</strong> to go on as above.</li>
+<li><strong>Restore tests</strong>: press <strong>Test</strong> beside a full backup, or <strong>Test the newest backup now</strong>. ITAM restores a copy into
+  a temporary file, upgrades it to this version, checks it and counts the assets, licences and users. Your data is not
+  touched. Scheduled backups test themselves once a week. Each test, passed or failed, is listed under <strong>Restore
+  tests</strong> and kept in <code>itam_restore_tests.jsonl</code> in the backup folder, so a restore never loses the record. This is
+  the evidence an auditor or a trust's data protection officer can ask for.</li>
 <li><strong>Moving to another PC</strong>: <strong>Download</strong> a full backup here, then on the other PC use
-  <strong>Upload Backup File...</strong> and <strong>Restore...</strong>. Re-enter saved passwords and keys afterwards.</li>
+  <strong>Upload Backup File...</strong> and <strong>Restore...</strong>. Re-enter saved passwords and keys afterwards. The download is the
+  database only: also copy the <code>attachments</code> folder (beside the database) to the same place on the new PC.</li>
 </ul>
 <hr />
 <h2 id="company-name-ci-types-and-dashboard-groups">Company name, CI types and dashboard groups</h2>
@@ -601,16 +672,20 @@ notes, and these:</p>
 <ul>
 <li><strong>Licensed per</strong>: what one seat is: <strong>Device</strong>, <strong>User</strong> (for example Microsoft 365), <strong>Processor core</strong> (for
   example Windows Server), <strong>Concurrent users</strong> or <strong>Site / unlimited</strong>. Only per-device licences are compared
-  with the installs ITAM finds; per-user, per-core and concurrent licences show <strong>Not measured</strong> (check their
-  seats in the publisher's portal), and a site licence is always Compliant.</li>
-<li><strong>Billed</strong>: Monthly, Yearly, Every 2 years or Every 3 years. The cost per seat is per billing period, so 10
+  with the installs ITAM finds. A per-user licence is counted against its <strong>Named users</strong> once you list them (see
+  the <a href="03-User-Guide.html#software-licences">User Guide</a>); until then, and for per-core and concurrent licences, it
+  shows <strong>Not measured</strong> (check the seats in the publisher's portal). A site licence is always Compliant.</li>
+<li><strong>Billed</strong>: Monthly, Quarterly, Yearly, Every 2 years or Every 3 years. The cost per seat is per billing period, so 10
   seats at £10 billed monthly is £1,200 a year.</li>
-<li><strong>Auto-renews</strong>: the supplier renews it unless it is cancelled.</li>
+<li><strong>Renews by itself</strong>: Yes, No or Not sure (the supplier renews it unless told in time).</li>
+<li><strong>Notice to cancel (days)</strong>: how long before the expiry date the supplier must be told. ITAM shows the cancel-by
+  date and alerts before it, unless Renews by itself is No.</li>
 <li><strong>Licence key</strong>: hidden as dots. In a saved licence, administrators press the <strong>eye</strong> to show it; each look is
   recorded in the change log. Keys are never sent to other users' screens or exported. Editing a licence
   without touching the key keeps it.</li>
 <li><strong>Supplier / Reseller</strong>, <strong>PO / Invoice No.</strong>, <strong>Agreement / Contract No.</strong> and <strong>Owner / Cost Centre</strong>, for
   audits and finance.</li>
+<li><strong>Licence owner email</strong> and <strong>Backup contact</strong>: who looks after the licence and decides on renewals.</li>
 <li>
 <p><strong>Installed on</strong>: the assets the licence is installed on. Type part of an asset name and choose it from the
   list (or <strong>+ Add all shown</strong>). Compliance counts these against the seats; decommissioned assets use no seat.</p>
@@ -643,16 +718,16 @@ notes, and these:</p>
 <hr />
 <h2 id="agentless-network-discovery">Agentless network discovery</h2>
 <p>ITAM can scan your own networks and find devices without installing anything on them.
-<strong>Settings → Discovery (Agentless)</strong></p>
+<strong>Settings → Network Scans</strong></p>
 <img alt="Settings: Discovery" src="images/10-discovery.png" loading="lazy" /><p class="figure-caption">Settings: Discovery</p>
 <h3 id="1-switch-it-on">1. Switch it on</h3>
-<p>Tick <strong>Enable Agentless Network Discovery</strong>. While it is off, ITAM sends nothing on the network.</p>
+<p>Tick <strong>Turn on network scans</strong>. While it is off, ITAM sends nothing on the network.</p>
 <h3 id="2-add-your-networks">2. Add your networks</h3>
-<p>Under <strong>Available Networks</strong>, press <strong>+ Add Subnet Block</strong> and enter:
+<p>Under <strong>Networks to scan</strong>, press <strong>+ Add network</strong> and enter:
 - a name;
-- the network in CIDR form, for example <code>192.168.1.0/24</code>;
+- its <strong>address range</strong>, for example <code>192.168.1.0/24</code> (one for each subnet or VLAN);
 - a default location and environment;
-- optionally a <strong>Target Credential Profile</strong> (a saved login, see below).</p>
+- optionally a <strong>Login for this network</strong> (a saved login, see below).</p>
 <p>Rules that keep scans safe:
 - Only private ranges (10.x, 172.16–31.x, 192.168.x, 169.254.x) can be scanned.
 - Each network is a /24 (256 addresses) or smaller. Split bigger networks into several.</p>
@@ -688,7 +763,7 @@ removes its oldest.</p>
 <li><strong>Import new devices automatically</strong> (off by default): after each scan, by hand or scheduled, adds new devices
   whose CI type, make and model are already in your inventory. Anything unfamiliar, and any change to an existing
   asset, waits for review. Off: every scan waits for review.</li>
-<li><strong>Skip Devices Managed by Microsoft Intune / Google Workspace</strong> (on by default): when Intune or Google
+<li><strong>Skip devices Microsoft Intune / Google Workspace already reports</strong> (on by default): when Intune or Google
   Workspace is linked, devices it manages are left alone, matched by MAC address (and by computer name). The
   same PC is not reported twice or sent a Windows login. MAC addresses you linked to such a device with
   <strong>Same as…</strong> (see the User guide) count too. The network list shows how many were skipped, for example
@@ -699,7 +774,7 @@ removes its oldest.</p>
 </ul>
 <h3 id="windows-logins-wmi">Windows logins (WMI)</h3>
 <p>ITAM reads Windows details over <strong>WinRM</strong> (fast) or <strong>WMI/DCOM</strong> (slower, can take a minute) using a saved
-login. Save one under <strong>Targeted Credential Vaults → Add Credential Profile</strong>, type <strong>WMI</strong>. Use <strong>Test</strong> to try
+login. Save one under <strong>Saved logins → Add login</strong>, type <strong>WMI</strong>. Use <strong>Test</strong> to try
 it on one PC before scanning; <strong>Change</strong> replaces the password later.</p>
 <p><strong>In a company domain: create a separate scan account</strong></p>
 <blockquote>
@@ -761,7 +836,7 @@ too. For the fullest results, run the scan from a PC on that VLAN.</p>
 <p>For printers, NAS boxes and simple network gear.
 - <strong>SNMP v1/v2c community strings</strong>: type up to 10, one per line. A scan tries the network's SNMP profile
   first, then these, then <code>public</code>. They are stored encrypted.
-- Or save an <strong>SNMP</strong> credential profile and attach it to a network.</p>
+- Or save an <strong>SNMP</strong> login and choose it for a network.</p>
 <p>Switch SNMP on in the device's own settings, preferably read-only and with a community other than <code>public</code>.</p>
 <h3 id="snmpv3-network-devices">SNMPv3 network devices</h3>
 <p>For switches, routers and firewalls that use SNMPv3 (username plus authentication and encryption passwords).
@@ -921,29 +996,84 @@ empty.</p>
 3. Enter the <strong>purchase date</strong> and <strong>expiry date</strong>, tick <strong>Needs renewing</strong> to be warned before it ends, and
    save.</p>
 <p><strong>Review licence seats</strong> later only updates the seat count and the note. The dates you entered are kept.</p>
+<h3 id="more-than-one-link">More than one link</h3>
+<p>You can link more than one Intune tenant or Google Workspace domain when some schools in a trust have their own
+(<strong>ITAM Education Trust</strong>; the button shows once ITAM is set up as a trust). <strong>Settings → Integrations → Device links</strong> lists every link.</p>
+<ol>
+<li>Press <strong>+ Intune link</strong> or <strong>+ Google link</strong> and give it a name, for example the school or the domain.</li>
+<li>Set it up in the Intune or Google card below, the same way as the first link. <strong>Link</strong> at the top of the card
+   shows which link you are looking at.</li>
+<li>In a trust, choose <strong>New devices go to</strong> for the link. New devices it imports are added to that school. Devices
+   already in ITAM stay where they are.</li>
+</ol>
+<p>Each link has its own schedule. Network scans skip the devices of every link.</p>
+<p>Only the first (main) link fills in Microsoft or Google sign-in. Connecting a further Google link never gives its
+administrator an ITAM account. A Google link with a school records its licence seats as that school's licences;
+a further link without one adds its name to the licence names, so two domains' counts never mix.</p>
+<p>Only the built-in <code>admin</code> account can remove a further link. Its imported assets stay. A school that a link sends
+new devices to cannot be deleted until you choose another school for the link.</p>
 <h3 id="removing-the-link">Removing the link</h3>
 <p>Only the built-in <code>admin</code> account sees <strong>Disconnect and forget</strong>. It removes the saved sign-in and the client
 details; assets and licences already imported stay. It does <strong>not</strong> remove Sign in with Google: to remove that
 too, use <strong>Clear Google Sign-In</strong> in Users &amp; Auth.</p>
 <hr />
 <h2 id="hardware-models-and-lifecycle">Hardware models and lifecycle</h2>
-<p><strong>Settings → Hardware &amp; Logs → Hardware Models</strong> lists every make and model with its release, end-of-life and
-end-of-support dates. Every asset of a model shows that model's dates.</p>
+<p><strong>Settings → Hardware &amp; Logs → Hardware Models</strong> lists every make and model with its dates. Every asset of a
+model shows that model's dates.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Released</strong></td>
+<td>When the model came out</td>
+</tr>
+<tr>
+<td><strong>End of sale</strong></td>
+<td>The last day it could be bought</td>
+</tr>
+<tr>
+<td><strong>End of support</strong></td>
+<td>The main date: after it the maker no longer supports the model</td>
+</tr>
+<tr>
+<td><strong>End of security updates</strong></td>
+<td>Optional: when security updates stop, if the maker gives a different date (for example a Chromebook's update end date)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Status</strong> follows End of support, or End of security updates when that comes first:</p>
 <ul>
-<li>Dates come from a built-in table of approximate dates. Nothing is sent anywhere. Unknown models show as
-  Unknown; ITAM never invents dates.</li>
-<li><strong>Set dates</strong> (editors and administrators) enters a model's dates yourself; they always win over the table.
-  For a <strong>new product</strong> the release date alone is enough: it shows as <strong>Supported</strong> until you add an
-  end-of-life or end-of-support date.</li>
+<li><strong>Supported</strong>: more than 12 months to go. A new product with only a release date, or one still on sale, is
+  Supported too.</li>
+<li><strong>Support ending soon</strong>: under 12 months to go.</li>
+<li><strong>Unsupported</strong>: the date has passed.</li>
+<li><strong>Unknown</strong>: no dates, or no longer on sale and the end of support is not known.</li>
+</ul>
+<p>Finance uses the same date: an asset is due for replacement when its model's support ends, if that comes before
+its type's replacement age.</p>
+<ul>
+<li>Dates come from a built-in table of approximate dates.
+  Unknown models show as Unknown; ITAM never invents dates.</li>
+<li><strong>Set dates</strong> (editors and administrators) enters a model's dates yourself; they always win. You can also save the
+  <strong>vendor bulletin link</strong> (the maker's web page with the dates) and the <strong>last checked</strong> date (today if left blank).</li>
 <li><strong>Keeping the reference table up to date</strong>: <strong>Export Reference Table (CSV)</strong> saves the whole table (built-in
-  entries and yours; the <code>source</code> column says which). Add models or correct dates in Excel, then
+  entries, the update list's and yours; the <code>source</code> column says which). Add models or correct dates in Excel, then
   <strong>Import Reference Table (CSV)</strong> (editors and administrators): ITAM shows what it would add, update or leave
   alone, and which rows have problems, before anything is saved.</li>
+<li>The columns are <code>model</code>, <code>make</code>, <code>release_date</code>, <code>eol_date</code> (End of sale), <code>eos_date</code> (End of support), <code>notes</code>,
+    <code>source</code>, <code>security_end_date</code>, <code>vendor_link</code> and <code>checked_on</code>. Older files without the last three still import.</li>
 <li>Dates can be <code>2027-12-31</code> or <code>31/12/2027</code> (as Excel saves them in the UK). A blank cell keeps the date the
-    table already has. Each row needs at least one date, in order: release, end of life, end of support.</li>
+    table already has. Each row needs at least one date, in order: release, end of sale, end of support.</li>
 <li>Your entries are kept with your data, so updates of ITAM never remove them, and they win over the
-    built-in entry for the same model. Their Source shows <strong>Reference table (your entry)</strong>.</li>
-<li>The model name must be at least 4 letters or digits, and it matches whole words, as the built-in entries do.</li>
+    built-in entry and the update list for the same model. Their Source shows <strong>Reference table (your entry)</strong>.</li>
+<li>The model name must be at least 4 letters or digits, and it matches whole words, as the built-in entries do.
+    A name with a general word on the end (<em>PowerEdge R750 Server</em>, <em>Catalyst 9300 Series Switch</em>) updates the
+    model already listed rather than adding a second one.</li>
 </ul>
 <hr />
 <h2 id="asset-history-and-the-change-log">Asset history and the change log</h2>
@@ -953,8 +1083,9 @@ end-of-support dates. Every asset of a model shows that model's dates.</p>
 <li><strong>Each asset's History</strong>: every change to the asset, field by field from the old value to the new one, with who made
   it and how (by hand, Edit together, CSV import, Intune, Google Workspace, network scan or a scheduled run). Open an
   asset and press <strong>View full history</strong>; <strong>Download CSV</strong> saves it.</li>
-<li><strong>The Change Log Ledger</strong> (left menu, administrators): every action in ITAM, including sign-ins, settings and
-  imports.</li>
+<li><strong>The Change Log Ledger</strong> (left menu, administrators): every action in ITAM, including sign-ins (with the computer
+  they came from), failed sign-ins, sign-outs, settings and imports. Filter it by person, or choose <strong>Sign-ins and
+  sign-outs</strong>.</li>
 </ul>
 <p><strong>Settings → Hardware &amp; Logs</strong>:</p>
 <ul>
@@ -976,7 +1107,11 @@ end-of-support dates. Every asset of a model shows that model's dates.</p>
 <li><strong>Renewals in the next</strong>: 3, 6 or 12 months (shown for this year only).</li>
 </ul>
 <p>These choices apply to your own view. An administrator can press <strong>Save as default</strong> to make them the starting point
-for everyone. The currency is the one chosen on the Software Licences screen.</p>
+for everyone.</p>
+<p><strong>Replacement ages</strong> (administrators): how many years each asset type is kept before it is replaced, for example
+Laptop 4, Desktop 5, Switch 7. The forecast and "due for replacement" use them. A type left on <em>Write-off period</em>
+is replaced when it is fully written off. Each asset's <strong>Replacement cost</strong> (in Purchase &amp; Warranty) is the price used;
+blank means the purchase cost. The currency is the one chosen on the Software Licences screen.</p>
 <hr />
 <h2 id="restart-shut-down-and-factory-reset">Restart, shut down and factory reset</h2>
 <p>Only the built-in <code>admin</code> account sees <strong>Shutdown/Reset</strong> in the top bar (<strong>Settings → Power</strong>):
@@ -986,6 +1121,6 @@ for everyone. The currency is the one chosen on the Software Licences screen.</p
   typing <code>RESET</code>. A full backup is made first.</p>
 <div class="pager"><a href="01-Getting-Started.html">&larr; 1. Getting Started</a><a href="03-User-Guide.html">3. User Guide &rarr;</a></div>
 </main>
-<footer>CJW-Apps ITAM 2.7.0 · CJW Apps · CJW-Apps@outlook.com · apps.cwink.com</footer>
+<footer>CJW-Apps ITAM 2.8.0 · CJW Apps · CJW-Apps@outlook.com · apps.cwink.com</footer>
 </body>
 </html>

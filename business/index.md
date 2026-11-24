@@ -22,7 +22,7 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
         <div class="platform">For starters and small businesses</div>
       </div>
     </div>
-    <p>Install it from the Microsoft Store and start straight away. Free for up to 100 assets. ITAM Pro removes the limit and adds Microsoft Intune and Google Workspace imports: £44.99 a month or £454.99 a year, with a 30-day free trial, paid through your Microsoft account.</p>
+    <p>Install it from the Microsoft Store and start straight away. Free for up to 100 assets. ITAM Pro removes the limit and adds Microsoft Intune and Google Workspace imports, stocktakes, photos and files, and disposal records: £44.99 a month or £454.99 a year, with a 30-day free trial, paid through your Microsoft account.</p>
     <div class="card-actions">
       <a class="btn" href="https://apps.microsoft.com/detail/9N828LN3WS8V">Microsoft Store</a>
       <span class="badge free">Free up to 100 assets</span>
