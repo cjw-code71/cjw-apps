@@ -16,7 +16,7 @@ answer quickly.
 ## Entertainment apps
 
 For **Audiobook Library**, **eBook AI Reader** and **eBook Library**.
-Please say which app and whether you use Android or Windows.
+Please say which app and whether you use Android, Windows, iPhone or iPad.
 
 <div class="faq">
 <details markdown="1">

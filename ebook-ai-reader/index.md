@@ -10,7 +10,7 @@ title: eBook AI Reader - eBook Reader That Reads Aloud, Android and Windows
 
 eBook AI Reader opens the books you already have and reads them aloud,
 sentence by sentence, following along on the page. On your phone, in the
-car and on your PC. For Android and Windows.
+car and on your PC. For Android and Windows, with iPhone and iPad coming soon.
 
 <div class="callout" markdown="1">
 **Just want to read?** [eBook Library](../ebook-library/) is the lighter app: the same tidy library and reader,
@@ -21,6 +21,7 @@ without the read-aloud voices.
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NWL094R78JQ) (listed as "eBook AI Reader")
 - **Android:** coming soon to Google Play
+- **iPhone and iPad:** coming soon to the App Store, one price with everything included (no Pro to buy)
 
 ## Screenshots
 
@@ -65,6 +66,8 @@ Windows, with free classics from Project Gutenberg.
 - Scroll or turn pages, with your choice of text size and spacing
 
 ## Pro (one-off purchase)
+
+On iPhone and iPad these are all included in the price.
 
 - The natural voice and My voices
 - Edit a book's details and cover, find details online, and edit several

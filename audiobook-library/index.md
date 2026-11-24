@@ -11,12 +11,13 @@ title: Audiobook Library Player - Audiobook App for Android and Windows
 Audiobook Library brings together the audiobooks on your phone or PC and in
 your OneDrive and Google Drive, and plays them without downloading whole
 books first. Built for big collections: thousands of books, tens of
-thousands of files. For Android and Windows.
+thousands of files. For Android and Windows, with iPhone and iPad coming soon.
 
 ## Get it
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NTCNMVBPCNG) (listed as "Audiobook Library Player")
 - **Android:** coming soon to Google Play
+- **iPhone and iPad:** coming soon to the App Store, one price with everything included (no Pro to buy)
 
 ## Screenshots
 
@@ -56,6 +57,8 @@ Windows, with free LibriVox audiobooks.
   and the Windows media keys
 
 ## Pro (one-off purchase)
+
+On iPhone and iPad these are all included in the price.
 
 - Download any book for offline listening: LibriVox, OneDrive and Google
   Drive

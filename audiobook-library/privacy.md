@@ -6,16 +6,16 @@ title: Audiobook Library — Privacy Policy
 
 # Audiobook Library — Privacy Policy
 
-*CJW Apps · Last updated 17 October 2026*
+*CJW Apps · Last updated 24 November 2026*
 
-Audiobook Library is an audiobook player for Android and Windows. This
+Audiobook Library is an audiobook player for Android, Windows, iPhone and iPad. This
 policy explains what the app does with your information. In short: **we
 don't collect anything.** There is no account with us, no analytics, no
 advertising and no server of ours that your data goes to.
 
 ## What stays on your device
 
-Everything the app keeps is stored only on your phone or PC:
+Everything the app keeps is stored only on your phone, tablet or PC:
 
 - your library: book titles, authors, narrators, covers, chapters and
   descriptions;
@@ -27,6 +27,15 @@ Everything the app keeps is stored only on your phone or PC:
   download links. It stays on the device.
 
 Uninstalling the app removes all of this.
+
+## iCloud Drive (iPhone and iPad)
+
+On iPhone and iPad the app has its own folder in iCloud Drive (Files ›
+iCloud Drive › Audiobook Library). Books you put there are synced by Apple between
+your devices; the app reads them on your device, and changes a file only
+when you ask it to. Apple's own privacy
+policy applies to iCloud. iOS may also include the app's data in your
+iCloud backup, if you have backups turned on; books you download for offline listening are left out.
 
 ## Your cloud storage (OneDrive, Google Drive)
 
@@ -68,6 +77,10 @@ account or personal information from the app.
 Audiobook Library Pro is a one-off purchase made through Google Play or
 the Microsoft Store. The store handles the payment; we never see your
 payment details. The app only learns whether Pro is unlocked.
+
+On iPhone and iPad, Audiobook Library is a one-off purchase from the App Store with
+everything included, and has no in-app purchases. Apple handles the
+payment; we never see your payment details.
 
 ## Children
 

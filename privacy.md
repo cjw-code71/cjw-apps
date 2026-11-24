@@ -4,11 +4,11 @@ title: CJW Apps — Privacy Policy
 
 # CJW Apps — Privacy Policy
 
-*Last updated 19 November 2026*
+*Last updated 24 November 2026*
 
 This policy covers the apps published by CJW Apps:
 [Audiobook Library](audiobook-library/), [eBook AI Reader](ebook-ai-reader/)
-and [eBook Library](ebook-library/), on Android and Windows. Each app also
+and [eBook Library](ebook-library/), on Android, Windows, iPhone and iPad. Each app also
 has its own page with the details for that app:
 [Audiobook Library](audiobook-library/privacy.html),
 [eBook AI Reader](ebook-ai-reader/privacy.html),
@@ -80,7 +80,7 @@ brokers or AI services.
 **Data protection.** All connections to Google use encrypted HTTPS. Sign-in
 is on Google's own page, so the apps never see your password. The access
 tokens Google issues are kept only on your device, in the system's secure
-storage provided by Windows or Android, encrypted for your user account.
+storage provided by Windows, Android or iOS (the Keychain), encrypted for your user account.
 
 **Data retention and deletion.** What the apps keep (your library details,
 covers, positions and any books you download for offline use) stays only on

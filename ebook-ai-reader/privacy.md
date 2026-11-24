@@ -6,9 +6,9 @@ title: eBook AI Reader — Privacy Policy
 
 # eBook AI Reader — Privacy Policy
 
-*CJW Apps · Last updated 20 October 2026*
+*CJW Apps · Last updated 24 November 2026*
 
-eBook AI Reader is an ebook reader for Android and Windows that can read
+eBook AI Reader is an ebook reader for Android, Windows, iPhone and iPad that can read
 books aloud. This policy explains what the app does with your
 information. In short: **we don't collect anything.** There is no account
 with us, no analytics, no advertising and no server of ours that your
@@ -16,14 +16,14 @@ data goes to.
 
 ## What stays on your device
 
-Everything the app keeps is stored only on your phone or PC:
+Everything the app keeps is stored only on your phone, tablet or PC:
 
 - your books, their covers and details, and your library;
 - reading positions, bookmarks and their notes, and your settings;
 - the natural voice and My voices, if you download them, and any voice
   files you add to My voices;
 - sign-in tokens for OneDrive and Google Drive, and passwords for any OPDS
-  catalogues you add, in your system's secure storage;
+  catalogues you add, in your system's secure storage (the Keychain on iPhone and iPad);
 - a small diagnostic log, which never contains sign-in tokens or
   passwords. It stays on the device.
 
@@ -32,13 +32,23 @@ Uninstalling the app removes all of this.
 ## Reading aloud
 
 Reading aloud uses either your device's own speech engine (for example
-Google's text-to-speech on Android, or the voices built into Windows) or
+Google's text-to-speech on Android, the voices built into Windows, or the
+voices on your iPhone or iPad) or
 the natural voice or My voices, which run entirely on your device. The
 text of your books is not sent anywhere by this app. My voices uses Pocket
 TTS by Kyutai (voice model licensed CC BY 4.0), with six voices that come
 with the app and any voice files you choose to add; voice files you add
 stay on your device. Your device's speech engine is
 provided by its maker, whose own policies apply.
+
+## iCloud Drive (iPhone and iPad)
+
+On iPhone and iPad the app has its own folder in iCloud Drive (Files ›
+iCloud Drive › eBook AI Reader). Books you put there are synced by Apple between
+your devices; the app reads them on your device, and changes a file only
+when you ask it to. Apple's own privacy
+policy applies to iCloud. iOS may also include the app's data in your
+iCloud backup, if you have backups turned on; the voices you download are left out.
 
 ## Your cloud storage (OneDrive, Google Drive)
 
@@ -83,6 +93,10 @@ account or personal information from the app.
 eBook AI Reader Pro is a one-off purchase made through Google Play or the
 Microsoft Store. The store handles the payment; we never see your payment
 details. The app only learns whether Pro is unlocked.
+
+On iPhone and iPad, eBook AI Reader is a one-off purchase from the App Store with
+everything included, and has no in-app purchases. Apple handles the
+payment; we never see your payment details.
 
 ## Children
 
