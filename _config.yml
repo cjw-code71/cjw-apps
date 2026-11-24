@@ -1,7 +1,7 @@
 title: CJW Apps
 description: Apps that keep your data on your own device
 url: https://apps.cwink.com
-email: CJW-Apps@outlook.com  # the address shown everywhere on the site (footer, contact, support, privacy pages)
+email: cjw-apps@cwink.com  # the address shown everywhere on the site (footer, contact, support, privacy pages)
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-sitemap
