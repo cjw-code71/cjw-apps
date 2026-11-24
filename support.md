@@ -48,9 +48,11 @@ the file type and what you see.
 
 ## CJW-Apps ITAM
 
-**[Read the ITAM guides](itam/guides/)**: Getting Started, Installation &
-Configuration (including the network ports to open in a firewall), the
-User Guide and Troubleshooting. These are the questions asked most.
+**Read the ITAM guides** for your version:
+[Microsoft Store version](itam/guides/) (Getting Started, Installation &
+Configuration including the network ports to open in a firewall, the User
+Guide and Troubleshooting) or [Download version](itam/download/guides/).
+These answer the questions asked most.
 
 **Do I need an account with CJW Apps?**
 No. ITAM runs on your own PC and has its own sign-in.

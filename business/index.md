@@ -16,7 +16,7 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
     <div class="card-head">
       <img class="app-icon plain" src="../assets/icons/itam.png" alt="" width="56" height="56">
       <div>
-        <h3><a href="../itam/#microsoft-store-version">ITAM: Microsoft Store version</a></h3>
+        <h3><a href="../itam/store/">ITAM: Microsoft Store version</a></h3>
         <div class="platform">For starters and small businesses</div>
       </div>
     </div>
@@ -26,7 +26,7 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
       <span class="badge free">Free up to 100 assets</span>
     </div>
     <div class="card-actions">
-      <a class="btn ghost" href="../itam/#microsoft-store-version">More about it</a>
+      <a class="btn ghost" href="../itam/store/">Editions and prices</a>
       <a class="btn ghost" href="../itam/guides/">Guides</a>
     </div>
   </div>
@@ -35,7 +35,7 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
     <div class="card-head">
       <img class="app-icon plain" src="../assets/icons/itam.png" alt="" width="56" height="56">
       <div>
-        <h3><a href="../itam/#download-version">ITAM: Download version</a></h3>
+        <h3><a href="../itam/download/">ITAM: Download version</a></h3>
         <div class="platform">For SMEs, schools and school trusts</div>
       </div>
     </div>
@@ -45,8 +45,8 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
       <a class="btn" href="../contact.html">Ask about a trial or the schools pilot</a>
     </div>
     <div class="card-actions">
-      <a class="btn ghost" href="../itam/#download-version">Editions and prices</a>
-      <a class="btn ghost" href="../itam/guides/">Guides</a>
+      <a class="btn ghost" href="../itam/download/">Editions and prices</a>
+      <a class="btn ghost" href="../itam/download/guides/">Guides</a>
     </div>
   </div>
 </div>

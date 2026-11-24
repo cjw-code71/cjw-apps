@@ -13,10 +13,11 @@ cloud of ours: your inventory is stored locally.
 for starters and small businesses, and the [Download version](#download-version)
 for SMEs, schools and school trusts.
 
-**Guides:** [Getting Started](guides/01-Getting-Started.html) ·
-[Installation & Configuration](guides/02-Installation-and-Configuration.html) ·
-[User Guide](guides/03-User-Guide.html) · [Troubleshooting](guides/04-Troubleshooting.html) ·
-[Network ports and firewalls](guides/02-Installation-and-Configuration.html#network-ports-and-protocols)
+**Editions and prices:** [Microsoft Store version](store/) ·
+[Download version](download/)
+
+**Guides:** [Microsoft Store version](guides/) ·
+[Download version](download/guides/)
 
 ## Which version?
 
@@ -37,43 +38,26 @@ for SMEs, schools and school trusts.
 
 ## Microsoft Store version
 
-For starters and small businesses: install it from the Store and start
-straight away.
+For starters and small businesses: install it from the Microsoft Store and
+start straight away. Free for up to 100 assets; ITAM Pro removes the limit
+and adds Microsoft Intune and Google Workspace device imports, from £44.99
+a month with a 30-day free trial.
 
-- **Free:** up to 100 assets, with network discovery, CSV imports,
-  licences, alerts, roles, the Finance page and backups. Software
-  licences and decommissioned assets are not counted.
-- **ITAM Pro:** no asset limit, plus Microsoft Intune and Google
-  Workspace device imports. £44.99 a month or £454.99 a year, with a
-  30-day free trial, through the Microsoft Store. Cancel any time in your
-  Microsoft account.
-- If Pro ends, nothing is deleted or locked. Only adding new assets
-  pauses.
-
-<p><a class="btn" href="https://apps.microsoft.com/detail/9N828LN3WS8V">Get it from the Microsoft Store</a></p>
+<p><a class="btn" href="https://apps.microsoft.com/detail/9N828LN3WS8V">Get it from the Microsoft Store</a>
+<a class="btn ghost" href="store/">Editions and prices</a>
+<a class="btn ghost" href="guides/">Guides</a></p>
 
 ## Download version
 
 For SMEs, schools and school trusts, and for organisations where the
 Microsoft Store is blocked. Your IT team installs it on one PC, or as a
-Windows service on a server so colleagues use it from their browsers.
-The same free tier as the Store version (up to 100 assets) without a
-key; a paid edition is a yearly licence key, entered in ITAM's About
-page. When a key ends, ITAM goes back to the free version: nothing is
-deleted.
+Windows service on a server. Free for up to 100 assets without a key;
+the Pro, Education and Education Trust editions are a yearly licence key.
+**Coming soon:** [contact us](../contact.html) for a trial or the schools
+pilot.
 
-<div class="table-scroll" markdown="1">
-
-| Edition | For | What it adds | Price a year (ex VAT) |
-|---|---|---|---|
-| **Pro** | SMEs | Everything in ITAM Pro: no asset limit, Microsoft Intune and Google Workspace imports, stocktakes, photos and files, disposal records | £454.99 |
-| **Education** | One school | Pro, plus who has each device: staff, and pupils (name, year and class only, school-owned devices) and loans with due dates | £249 |
-| **Education Trust** | A multi-academy trust | Education for several schools in one ITAM: each school's own buildings and rooms, staff who see only their own school, transfers between schools, schools joining and leaving, and Finance by school | £349 for 2 schools, then £100 for each extra school |
-
-</div>
-
-**Coming soon.** To try it now, or to join the schools pilot, [contact
-us](../contact.html).
+<p><a class="btn ghost" href="download/">Editions and prices</a>
+<a class="btn ghost" href="download/guides/">Guides</a></p>
 
 ## Know what you have
 
@@ -107,4 +91,4 @@ us](../contact.html).
 - Share it with colleagues on your network over HTTPS.
 - A change log, automatic sign-out and scheduled backups.
 
-[Guides](guides/) · [Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) · [Business apps](../business/) · [All CJW Apps](../)
+[Microsoft Store version](store/) · [Download version](download/) · [Privacy policy](privacy.html) · [Support](../support.html) · [Contact](../contact.html) · [Business apps](../business/) · [All CJW Apps](../)
