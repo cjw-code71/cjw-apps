@@ -3,7 +3,7 @@ title: "CJW-Apps ITAM Download version: editions and prices"
 description: The Download version of CJW-Apps ITAM for SMEs, schools and school trusts. Free for up to 100 assets; Pro, Education and Education Trust editions with a yearly licence key.
 ---
 
-[CJW-Apps ITAM](../) › Download version
+<p class="crumbs"><a href="../../business/">Business</a> › <a href="../">CJW-Apps ITAM</a> › Download version</p>
 
 # <img class="title-icon app-icon plain" src="../../assets/icons/itam.png" alt="" width="60" height="60">ITAM: Download version
 
@@ -12,8 +12,10 @@ Microsoft Store is blocked. Your IT team installs it on one PC, or as a
 Windows service on a server so colleagues use it from their browsers. You
 choose when to install updates.
 
-**Coming soon.** To try it now, or to join the schools pilot, [contact
-us](../../contact.html).
+**Early access:** the schools pilot is open, and SMEs can ask for a free
+30-day trial key.
+
+<p><a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20trial%20request&amp;body=Organisation%3A%0ANumber%20of%20schools%20or%20sites%3A%0AAbout%20how%20many%20assets%3A%0A">Request a trial</a></p>
 
 **Guides:** [Download version guides](guides/)
 
@@ -33,6 +35,12 @@ us](../../contact.html).
 For example, an Education Trust with 3 schools is £449 a year, and with 4
 schools £549.
 
+<div class="callouts">
+  <div class="callout"><strong>Every import is reviewed first</strong><p>Network scans, CSV files, Intune and Google Workspace: you see what would be added or changed before anything is saved.</p></div>
+  <div class="callout"><strong>Nothing is deleted or locked</strong><p>If a licence key ends, ITAM goes back to the free version. All your data stays viewable and exportable.</p></div>
+  <div class="callout"><strong>Your data stays on your PC</strong><p>No account with us and no cloud of ours. Back it up to any folder you choose.</p></div>
+</div>
+
 ## Licence keys
 
 - **Free:** no key needed. ITAM works as the free version (up to 100
@@ -46,7 +54,7 @@ schools £549.
 - **When a key ends:** ITAM goes back to the free version. Nothing is
   deleted: all your data stays viewable and exportable.
 
-<p><a class="btn" href="../../contact.html">Ask about a trial or the schools pilot</a></p>
+<p><a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20trial%20request&amp;body=Organisation%3A%0ANumber%20of%20schools%20or%20sites%3A%0AAbout%20how%20many%20assets%3A%0A">Request a trial or join the schools pilot</a></p>
 
 ## Guides
 

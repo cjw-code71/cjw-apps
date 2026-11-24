@@ -2,6 +2,8 @@
 title: eBook AI Reader — Privacy Policy
 ---
 
+<p class="crumbs"><a href="../entertainment/">Entertainment</a> › <a href="./">eBook AI Reader</a> › Privacy policy</p>
+
 # eBook AI Reader — Privacy Policy
 
 *CJW Apps · Last updated 20 October 2026*
@@ -94,4 +96,4 @@ date.
 
 ## Contact
 
-CJW Apps — [CJW-Apps@outlook.com](mailto:CJW-Apps@outlook.com)
+CJW Apps — [{{ site.email }}](mailto:{{ site.email }})

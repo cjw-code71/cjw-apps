@@ -2,6 +2,8 @@
 title: Audiobook Library Player - Audiobook App for Android and Windows
 ---
 
+<p class="crumbs"><a href="../entertainment/">Entertainment</a> › Audiobook Library</p>
+
 # Audiobook Library
 
 **All your audiobooks in one place — streamed straight from your cloud.**
@@ -18,13 +20,17 @@ thousands of files. For Android and Windows.
 
 ## Screenshots
 
+Press a picture to see it full size.
+
 Windows, with free LibriVox audiobooks.
 
-<p><img src="../assets/screenshots/audiobook-library/player.png" alt="The player: chapter seek bar, time left, speed, sleep timer and bookmarks" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/audiobook-library/library.png" alt="The library, with search and filters" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/audiobook-library/home.png" alt="Home: recently added audiobooks" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/audiobook-library/free-audiobooks.png" alt="Free audiobooks: classics read by LibriVox volunteers" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/audiobook-library/library-light.png" alt="The library in the light theme" style="max-width:100%"></p>
+<div class="shots">
+  <figure><a href="../assets/screenshots/audiobook-library/player.png"><img src="../assets/screenshots/audiobook-library/player.png" alt="The player: chapter seek bar, time left, speed, sleep timer and bookmarks" loading="lazy" width="700" height="450"></a><figcaption>The player: chapter seek bar, time left, speed, sleep timer and bookmarks</figcaption></figure>
+  <figure><a href="../assets/screenshots/audiobook-library/library.png"><img src="../assets/screenshots/audiobook-library/library.png" alt="The library, with search and filters" loading="lazy" width="700" height="450"></a><figcaption>The library, with search and filters</figcaption></figure>
+  <figure><a href="../assets/screenshots/audiobook-library/home.png"><img src="../assets/screenshots/audiobook-library/home.png" alt="Home: recently added audiobooks" loading="lazy" width="700" height="450"></a><figcaption>Home: recently added audiobooks</figcaption></figure>
+  <figure><a href="../assets/screenshots/audiobook-library/free-audiobooks.png"><img src="../assets/screenshots/audiobook-library/free-audiobooks.png" alt="Free audiobooks: classics read by LibriVox volunteers" loading="lazy" width="700" height="450"></a><figcaption>Free audiobooks: classics read by LibriVox volunteers</figcaption></figure>
+  <figure><a href="../assets/screenshots/audiobook-library/library-light.png"><img src="../assets/screenshots/audiobook-library/library-light.png" alt="The library in the light theme" loading="lazy" width="700" height="450"></a><figcaption>The library in the light theme</figcaption></figure>
+</div>
 
 ## Your library, sorted for you
 

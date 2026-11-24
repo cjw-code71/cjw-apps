@@ -50,7 +50,8 @@ img { max-width: 100%; height: auto; }
 .brand { display: inline-flex; align-items: center; gap: 9px; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.2rem; letter-spacing: .2px; }
 .brand-mark { background: #fff; color: var(--brand-strong); border-radius: 8px; padding: 2px 8px; font-size: .95rem; letter-spacing: .6px; }
 .menu { display: flex; flex-wrap: wrap; gap: 4px; }
-.menu a { color: #dbe8f5; text-decoration: none; font-weight: 600; font-size: .98rem; padding: 7px 13px; border-radius: 999px; }
+.menu a { color: #dbe8f5; text-decoration: none; font-weight: 600; font-size: .98rem; padding: 7px 13px; border-radius: 999px;
+  min-height: 44px; display: inline-flex; align-items: center; }  /* comfortable to tap on a phone */
 .menu a:hover { background: rgba(255, 255, 255, .12); color: #fff; }
 .menu a[aria-current="page"] { background: #fff; color: var(--brand-strong); }
 
@@ -97,14 +98,40 @@ tr:last-child td { border-bottom: 0; }
 .icon-row a:hover { color: var(--accent); }
 .icon-row img { width: 30px; height: 30px; border-radius: 7px; }
 
+.app-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.app-list li { display: grid; gap: 2px; }
+.app-list a { display: inline-flex; align-items: center; gap: 8px; color: var(--text); text-decoration: none; font-weight: 600; }
+.app-list a:hover { color: var(--accent); }
+.app-list img { width: 30px; height: 30px; border-radius: 7px; }
+.app-list span { color: var(--muted); font-size: .93rem; padding-left: 38px; }
+
 /* ---- buttons and badges */
-.btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; font-size: .93rem; padding: 8px 15px; border-radius: 9px; border: 1px solid transparent; }
+.btn { display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; font-size: .93rem; padding: 8px 15px; border-radius: 9px; border: 1px solid transparent; }
 .btn:hover { filter: brightness(1.08); }
 .btn.ghost { background: transparent; color: var(--accent); border-color: var(--line); }
 .btn.ghost:hover { background: var(--accent-soft); filter: none; }
 @media (prefers-color-scheme: dark) { .btn { color: #0c1620; } .btn.ghost { color: var(--accent); } }
 .badge { display: inline-block; font-size: .78rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--muted); border: 1px solid var(--line); }
 .badge.free { color: var(--ok); }
+
+/* ---- breadcrumbs, screenshot grids, callouts, questions */
+.crumbs { font-size: .9rem; color: var(--muted); margin: 0 0 14px; }
+.crumbs a { color: var(--accent); text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 14px 0 22px; }
+.shots figure { margin: 0; }
+.shots a { display: block; }
+.shots img { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.shots figcaption { font-size: .85rem; color: var(--muted); margin-top: 6px; }
+.card-shot { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+.callouts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 20px 0; }
+.callout { background: var(--accent-soft); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; padding: 14px 16px; }
+.callout strong { display: block; margin-bottom: 4px; }
+.callout p { margin: 0; color: var(--muted); font-size: .95rem; }
+.faq { max-width: 760px; margin: 0 0 1.4em; }
+.faq details { border-bottom: 1px solid var(--line); padding: 4px 0; }
+.faq summary { cursor: pointer; font-weight: 600; padding: 10px 0; min-height: 24px; }
+.faq details > :not(summary) { margin: 0 0 12px; }
 
 /* ---- panels */
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; margin: 28px 0; box-shadow: var(--shadow); }

@@ -130,4 +130,4 @@ If this policy changes, the new version will be posted here with a new date.
 
 ## Contact
 
-CJW Apps — [CJW-Apps@outlook.com](mailto:CJW-Apps@outlook.com)
+CJW Apps — [{{ site.email }}](mailto:{{ site.email }})

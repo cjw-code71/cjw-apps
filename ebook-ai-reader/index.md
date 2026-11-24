@@ -2,6 +2,8 @@
 title: eBook AI Reader - eBook Reader That Reads Aloud, Android and Windows
 ---
 
+<p class="crumbs"><a href="../entertainment/">Entertainment</a> › eBook AI Reader</p>
+
 # eBook AI Reader
 
 **Read your ebooks, or listen to them.**
@@ -10,6 +12,11 @@ eBook AI Reader opens the books you already have and reads them aloud,
 sentence by sentence, following along on the page. On your phone, in the
 car and on your PC. For Android and Windows.
 
+<div class="callout" markdown="1">
+**Just want to read?** [eBook Library](../ebook-library/) is the lighter app: the same tidy library and reader,
+without the read-aloud voices.
+</div>
+
 ## Get it
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NWL094R78JQ) (listed as "eBook AI Reader")
@@ -17,14 +24,18 @@ car and on your PC. For Android and Windows.
 
 ## Screenshots
 
+Press a picture to see it full size.
+
 Windows, with free classics from Project Gutenberg.
 
-<p><img src="../assets/screenshots/ebook-ai-reader/home.png" alt="Home: recently added books" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/ebook-ai-reader/reader.png" alt="Reading Pride and Prejudice, with the sentence being read highlighted" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/ebook-ai-reader/library.png" alt="The library, with search and filters" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/ebook-ai-reader/reader-light.png" alt="The same book in the light theme" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/ebook-ai-reader/my-voices.png" alt="Settings: the natural voice and My voices, with six included voices" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/ebook-ai-reader/sources.png" alt="Sources: your files and folders, Project Gutenberg, Wikisource, the Internet Archive and your own catalogues" style="max-width:100%"></p>
+<div class="shots">
+  <figure><a href="../assets/screenshots/ebook-ai-reader/home.png"><img src="../assets/screenshots/ebook-ai-reader/home.png" alt="Home: recently added books" loading="lazy" width="700" height="450"></a><figcaption>Home: recently added books</figcaption></figure>
+  <figure><a href="../assets/screenshots/ebook-ai-reader/reader.png"><img src="../assets/screenshots/ebook-ai-reader/reader.png" alt="Reading Pride and Prejudice, with the sentence being read highlighted" loading="lazy" width="700" height="450"></a><figcaption>Reading Pride and Prejudice, with the sentence being read highlighted</figcaption></figure>
+  <figure><a href="../assets/screenshots/ebook-ai-reader/library.png"><img src="../assets/screenshots/ebook-ai-reader/library.png" alt="The library, with search and filters" loading="lazy" width="700" height="450"></a><figcaption>The library, with search and filters</figcaption></figure>
+  <figure><a href="../assets/screenshots/ebook-ai-reader/reader-light.png"><img src="../assets/screenshots/ebook-ai-reader/reader-light.png" alt="The same book in the light theme" loading="lazy" width="700" height="450"></a><figcaption>The same book in the light theme</figcaption></figure>
+  <figure><a href="../assets/screenshots/ebook-ai-reader/my-voices.png"><img src="../assets/screenshots/ebook-ai-reader/my-voices.png" alt="Settings: the natural voice and My voices, with six included voices" loading="lazy" width="700" height="450"></a><figcaption>Settings: the natural voice and My voices, with six included voices</figcaption></figure>
+  <figure><a href="../assets/screenshots/ebook-ai-reader/sources.png"><img src="../assets/screenshots/ebook-ai-reader/sources.png" alt="Sources: your files and folders, Project Gutenberg, Wikisource, the Internet Archive and your own catalogues" loading="lazy" width="700" height="450"></a><figcaption>Sources: your files and folders, Project Gutenberg, Wikisource, the Internet Archive and your own catalogues</figcaption></figure>
+</div>
 
 ## Every book you have
 

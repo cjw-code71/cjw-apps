@@ -6,10 +6,17 @@ title: Contact - CJW Apps
 
 **CJW Apps**
 
-Email: [CJW-Apps@outlook.com](mailto:CJW-Apps@outlook.com)
+Email: [{{ site.email }}](mailto:{{ site.email }})
 
 Email is the way to reach us for everything: help with an app, a problem
 to report, an idea, or a question before you buy.
+
+<p>
+<a class="btn" href="mailto:{{ site.email }}?subject=Support%20request%3A%20%5Bapp%20name%5D&amp;body=App%3A%20%0AVersion%20(shown%20in%20About)%3A%20%0AAndroid%20or%20Windows%3A%20%0AWhat%20I%20did%3A%20%0AWhat%20I%20expected%3A%20%0AWhat%20happened%20instead%3A%20%0A">Email a support request</a>
+<a class="btn ghost" href="mailto:{{ site.email }}?subject=ITAM%20business%20enquiry&amp;body=Organisation%3A%20%0AMicrosoft%20Store%20or%20Download%20version%3A%20%0ANumber%20of%20sites%20or%20schools%3A%20%0AAbout%20how%20many%20assets%3A%20%0AQuestion%3A%20%0A">Email an ITAM business enquiry</a>
+</p>
+
+The buttons open your email app with the details we need already listed.
 
 ## So we can help quickly, please say
 

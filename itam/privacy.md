@@ -2,6 +2,8 @@
 title: CJW-Apps ITAM — Privacy Policy
 ---
 
+<p class="crumbs"><a href="../business/">Business</a> › <a href="./">CJW-Apps ITAM</a> › Privacy policy</p>
+
 # CJW-Apps ITAM — Privacy Policy
 
 *CJW Apps · Last updated 15 November 2026*
@@ -85,4 +87,4 @@ a new date.
 
 ## Contact
 
-CJW Apps · [CJW-Apps@outlook.com](mailto:CJW-Apps@outlook.com)
+CJW Apps · [{{ site.email }}](mailto:{{ site.email }})

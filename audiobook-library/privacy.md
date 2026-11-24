@@ -2,6 +2,8 @@
 title: Audiobook Library — Privacy Policy
 ---
 
+<p class="crumbs"><a href="../entertainment/">Entertainment</a> › <a href="./">Audiobook Library</a> › Privacy policy</p>
+
 # Audiobook Library — Privacy Policy
 
 *CJW Apps · Last updated 17 October 2026*
@@ -79,4 +81,4 @@ date.
 
 ## Contact
 
-CJW Apps — [CJW-Apps@outlook.com](mailto:CJW-Apps@outlook.com)
+CJW Apps — [{{ site.email }}](mailto:{{ site.email }})

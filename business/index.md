@@ -11,6 +11,8 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
 <h2>CJW-Apps ITAM: IT Asset Management</h2>
 <p>A register of your hardware and software licences, with network discovery, warranty and licence alerts, and a Finance page for budgets. It comes in two versions: choose the one that fits your organisation.</p>
 
+<p><a href="../itam/"><img class="card-shot" src="../itam/guides/images/02-dashboard.png" alt="CJW-Apps ITAM's dashboard" loading="lazy" width="1440" height="900" style="max-width:760px"></a></p>
+
 <div class="cards two">
   <div class="card">
     <div class="card-head">
@@ -41,8 +43,8 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
     </div>
     <p>Installed by your IT team, on one PC or as a Windows service on a server, with a yearly licence key and an invoice. Editions for SMEs (Pro), a school (Education) and a multi-academy trust (Education Trust, several schools in one ITAM). Also for organisations where the Microsoft Store is blocked.</p>
     <div class="card-actions">
-      <span class="badge">Coming soon</span>
-      <a class="btn" href="../contact.html">Ask about a trial or the schools pilot</a>
+      <span class="badge">Early access</span>
+      <a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20trial%20request">Request a trial</a>
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../itam/download/">Editions and prices</a>

@@ -6,6 +6,9 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
   <p class="eyebrow">Entertainment</p>
   <h1>Apps for people with a lot of books</h1>
   <p>On Android and Windows. No accounts, no ads, no tracking: your library stays on your device.</p>
+  <p>Free to start, with an optional one-off Pro purchase in each app: no subscriptions. Your books from OneDrive,
+  Google Drive or your device, plus free classics from LibriVox and Project Gutenberg, and your own Calibre
+  catalogue.</p>
 </div>
 
 <div class="cards">
@@ -17,6 +20,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
         <div class="platform">Android · Windows</div>
       </div>
     </div>
+    <a href="../audiobook-library/"><img class="card-shot" src="../assets/screenshots/audiobook-library/player.png" alt="Audiobook Library's player" loading="lazy" width="700" height="450"></a>
     <p>All your audiobooks in one place, streamed straight from OneDrive, Google Drive or your device, with a player made for audiobooks.</p>
     <div class="card-actions">
       <a class="btn" href="https://apps.microsoft.com/detail/9NTCNMVBPCNG">Microsoft Store</a>
@@ -35,7 +39,8 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
         <div class="platform">Android · Windows</div>
       </div>
     </div>
-    <p>Read your ebooks, or have them read aloud: ePub, Kindle, PDF and more, with natural voices, including six of our own, that run offline.</p>
+    <a href="../ebook-ai-reader/"><img class="card-shot" src="../assets/screenshots/ebook-ai-reader/reader.png" alt="eBook AI Reader reading a book aloud" loading="lazy" width="700" height="450"></a>
+    <p>Read your ebooks, or have them read aloud: ePub, Kindle, PDF and more, with natural voices, including six of our own, that run offline. From OneDrive, Google Drive or your device.</p>
     <div class="card-actions">
       <a class="btn" href="https://apps.microsoft.com/detail/9NWL094R78JQ">Microsoft Store</a>
       <span class="badge">Google Play: coming soon</span>
@@ -54,7 +59,8 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
         <div class="platform">Android · Windows</div>
       </div>
     </div>
-    <p>All your ebooks in one tidy library, with covers, series and a comfortable reader.</p>
+    <a href="../ebook-library/"><img class="card-shot" src="../assets/screenshots/ebook-library/library.png" alt="eBook Library's library of covers" loading="lazy" width="700" height="450"></a>
+    <p>All your ebooks in one tidy library, with covers, series and a comfortable reader. From OneDrive, Google Drive or your device. The lighter of the two eBook apps: no read-aloud.</p>
     <div class="card-actions">
       <a class="btn" href="https://apps.microsoft.com/detail/9P23H7S4TF02">Microsoft Store</a>
       <span class="badge">Google Play: coming soon</span>

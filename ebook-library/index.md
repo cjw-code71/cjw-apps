@@ -2,6 +2,8 @@
 title: eBook Library Bookshelf - eBook Library and Reader, Android and Windows
 ---
 
+<p class="crumbs"><a href="../entertainment/">Entertainment</a> › eBook Library</p>
+
 # eBook Library
 
 **All your ebooks in one tidy library.**
@@ -10,6 +12,11 @@ eBook Library gathers the ebooks on your device and in your cloud storage
 into one library, with covers, series and details, and a comfortable
 reader. For Android and Windows.
 
+<div class="callout" markdown="1">
+**Want your books read aloud?** [eBook AI Reader](../ebook-ai-reader/) has the same library and reader, plus
+natural voices that read your books aloud offline. eBook Library is the lighter app, for reading.
+</div>
+
 ## Get it
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9P23H7S4TF02) (listed as "eBook Library Bookshelf")
@@ -17,13 +24,17 @@ reader. For Android and Windows.
 
 ## Screenshots
 
+Press a picture to see it full size.
+
 Windows, with free classics from Project Gutenberg.
 
-<p><img src="../assets/screenshots/ebook-library/home.png" alt="Home: recently added books" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/ebook-library/library.png" alt="The library, with search and filters" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/ebook-library/reader.png" alt="Reading Pride and Prejudice" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/ebook-library/library-light.png" alt="The library in the light theme" style="max-width:100%"></p>
-<p><img src="../assets/screenshots/ebook-library/sources.png" alt="Sources: your files and folders, Project Gutenberg, Wikisource, the Internet Archive and your own catalogues" style="max-width:100%"></p>
+<div class="shots">
+  <figure><a href="../assets/screenshots/ebook-library/home.png"><img src="../assets/screenshots/ebook-library/home.png" alt="Home: recently added books" loading="lazy" width="700" height="450"></a><figcaption>Home: recently added books</figcaption></figure>
+  <figure><a href="../assets/screenshots/ebook-library/library.png"><img src="../assets/screenshots/ebook-library/library.png" alt="The library, with search and filters" loading="lazy" width="700" height="450"></a><figcaption>The library, with search and filters</figcaption></figure>
+  <figure><a href="../assets/screenshots/ebook-library/reader.png"><img src="../assets/screenshots/ebook-library/reader.png" alt="Reading Pride and Prejudice" loading="lazy" width="700" height="450"></a><figcaption>Reading Pride and Prejudice</figcaption></figure>
+  <figure><a href="../assets/screenshots/ebook-library/library-light.png"><img src="../assets/screenshots/ebook-library/library-light.png" alt="The library in the light theme" loading="lazy" width="700" height="450"></a><figcaption>The library in the light theme</figcaption></figure>
+  <figure><a href="../assets/screenshots/ebook-library/sources.png"><img src="../assets/screenshots/ebook-library/sources.png" alt="Sources: your files and folders, Project Gutenberg, Wikisource, the Internet Archive and your own catalogues" loading="lazy" width="700" height="450"></a><figcaption>Sources: your files and folders, Project Gutenberg, Wikisource, the Internet Archive and your own catalogues</figcaption></figure>
+</div>
 
 ## Every book you have
 

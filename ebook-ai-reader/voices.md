@@ -2,6 +2,8 @@
 title: eBook AI Reader — My voices
 ---
 
+<p class="crumbs"><a href="../entertainment/">Entertainment</a> › <a href="./">eBook AI Reader</a> › Voices</p>
+
 # My voices
 
 eBook AI Reader (Pro) can read English books in **six voices that come with
