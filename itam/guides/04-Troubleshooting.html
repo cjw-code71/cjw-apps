@@ -70,7 +70,7 @@ footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85
 </div></header>
 <main>
 <h1 id="troubleshooting">Troubleshooting</h1>
-<p><em>CJW-Apps ITAM · Version 2.7.0 · For administrators</em></p>
+<p><em>CJW-Apps ITAM · Version 2.8.0 · For administrators</em></p>
 <p>Find the message or problem you see. ITAM's error messages stay on screen until you press <strong>OK</strong>, and the
 last 20 are kept under the alert bell (<strong>Recent messages</strong>), so you can read them again.</p>
 <p><strong>Where to look first</strong>
@@ -246,7 +246,7 @@ your organisation picked at the top), then create the project with your domain a
 Removing a sign-in method or a device link is reserved for the built-in <code>admin</code> account. Sign in as <code>admin</code>.</p>
 <h2 id="network-discovery">Network discovery</h2>
 <p><strong>"Discovery is dormant"</strong> or nothing is scanned
-Tick <strong>Enable Agentless Network Discovery</strong> (Settings → Discovery).</p>
+Tick <strong>Turn on network scans</strong> (Settings → Network Scans).</p>
 <p><strong>A network cannot be added</strong>
 Only private ranges of /24 or smaller are allowed, for example <code>192.168.1.0/24</code>. Split bigger networks into
 several.</p>
@@ -260,9 +260,9 @@ first.</p>
 - MAC addresses and makers only appear for devices on the same network segment as the ITAM PC.</p>
 <p><strong>A device I expected was skipped</strong>
 With Intune or Google Workspace linked, devices they manage are left out on purpose. The scan result says how
-many were skipped. Untick <strong>Skip Devices Managed by ...</strong> to include them.</p>
+many were skipped. Untick <strong>Skip devices ... already reports</strong> to include them.</p>
 <p><strong>A phone or laptop answers ping but the scan does not find it</strong>
-Phones save power on Wi-Fi and often miss the first ping. Keep <strong>Wake Devices First</strong> on (Settings → Discovery).</p>
+Phones save power on Wi-Fi and often miss the first ping. Keep <strong>Wake Devices First</strong> on (Settings → Network Scans).</p>
 <p><strong>A phone is found again as a new device after every scan</strong>
 It uses a private Wi-Fi MAC that nothing else knows. Press <strong>Same as…</strong> on it in the review and choose its
 asset; later scans recognise it.</p>
@@ -417,13 +417,13 @@ ends, ITAM becomes the free version; nothing is deleted.</p>
 <p>The 30-day free trial can be used once. Cancelling it and buying Pro again only gives the trial days that were not
 used (for example 1 day after using 29), and the banner says the rest was used in an earlier trial.</p>
 <h2 id="getting-help">Getting help</h2>
-<p>Open <strong>About CJW-Apps ITAM</strong> (left menu) and press the <strong>Support</strong> link, or e-mail <strong>cjw-apps@outlook.com</strong>.
+<p>Open <strong>About CJW-Apps ITAM</strong> (left menu) and press the <strong>Support</strong> link, or e-mail <strong>cjw-apps@cwink.com</strong>.
 Please include:
 - the ITAM version (shown in About);
 - what you did and the exact message (from <strong>Recent messages</strong> under the bell);
 - the last lines of <code>itam.log</code>. Remove anything private first; ITAM never writes passwords to it.</p>
 <div class="pager"><a href="03-User-Guide.html">&larr; 3. User Guide</a><span></span></div>
 </main>
-<footer>CJW-Apps ITAM 2.7.0 · CJW Apps · CJW-Apps@outlook.com · apps.cwink.com</footer>
+<footer>CJW-Apps ITAM 2.8.0 · CJW Apps · cjw-apps@cwink.com · apps.cwink.com</footer>
 </body>
 </html>
