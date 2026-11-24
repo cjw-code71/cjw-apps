@@ -53,9 +53,14 @@ Configuration (including the network ports to open in a firewall), the
 User Guide and Troubleshooting. These are the questions asked most.
 
 **Do I need an account with CJW Apps?**
-No. ITAM runs on your own PC and has its own sign-in. The first time, sign
-in as `admin` with the password shown in the Quick start guide; ITAM then
-asks you to choose your own.
+No. ITAM runs on your own PC and has its own sign-in.
+
+**How do I sign in the first time?**
+From version 2.8.0, ITAM opens on **Set up ITAM** the first time: enter
+your organisation's name and choose the administrator's password, then
+sign in as `admin` with that password. In version 2.7.0, sign in as
+`admin` with the temporary password `AdminPassword123!`; ITAM then asks
+you to choose your own.
 
 **Where is my inventory kept?**
 On the PC that runs ITAM. Nothing is sent to us. Make backups in
