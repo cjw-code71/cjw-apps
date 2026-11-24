@@ -34,19 +34,25 @@ title: CJW Apps - Audiobook, eBook and IT Asset Management Apps
 
 <div class="panel" markdown="1">
 
-## How the apps use Google Drive
+## How the book apps use Google Drive
 
-If you choose to connect Google Drive, the apps ask for access to your Drive
-so you can use the audiobooks and ebooks you keep there:
+For Audiobook Library, eBook AI Reader and eBook Library only (ITAM does not
+use Google Drive). If you choose to connect Google Drive, the apps read and,
+only when you ask, update the books you keep there. Your files go straight
+between your device and Google, never through a server of ours, and are not
+used for advertising, sold or shared. See the [privacy policy](privacy.html).
+
+<details markdown="1">
+<summary>What the apps read and write</summary>
 
 - **Reading:** the apps list the folders you browse and read the files you
   add, so they can show covers and details, and play or open your books.
 - **Writing:** only when you ask, the apps save a book's details back into its
   original file (and, for audiobooks, its cover and chapters).
 
-Your files go straight between your device and Google. They never pass through
-a server of ours, and they aren't used for advertising, sold or shared. You can
-disconnect in the app at any time, or remove CJW Apps' access in your Google
-Account. See the [privacy policy](privacy.html).
+You can disconnect in the app at any time, or remove CJW Apps' access in
+your Google Account.
+
+</details>
 
 </div>
