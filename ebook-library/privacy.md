@@ -6,7 +6,7 @@ title: eBook Library — Privacy Policy
 
 # eBook Library — Privacy Policy
 
-*CJW Apps · Last updated 17 October 2026*
+*CJW Apps · Last updated 25 November 2026*
 
 eBook Library is an ebook reader and library for Android and Windows.
 This policy explains what the app does with your information. In short:
@@ -33,9 +33,12 @@ Google's own page; the app never sees your password. The app then:
 
 - **reads** the files and folders you choose, to add those books to your
   library;
-- **writes** to your files **only when you ask it to**: with **Update
+- **changes** your book files **only when you ask it to**: with **Update
   original file** you can choose to save a book's details and cover back
   into its file.
+- with Pro's **Carry on from other devices** on, keeps one small file of
+  your places in an **Apps › CJW Apps** folder in that account (see
+  below).
 
 Your files go straight between your device and Microsoft or Google; they
 never pass through a server of ours. Microsoft's and Google's own privacy
@@ -47,6 +50,35 @@ eBook Library's use of information received from Google APIs adheres to
 the [Google API Services User Data
 Policy](https://developers.google.com/terms/api-services-user-data-policy),
 including the Limited Use requirements.
+
+## Carry on from other devices (Pro)
+
+With Pro, eBook Library can keep your place in a book in step between your
+devices, and between eBook Library and eBook AI Reader. It is on once Pro is unlocked; you can turn it off in
+**Settings › Pro › Carry on from other devices**.
+
+**What is kept.** For each book: the book's cloud file ID (or, for folder books, their file name and size),
+its title, where you are in it, how far through it you are, whether it is
+finished, when, and the name of the device (for example your computer's
+name, which you can change) with a random ID made by the app. Nothing
+else: no account details, no book contents.
+
+**Where it is kept.** Only in storage you choose, never with us:
+
+- books from OneDrive or Google Drive: a small file in the **Apps › CJW
+  Apps** folder of that same account;
+- books from folders on your device (matched by their file name and size): the **sync folder** you choose (for example a pCloud
+  folder) and/or a **backup cloud** you choose (your OneDrive or Google
+  Drive, the same Apps › CJW Apps folder).
+
+Each device writes only its own file and reads the others'. The files go
+straight between your device and your storage; we run no servers and
+never see them.
+
+**Removing it.** **Remove synced places** on the same Settings page
+deletes this device's file. You can also delete the Apps › CJW Apps folder
+or the files in your sync folder at any time; the app makes a new one only
+if the feature is still on.
 
 ## Services the app contacts
 

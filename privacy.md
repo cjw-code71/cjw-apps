@@ -4,7 +4,7 @@ title: CJW Apps — Privacy Policy
 
 # CJW Apps — Privacy Policy
 
-*Last updated 19 November 2026*
+*Last updated 25 November 2026*
 
 This policy covers the apps published by CJW Apps:
 [Audiobook Library](audiobook-library/), [eBook AI Reader](ebook-ai-reader/)
@@ -58,15 +58,23 @@ files").
 show which account is connected); the names, folders, sizes, dates and IDs
 of the files and folders in the Drive folder you choose and its subfolders;
 and the contents of the book and audiobook files in it (for example audio,
-e-book text, tags, covers and chapters). The apps do not access your other
+e-book text, tags, covers and chapters). With Pro's **Carry on from other
+devices** on, also the small place files the apps keep in the **Apps › CJW
+Apps** folder of your Drive (see below). The apps do not access your other
 Google services, such as Gmail, Contacts or Photos.
 
 **Data use.** Only to provide the features you use: building your library
 from the folder you chose, showing covers and details, playing, streaming
 and opening books, downloading books for offline use when you ask, and,
 only when you ask and confirm, saving edited details, cover and chapters
-back into a book's original file in your Drive. The apps never delete,
-share or change the sharing permissions of your Drive files. Google user
+back into a book's original file in your Drive; and, with Pro's Carry on
+from other devices on, keeping your place in your books in step between
+your devices: each device writes one small file in **Apps › CJW Apps**
+(each book's file ID, title, place, how far through, finished or not, when,
+the device's name and a random device ID) and reads the other devices'
+files. The apps never delete, share or change the sharing permissions of
+your Drive files, apart from deleting their own place file when you choose
+Remove synced places. Google user
 data is not used for advertising, profiling, lending decisions or any other
 purpose, and is not used to develop, improve or train AI or machine
 learning models. Reading aloud in eBook AI Reader uses voices that run on
@@ -84,7 +92,10 @@ storage provided by Windows or Android, encrypted for your user account.
 
 **Data retention and deletion.** What the apps keep (your library details,
 covers, positions and any books you download for offline use) stays only on
-your device for as long as you use the app. Choosing Disconnect in the app
+your device for as long as you use the app, apart from the place files in
+Apps › CJW Apps in your own Drive (Pro, Carry on from other devices), which
+stay until you choose Remove synced places, turn the feature off and delete
+the folder, or delete them yourself. Choosing Disconnect in the app
 deletes the stored Google sign-in tokens; removing a book or source deletes
 what the app kept for it; uninstalling the app deletes everything it
 stored. You can also remove CJW Apps' access at any time in your Google

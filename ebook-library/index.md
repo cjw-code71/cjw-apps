@@ -61,6 +61,8 @@ Windows, with free classics from Project Gutenberg.
   together
 - Save details back into your original files, on your device or in the
   cloud
+- Carry on from other devices: open a book on your phone where you
+  stopped on your PC, and in eBook AI Reader where you stopped here
 
 ## Private by design
 

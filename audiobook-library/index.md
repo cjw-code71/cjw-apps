@@ -64,6 +64,8 @@ Windows, with free LibriVox audiobooks.
 - Edit a book's details and cover by hand
 - Save details, cover and chapters into your audio files, and upload them
   over the originals in your cloud storage
+- Carry on from other devices: open a book on your phone where you
+  stopped on your PC, and the other way round
 
 ## Private by design
 
