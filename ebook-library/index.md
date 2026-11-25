@@ -10,7 +10,7 @@ title: eBook Library Bookshelf - eBook Library and Reader, Android and Windows
 
 eBook Library gathers the ebooks on your device and in your cloud storage
 into one library, with covers, series and details, and a comfortable
-reader. For Android and Windows, with iPhone and iPad coming soon.
+reader. For Android and Windows.
 
 <div class="callout" markdown="1">
 **Want your books read aloud?** [eBook AI Reader](../ebook-ai-reader/) has the same library and reader, plus
@@ -21,7 +21,6 @@ natural voices that read your books aloud offline. eBook Library is the lighter 
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9P23H7S4TF02) (listed as "eBook Library Bookshelf")
 - **Android:** coming soon to Google Play
-- **iPhone and iPad:** coming soon to the App Store, one price with everything included (no Pro to buy)
 
 ## Screenshots
 
@@ -56,8 +55,6 @@ Windows, with free classics from Project Gutenberg.
 - Scroll or turn pages, with your choice of text size and spacing
 
 ## Pro (one-off purchase)
-
-On iPhone and iPad these are all included in the price.
 
 - Edit a book's details and cover
 - Find details online for one book or many, and edit several books

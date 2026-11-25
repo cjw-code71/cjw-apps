@@ -6,7 +6,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
   <p class="eyebrow">Entertainment</p>
   <h1>Apps for people with a lot of books</h1>
   <p>On Android and Windows, with iPhone and iPad coming soon. No accounts, no ads, no tracking: your library stays on your device.</p>
-  <p>Free to start, with an optional one-off Pro purchase in each app: no subscriptions. On iPhone and iPad, one price with everything included. Your books from OneDrive,
+  <p>Free to start, with an optional one-off Pro purchase in each app: no subscriptions. On iPhone and iPad (Audiobook Library and eBook AI Reader), one price with everything included. Your books from OneDrive,
   Google Drive or your device, plus free classics from LibriVox and Project Gutenberg, and your own Calibre
   catalogue.</p>
 </div>
@@ -66,7 +66,6 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
     <div class="card-actions">
       <a class="btn" href="https://apps.microsoft.com/detail/9P23H7S4TF02">Microsoft Store</a>
       <span class="badge">Google Play: coming soon</span>
-      <span class="badge">App Store: coming soon</span>
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../ebook-library/">More about it</a>
