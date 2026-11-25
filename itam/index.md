@@ -90,9 +90,11 @@ the Pro, Education and Education Trust editions are a yearly licence key.
 ## Find it automatically
 
 - Agentless network discovery (ping, WMI, SSH, SNMP): nothing to
-  install on the devices.
+  install on the devices. **Scan my network** finds your PC's own
+  networks, and **Find networks** reads the others from your router.
 - Microsoft Intune and Google Workspace device imports (ITAM Pro), on demand or on
-  a schedule.
+  a schedule. Devices that are no longer there, or have been renamed, are
+  shown for you to decide.
 - Every import is reviewed first: you see what would be added or
   changed before anything is saved.
 

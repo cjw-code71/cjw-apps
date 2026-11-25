@@ -19,7 +19,7 @@ start straight away. Updates come automatically through the Store.
 | Edition | What you get | Price |
 |---|---|---|
 | **Free** | Up to 100 assets, with network discovery, CSV imports, licences, alerts, roles, the Finance page and backups | Free |
-| **ITAM Pro** | No asset limit, plus Microsoft Intune and Google Workspace device imports, on demand or on a schedule | £44.99 a month or £454.99 a year, with a 30-day free trial |
+| **ITAM Pro** | No asset limit, plus Microsoft Intune and Google Workspace device imports, on demand or on a schedule, and monthly lifecycle date updates | £44.99 a month or £454.99 a year, with a 30-day free trial |
 
 </div>
 

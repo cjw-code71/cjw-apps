@@ -44,7 +44,10 @@ blockquote { margin:1.2em 0; padding:12px 16px; background:var(--note); border-l
 blockquote p { margin:.2em 0; }
 img { max-width:100%; height:auto; display:block; margin:1em 0 1.6em; border:1px solid var(--line); border-radius:10px;
       box-shadow:0 4px 16px rgba(16,32,48,.10); }
+figure { margin:0; }
 .figure-caption { font-size:.85rem; color:var(--muted); margin:-1.1em 0 1.6em; }
+blockquote:has(.warning) { background:color-mix(in srgb, #f59e0b 18%, var(--paper)); border-left-color:#d97706; }
+blockquote:has(.warning) p:first-child::before { content:"A0\FE0F  "; }
 hr { border:0; border-top:1px solid var(--line); margin:2.4em 0; }
 footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85rem; color:var(--muted); text-align:center; }
 .pager { display:flex; justify-content:space-between; gap:12px; margin-top:3em; padding-top:1.2em; border-top:1px solid var(--line); }
@@ -70,7 +73,7 @@ footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85
 </div></header>
 <main>
 <h1 id="installation--configuration-guide">Installation &amp; Configuration Guide</h1>
-<p><em>CJW-Apps ITAM · Version 2.8.0 · For administrators</em></p>
+<p><em>CJW-Apps ITAM · Version 2.9.0 · For administrators</em></p>
 <p>This guide covers installing ITAM, connecting it to your network and services, and every setting an administrator
 looks after. New to ITAM? Start with the <a href="01-Getting-Started.html">Getting Started guide</a>.</p>
 <p>Everything in this guide is done in <strong>Settings</strong> (the cog in the top bar), by an account with the
@@ -86,7 +89,7 @@ looks after. New to ITAM? Start with the <a href="01-Getting-Started.html">Getti
 <li><a href="#backups">Backups</a></li>
 <li><a href="#company-name-ci-types-and-dashboard-groups">Company name, CI types and dashboard groups</a></li>
 <li><a href="#software-licences">Software licences</a></li>
-<li><a href="#agentless-network-discovery">Agentless network discovery</a>: <a href="#4-kept-scans">Kept scans</a> · <a href="#windows-logins-wmi">Windows logins</a> · <a href="#snmp-v1v2c">SNMP</a> · <a href="#snmpv3-network-devices">SNMPv3</a> · <a href="#schedules">Schedules</a></li>
+<li><a href="#agentless-network-discovery">Agentless network discovery</a>: <a href="#4-kept-scans">Kept scans</a> · <a href="#networks-by-school-education-trust">By school</a> · <a href="#windows-logins-wmi">Windows logins</a> · <a href="#switches-routers-and-printers-snmp">SNMP</a> · <a href="#snmpv3-devices">SNMPv3</a> · <a href="#scanning-other-vlans">Scanning other VLANs</a> · <a href="#schedules">Schedules</a></li>
 <li><a href="#microsoft-intune">Microsoft Intune</a> · <a href="#google-workspace">Google Workspace</a> · <a href="#more-than-one-link">More than one link</a> (ITAM Pro)</li>
 <li><a href="#hardware-models-and-lifecycle">Hardware models and lifecycle</a></li>
 <li><a href="#asset-history-and-the-change-log">Asset history and the change log</a></li>
@@ -195,7 +198,7 @@ Microsoft Store.</p>
   <strong>Pro (offline)</strong> and counts down 7 more days. After 14 days ITAM works as the free version until the Store answers
   again; press <strong>Recover purchase</strong> in <strong>About</strong> once the PC is online.</li>
 </ul>
-<img alt="About, with the edition and Pro buttons" src="images/14-about.png" loading="lazy" /><p class="figure-caption">About, with the edition and Pro buttons</p>
+<figure><img alt="" src="images/14-about.png" loading="lazy" /><figcaption class="figure-caption">About, with the edition and Pro buttons</figcaption></figure>
 <h3 id="running-itam-as-a-windows-service-download-version">Running ITAM as a Windows service (Download version)</h3>
 <p>On a server that nobody signs in to, ITAM can run as a <strong>Windows service</strong>: it starts with Windows, keeps running
 when nobody is signed in, and Windows restarts it if it stops (after 1, 1 and 5 minutes).</p>
@@ -456,7 +459,7 @@ only work for the <strong>same Windows user on the same PC</strong>. If you move
 again.</p>
 <h2 id="network-access-and-https">Network access and HTTPS</h2>
 <p><strong>Settings → Server &amp; Access</strong></p>
-<img alt="Settings: Server &amp; Access" src="images/09-server-access.png" loading="lazy" /><p class="figure-caption">Settings: Server &amp; Access</p>
+<figure><img alt="" src="images/09-server-access.png" loading="lazy" /><figcaption class="figure-caption">Settings: Server &amp; Access</figcaption></figure>
 <p>Choose who can open ITAM with the two buttons:</p>
 <ul>
 <li><strong>127.0.0.1 – this PC only</strong> (default): only this PC can open ITAM.</li>
@@ -495,7 +498,7 @@ another program has the port), it shows a message saying why.</p>
 <hr />
 <h2 id="users-and-sign-in">Users and sign-in</h2>
 <p><strong>Settings → Users &amp; Auth</strong></p>
-<img alt="Settings: Users &amp; Auth" src="images/08-users.png" loading="lazy" /><p class="figure-caption">Settings: Users &amp; Auth</p>
+<figure><img alt="" src="images/08-users.png" loading="lazy" /><figcaption class="figure-caption">Settings: Users &amp; Auth</figcaption></figure>
 <p>There are three ways to sign in: local accounts, Microsoft and Google. You can use any of them together.</p>
 <h3 id="local-accounts">Local accounts</h3>
 <ol>
@@ -616,7 +619,7 @@ administrators can change the settings but cannot remove them.</p>
 <hr />
 <h2 id="backups">Backups</h2>
 <p><strong>Settings → Backups &amp; Storage</strong></p>
-<img alt="Settings: Backups &amp; Storage" src="images/12-backups.png" loading="lazy" /><p class="figure-caption">Settings: Backups &amp; Storage</p>
+<figure><img alt="" src="images/12-backups.png" loading="lazy" /><figcaption class="figure-caption">Settings: Backups &amp; Storage</figcaption></figure>
 <ol>
 <li><strong>Backup Target Directory / Location</strong>: choose a folder, ideally on another drive, a NAS or a synced folder.</li>
 <li><strong>Automated Backup Schedule</strong>: Daily, Weekly or Monthly at a set time. Backups run while ITAM is running.
@@ -652,7 +655,7 @@ back the files it needs.</p>
 <hr />
 <h2 id="company-name-ci-types-and-dashboard-groups">Company name, CI types and dashboard groups</h2>
 <p><strong>Settings → Config CI &amp; Taxonomy</strong></p>
-<img alt="Settings: Config CI &amp; Taxonomy" src="images/13-company-and-types.png" loading="lazy" /><p class="figure-caption">Settings: Config CI &amp; Taxonomy</p>
+<figure><img alt="" src="images/13-company-and-types.png" loading="lazy" /><figcaption class="figure-caption">Settings: Config CI &amp; Taxonomy</figcaption></figure>
 <ul>
 <li><strong>Company name and picture</strong>: shown at the top of the dashboard for everyone. Use PNG, JPEG, GIF or WebP,
   up to 300 KB; a small square works best.</li>
@@ -666,7 +669,7 @@ back the files it needs.</p>
 <hr />
 <h2 id="software-licences">Software licences</h2>
 <p><strong>Settings → Software Licences (SAM)</strong>, or <strong>Add Software Licence</strong> in the left menu.</p>
-<img alt="Settings: Software Licences" src="images/06-software-licences.png" loading="lazy" /><p class="figure-caption">Settings: Software Licences</p>
+<figure><img alt="" src="images/06-software-licences.png" loading="lazy" /><figcaption class="figure-caption">Settings: Software Licences</figcaption></figure>
 <p>For each licence, record the title, publisher, version, seats, cost per seat, purchase date, expiry date and
 notes, and these:</p>
 <ul>
@@ -719,24 +722,84 @@ notes, and these:</p>
 <h2 id="agentless-network-discovery">Agentless network discovery</h2>
 <p>ITAM can scan your own networks and find devices without installing anything on them.
 <strong>Settings → Network Scans</strong></p>
-<img alt="Settings: Discovery" src="images/10-discovery.png" loading="lazy" /><p class="figure-caption">Settings: Discovery</p>
+<figure><img alt="" src="images/10-discovery.png" loading="lazy" /><figcaption class="figure-caption">Settings: Discovery</figcaption></figure>
+<h3 id="quick-start-scan-my-network">Quick start: Scan my network</h3>
+<p>Press <strong>Scan my network</strong>. You do not need to know your address ranges:</p>
+<ul>
+<li>ITAM looks at this PC's wired and Wi-Fi connections (not VPN or virtual ones) and adds each network it is on to
+  <strong>Networks to scan</strong>, named after the connection (for example <em>Wi-Fi</em> or <em>Ethernet</em>).</li>
+<li>A network bigger than 256 addresses is split into blocks of 256. ITAM checks a few addresses in each block and
+  keeps the blocks where something answers, plus the block this PC is in.</li>
+<li>It turns on network scans, scans these networks and opens the review when the scan finishes. Nothing goes into
+  your inventory until you apply it.</li>
+</ul>
+<p>A network that is already in the list is scanned as it is, not added twice. For networks in other VLANs, use
+<strong>Find networks</strong> or add them by hand, as below.</p>
 <h3 id="1-switch-it-on">1. Switch it on</h3>
-<p>Tick <strong>Turn on network scans</strong>. While it is off, ITAM sends nothing on the network.</p>
+<p><strong>Scan my network</strong>, or adding your first network, turns on network scans for you. <strong>Turn on network scans</strong> is the
+switch to turn them off again: while it is off, ITAM sends nothing on the network.</p>
 <h3 id="2-add-your-networks">2. Add your networks</h3>
 <p>Under <strong>Networks to scan</strong>, press <strong>+ Add network</strong> and enter:
 - a name;
 - its <strong>address range</strong>, for example <code>192.168.1.0/24</code> (one for each subnet or VLAN);
-- a default location and environment;
-- optionally a <strong>Login for this network</strong> (a saved login, see below).</p>
+- a default location and environment (in a trust: the school, see <a href="#networks-by-school-education-trust">Networks by school</a>).</p>
 <p>Rules that keep scans safe:
 - Only private ranges (10.x, 172.16–31.x, 192.168.x, 169.254.x) can be scanned.
-- Each network is a /24 (256 addresses) or smaller. Split bigger networks into several.</p>
-<p><strong>One login of each type per network.</strong> A network can use one Windows login, one SNMP profile and one SSH
-profile at the same time. To add another type, add the same CIDR again with that login, and it is attached to
-the existing network. Each login shows as a badge on the network; the <strong>×</strong> on a badge takes it off.</p>
+- Each network is a /24 (256 addresses) or smaller.</p>
+<p><strong>Bigger ranges.</strong> Type a range up to a /16 (65,536 addresses), for example <code>10.20.0.0/16</code>, and press <strong>Save
+network</strong>. ITAM pings a few addresses in each block of 256 and lists the blocks where something answered, ticked.
+Untick any you do not want and press <strong>Add ticked networks</strong>: each block becomes its own network. Network scans must
+be on (Scan my network or adding your first network turns them on).</p>
+<p><strong>Find networks.</strong> Press <strong>Find networks</strong> to ask your router or core switch for its networks (VLANs) over
+read-only SNMP. ITAM uses the router set under <a href="#switches-routers-and-printers-snmp">Switches, routers and printers (SNMP)</a>
+(or this PC's default gateway) and the community strings or SNMPv3 file there. The list shows each network with
+the name the router gives it (for example <em>Vlan20 Staff</em>), how many addresses it has, and whether it is already in
+your list. Edit the names, tick the ones to scan and press <strong>Add ticked networks</strong>. The router is only asked while
+network scans are on.</p>
+<ul>
+<li><strong>Pupil and guest networks are listed but not ticked.</strong> A network counts as one when its name has a word such
+  as pupil, student, guest, visitor, public, BYOD or eduroam in it. School kit may be on such a network by mistake:
+  tick it to look.</li>
+<li>A network bigger than 256 addresses is split into the blocks that answer when you add it.</li>
+<li><strong>If the router does not answer SNMP</strong>, the list is built from what ITAM already knows: this PC's own networks and
+  the addresses earlier scans found, in blocks of 256. You can type another range under the list.</li>
+</ul>
+<p><strong>Logins on each network's row.</strong> Each network in the list has two drop-downs, <strong>Windows</strong> and <strong>SNMP</strong>:</p>
+<ul>
+<li>Choose one of your saved logins, or <strong>Add a login...</strong> to save a new one and use it for that network at once.</li>
+<li><strong>Test</strong> beside it tries the login on one device now: a Windows PC for a Windows login, or a switch, router or
+  printer for an SNMP login.</li>
+<li>Choose <strong>No Windows login</strong> or <strong>Community strings only</strong> to scan that network without it.</li>
+</ul>
+<p>A network uses one Windows login and one SNMP login. A saved login can be used by several networks. An address
+range can only be in the list once.</p>
+<p>Scans read SSH banners without a login, so new SSH logins cannot be added. SSH logins saved by an earlier version
+stay in <strong>Saved logins</strong>, marked <em>not used by scans yet</em>; the <strong>×</strong> beside one on a network takes it off.</p>
+<h3 id="networks-by-school-education-trust">Networks by school (Education Trust)</h3>
+<p>In a trust, each network belongs to a school, or to no school (for example the trust office or a data centre).</p>
+<ul>
+<li><strong>Choose the school</strong> when you add a network, or later in the <strong>School</strong> drop-down on its row. A <strong>room</strong> can
+  be chosen on the row too (it must be in that school). Devices found on the network go into that school, and
+  that room, when they are added from the review. The location, environment and department defaults are not used
+  in a trust.</li>
+<li>The list is grouped by school. <strong>Scan this school</strong> scans every active network of that school; <strong>Scan all
+  networks</strong> scans them all.</li>
+<li><strong>Each school has its own scan schedule</strong>, so each school's scan can run out of its own hours. <strong>Scan schedules
+  by school</strong> lists every school's schedule, its next run and last result; <strong>Change</strong> opens that school's
+  schedule. The schedule at the top of the page scans the networks that belong to no school.</li>
+<li><strong>School IT</strong> (administrators limited to their school) see only their school's networks, schedule and scans.
+  They can scan their school, change its schedule and <strong>review the devices found</strong> on their school's networks:
+  add them (they go into that school), update them or remove them from the list. Editors limited to a school can
+  review too.</li>
+<li>A device found at one school that is already an asset of <strong>another school</strong> shows as <strong>Other school</strong> in the
+  review and is left alone (its name is not shown). Trust IT can move it to the right school.</li>
+<li><strong>Trust IT</strong> (administrators who see every school) see and review every scan, add networks, logins and SNMP,
+  and clear the kept scans.</li>
+</ul>
 <h3 id="3-what-a-scan-finds">3. What a scan finds</h3>
 <ul>
-<li><strong>Every device that answers</strong>: IP address, MAC address and maker (from the MAC address).</li>
+<li><strong>Every device that answers</strong>: IP address, MAC address and maker (from the MAC address). For devices in other
+  VLANs the MAC address comes from the router, see <a href="#scanning-other-vlans">Scanning other VLANs</a>.</li>
 <li><strong>Bonjour / mDNS</strong>: Apple devices, printers and Chromecasts report their names and models.</li>
 <li><strong>Windows PCs and servers</strong>: recognised from their open ports. With a Windows login, ITAM also reads the real
   name, make, model, serial number and operating system. The PC running ITAM is always read this way, without
@@ -749,7 +812,7 @@ the existing network. Each login shows as a badge on the network; the <strong>×
 <p>Found devices are <strong>staged</strong> in a kept scan. Nothing goes into the inventory until an administrator reviews it (see
 the <a href="03-User-Guide.html#reviewing-discovered-devices">User guide</a>), unless <strong>Import new devices automatically</strong> is on.</p>
 <h3 id="4-kept-scans">4. Kept scans</h3>
-<img alt="Kept scans waiting for review" src="images/20-kept-scans.png" loading="lazy" /><p class="figure-caption">Kept scans waiting for review</p>
+<figure><img alt="" src="images/20-kept-scans.png" loading="lazy" /><figcaption class="figure-caption">Kept scans waiting for review</figcaption></figure>
 <p>Every scan, by hand or scheduled, is kept as its own list: <strong>the last 5 of each network</strong>. A sixth scan of a network
 removes its oldest.</p>
 <ul>
@@ -758,24 +821,62 @@ removes its oldest.</p>
 <li><strong>Review &amp; Import to Inventory</strong> works on the scan chosen there, so you can still import from an older scan.</li>
 <li><strong>Remove this scan</strong> forgets one scan; <strong>Clear All Scans</strong> forgets them all. Neither touches the inventory.</li>
 </ul>
+<h3 id="5-what-each-network-says-after-a-scan">5. What each network says after a scan</h3>
+<p>The <strong>Last Scan</strong> column shows when each network was scanned and what happened:</p>
+<table>
+<thead>
+<tr>
+<th>It says</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>12 devices.</strong></td>
+<td>The scan found 12 devices. They wait in the kept scan for review.</td>
+</tr>
+<tr>
+<td><strong>Nothing answered: a firewall may block this PC from Pupil Wi-Fi (ping, ports 135 and 5985, SNMP 161).</strong></td>
+<td>No device replied. Usually a firewall between the VLANs blocks the ITAM PC. See <a href="#scanning-other-vlans">Scanning other VLANs</a>.</td>
+</tr>
+<tr>
+<td><strong>Nothing answered. Check this PC is still connected to this network.</strong></td>
+<td>The network is the one this PC is on, but nothing replied: check its cable or Wi-Fi.</td>
+</tr>
+<tr>
+<td><strong>Skipped: scans are off</strong></td>
+<td>A scheduled scan did not run because <strong>Turn on network scans</strong> is off.</td>
+</tr>
+<tr>
+<td><strong>Stopped: scans were turned off during the scan</strong></td>
+<td>Someone turned scans off while it ran. What it had found so far is kept.</td>
+</tr>
+</tbody>
+</table>
+<p>Extra notes follow when they apply, for example when a Windows login was refused, or when Intune or Google
+Workspace could not be read.</p>
 <h3 id="options">Options</h3>
 <ul>
 <li><strong>Import new devices automatically</strong> (off by default): after each scan, by hand or scheduled, adds new devices
   whose CI type, make and model are already in your inventory. Anything unfamiliar, and any change to an existing
   asset, waits for review. Off: every scan waits for review.</li>
+</ul>
+<p>Under <strong>More options</strong> (both on unless you change them):</p>
+<ul>
 <li><strong>Skip devices Microsoft Intune / Google Workspace already reports</strong> (on by default): when Intune or Google
   Workspace is linked, devices it manages are left alone, matched by MAC address (and by computer name). The
   same PC is not reported twice or sent a Windows login. MAC addresses you linked to such a device with
   <strong>Same as…</strong> (see the User guide) count too. The network list shows how many were skipped, for example
-  "Completed (10 found, 1 skipped: managed by Google Workspace)".</li>
-<li><strong>Wake Devices First</strong> (on by default): before the detailed scan, every address is pinged at once. Phones and
+  "10 devices, 1 skipped: Google Workspace already reports it."</li>
+<li><strong>Wake devices first</strong> (on by default): before the detailed scan, every address is pinged at once. Phones and
   laptops saving power on Wi-Fi often miss the first ping; this wakes them so they are found first time. It
   adds a few seconds per network. Devices that still miss the quick check get one slower ping as well.</li>
 </ul>
 <h3 id="windows-logins-wmi">Windows logins (WMI)</h3>
 <p>ITAM reads Windows details over <strong>WinRM</strong> (fast) or <strong>WMI/DCOM</strong> (slower, can take a minute) using a saved
-login. Save one under <strong>Saved logins → Add login</strong>, type <strong>WMI</strong>. Use <strong>Test</strong> to try
-it on one PC before scanning; <strong>Change</strong> replaces the password later.</p>
+login. Choose <strong>Add a login...</strong> in the network's <strong>Windows</strong> drop-down (or save one under <strong>Saved logins → Add
+login</strong>, type <strong>WMI</strong>). Use <strong>Test</strong> to try it on one PC before scanning; <strong>Change</strong> under Saved logins replaces the
+password later.</p>
 <p><strong>In a company domain: create a separate scan account</strong></p>
 <blockquote>
 <p><strong>Do not scan with a Domain Admin or your own account.</strong> A scan offers the login to the Windows devices that
@@ -829,18 +930,44 @@ has no password ITAM can use. Windows Hello cannot be used over the network. Use
 above.</p>
 <h3 id="ports-and-firewalls">Ports and firewalls</h3>
 <p>The ports a scan uses, and the Windows firewall rules to allow, are listed in <a href="#network-ports-and-protocols">Network ports and protocols</a>.</p>
-<p><strong>Scanning across VLANs.</strong> Routers do not pass on MAC addresses, so a device on another VLAN shows no MAC: no make from
-its MAC, no <strong>Same as…</strong> button, and the skip switch can only match it by name. Bonjour usually stays within one VLAN
-too. For the fullest results, run the scan from a PC on that VLAN.</p>
-<h3 id="snmp-v1v2c">SNMP (v1/v2c)</h3>
-<p>For printers, NAS boxes and simple network gear.
-- <strong>SNMP v1/v2c community strings</strong>: type up to 10, one per line. A scan tries the network's SNMP profile
-  first, then these, then <code>public</code>. They are stored encrypted.
-- Or save an <strong>SNMP</strong> login and choose it for a network.</p>
+<h3 id="scanning-other-vlans">Scanning other VLANs</h3>
+<p>Schools and offices often split their network into VLANs, for example staff, servers, printers, pupil Wi-Fi and
+guest Wi-Fi. Between VLANs, a router or firewall decides what may pass. If a scan of another VLAN says <strong>Nothing
+answered</strong>, that firewall is usually blocking the ITAM PC.</p>
+<p><strong>Allow the ITAM PC through.</strong> On the router or firewall between the VLANs, allow traffic <strong>from the ITAM PC's
+address</strong> to the VLANs you want scanned:</p>
+<ul>
+<li><strong>ICMP echo (ping)</strong>: to find which addresses are in use.</li>
+<li><strong>TCP 135 and 5985</strong> (and TCP 49152–65535 for WMI over DCOM): to recognise and read Windows PCs.</li>
+<li><strong>UDP 161</strong>: SNMP, for switches, printers and other network devices.</li>
+<li>Optionally <strong>TCP 22, 80, 443</strong> and <strong>UDP 5353</strong>, for the fuller details listed in
+  <a href="#network-ports-and-protocols">Network ports and protocols</a>.</li>
+</ul>
+<p>Allow it only from the ITAM PC's address, not from the whole staff network. Give the ITAM PC a fixed address (or a
+DHCP reservation) so the rule keeps working.</p>
+<p><strong>Pupil and guest Wi-Fi are usually blocked on purpose.</strong> They are kept apart so that pupils' and visitors' own
+phones and laptops cannot reach school systems, and that is right. School-owned kit should not be on them, so you
+normally do not need to scan them. If you think school devices have ended up there by mistake, ask whoever looks
+after the network to allow the ITAM PC for a one-off scan, and move the devices back afterwards.</p>
+<p><strong>MAC addresses for other VLANs.</strong> Routers do not pass on MAC addresses, so this PC cannot see them for devices on
+another VLAN. When the router answers SNMP (set it under <a href="#switches-routers-and-printers-snmp">Switches, routers and printers (SNMP)</a>),
+each scan of another VLAN reads the router's ARP table once and gives those devices their MAC address and maker, so
+they match Intune, Google Workspace and your assets as well as devices on this PC's own VLAN. ITAM only reads the
+table. Without SNMP on the router, devices on another VLAN show no MAC: no make from the MAC, no <strong>Same as…</strong> button,
+and the skip switch can only match them by name. Bonjour usually stays within one VLAN too.</p>
+<h3 id="switches-routers-and-printers-snmp">Switches, routers and printers (SNMP)</h3>
+<p>Everything about SNMP is in one section of <strong>Settings → Network Scans</strong>, <strong>Switches, routers and printers (SNMP)</strong>.
+A network's own SNMP login is chosen in the <strong>SNMP</strong> drop-down on its row.</p>
+<p><strong>Router or core switch.</strong> ITAM asks it for your networks (VLANs) and for the MAC addresses of devices in other
+VLANs, using the community strings or the SNMPv3 file below. Leave it empty to use this PC's default gateway (the
+page shows which address that is), or type the address of your core switch or router and press <strong>Save</strong>. Only
+private addresses can be used.</p>
+<p><strong>Community strings (SNMP v1 and v2c).</strong> For printers, NAS boxes and simple network gear. Type up to 10, one per
+line. A scan tries the network's SNMP login first, then these, then <code>public</code>. They are stored encrypted.</p>
 <p>Switch SNMP on in the device's own settings, preferably read-only and with a community other than <code>public</code>.</p>
-<h3 id="snmpv3-network-devices">SNMPv3 network devices</h3>
+<h3 id="snmpv3-devices">SNMPv3 devices</h3>
 <p>For switches, routers and firewalls that use SNMPv3 (username plus authentication and encryption passwords).
-1. In <strong>SNMPv3 network devices</strong>, type the full path of a CSV file (for example <code>D:\ITAM\snmpv3.csv</code>) and press
+1. In <strong>SNMPv3 devices (CSV file)</strong>, type the full path of a CSV file (for example <code>D:\ITAM\snmpv3.csv</code>) and press
    <strong>Save</strong>. <strong>Create starter file</strong> writes an example there.
 2. Add one row per device. The columns are <code>ip_address, username, auth_protocol, auth_password, priv_protocol,
    priv_password, port, context, name</code>.
@@ -868,7 +995,7 @@ for review". Runs happen while ITAM is running; a run missed while it was shut d
 starts again. Every run is written to the change log.</p>
 <hr />
 <h2 id="microsoft-intune">Microsoft Intune</h2>
-<img alt="Settings: Integrations" src="images/11-integrations.png" loading="lazy" /><p class="figure-caption">Settings: Integrations</p>
+<figure><img alt="" src="images/11-integrations.png" loading="lazy" /><figcaption class="figure-caption">Settings: Integrations</figcaption></figure>
 <p>Brings in the devices Intune manages (Windows, Mac, iPhone, iPad, Android). The link is read-only; nothing
 is changed in Microsoft. <strong>Settings → Integrations → Microsoft Intune</strong></p>
 <blockquote>
@@ -893,6 +1020,15 @@ redirect address to add.</p>
 <p>Then:
 - <strong>Review Intune devices</strong> shows what would be added or changed before anything is saved.
 - Set a <strong>Schedule</strong> to keep the inventory up to date.</p>
+<p><strong>Renamed and removed devices</strong> (Intune and Google Workspace alike):
+- A device renamed in Intune or Google shows <strong>Use the new name</strong> in the review. It is ticked when the device is
+  the same Intune or Google record, and unticked when it was matched by serial number (often a rebuilt device): check
+  it is the same device first. The old name stays in the asset's <strong>History</strong>. A scheduled run never renames.
+- After each review, <strong>No longer in Microsoft Intune</strong> (or Google Workspace) lists the assets the link did not report
+  this time: removed, retired or set up again under a new ID. For each one choose <strong>Keep as it is</strong>, <strong>Mark as
+  Decommissioned</strong> (the link is kept, so the device is matched again if it comes back) or <strong>Unlink</strong> (the asset stays
+  but is no longer listed), then press <strong>Apply these choices</strong>. A scheduled run only counts them as waiting for
+  review; nothing changes without you. Google Workspace lists them only when every kind of device was fetched.</p>
 <p>Client secrets expire (often after 6–24 months): create a new one in Entra and save it in ITAM before then.</p>
 <p><strong>When a device is in more than one source</strong> (for example Intune and Google Workspace), it stays one asset. Imports
 match on the device's ID from that source, then its serial number, then a known MAC address, then its name.</p>
@@ -1057,7 +1193,7 @@ model shows that model's dates.</p>
 <p>Finance uses the same date: an asset is due for replacement when its model's support ends, if that comes before
 its type's replacement age.</p>
 <ul>
-<li>Dates come from a built-in table of approximate dates.
+<li>Dates come from a built-in table of approximate dates, and, in ITAM Pro, the monthly lifecycle update list (below).
   Unknown models show as Unknown; ITAM never invents dates.</li>
 <li><strong>Set dates</strong> (editors and administrators) enters a model's dates yourself; they always win. You can also save the
   <strong>vendor bulletin link</strong> (the maker's web page with the dates) and the <strong>last checked</strong> date (today if left blank).</li>
@@ -1075,9 +1211,28 @@ its type's replacement age.</p>
     A name with a general word on the end (<em>PowerEdge R750 Server</em>, <em>Catalyst 9300 Series Switch</em>) updates the
     model already listed rather than adding a second one.</li>
 </ul>
+<h3 id="lifecycle-updates-pro">Lifecycle updates (Pro)</h3>
+<p>ITAM Pro downloads a checked list of model dates from CJW Apps once a month. It is built from EOSL.ai (servers,
+network and storage), endoflife.date (devices such as iPads) and models CJW Apps checked by hand.</p>
+<ul>
+<li>The list is signed by CJW Apps. ITAM checks the signature and refuses a list that was changed on the way.</li>
+<li><strong>Nothing is saved until you look.</strong> A new list shows in the alert bell and as <strong>Review update</strong> above Hardware
+  Models (editors who see every school). The review shows what would change, with the models in your inventory
+  first: new models, changed dates, models no longer listed and models where your own entry is kept. Press
+  <strong>Apply update</strong>, <strong>Later</strong> or <strong>Do not apply</strong>.</li>
+<li><strong>Your own entries always win.</strong> Dates you set and your reference-table entries are never changed by the list.</li>
+<li><strong>Only a download is made.</strong> ITAM fetches one file from apps.cwink.com; nothing about you, your assets or your
+  licence is sent.</li>
+<li><strong>Check now</strong> downloads the list at once. (admin) <strong>Check every month</strong> switches the monthly check off and on.</li>
+<li><strong>A PC without internet</strong>: download <code>https://apps.cwink.com/itam/lifecycle.json</code> on another PC and use
+  <strong>Import a list file</strong>. It is checked in the same way.</li>
+<li>(admin) <strong>Stop using the list</strong> goes back to the built-in table; your own entries stay.</li>
+</ul>
+<p>Lifecycle information from EOSL.ai (CC BY 4.0) and endoflife.date (MIT). Always confirm dates against the vendor's
+bulletin.</p>
 <hr />
 <h2 id="asset-history-and-the-change-log">Asset history and the change log</h2>
-<img alt="An asset's full history" src="images/16-asset-history.png" loading="lazy" /><p class="figure-caption">An asset's full history</p>
+<figure><img alt="" src="images/16-asset-history.png" loading="lazy" /><figcaption class="figure-caption">An asset's full history</figcaption></figure>
 <p>ITAM records two things:</p>
 <ul>
 <li><strong>Each asset's History</strong>: every change to the asset, field by field from the old value to the new one, with who made
@@ -1121,6 +1276,6 @@ blank means the purchase cost. The currency is the one chosen on the Software Li
   typing <code>RESET</code>. A full backup is made first.</p>
 <div class="pager"><a href="01-Getting-Started.html">&larr; 1. Getting Started</a><a href="03-User-Guide.html">3. User Guide &rarr;</a></div>
 </main>
-<footer>CJW-Apps ITAM 2.8.0 · CJW Apps · cjw-apps@cwink.com · apps.cwink.com</footer>
+<footer>CJW-Apps ITAM 2.9.0 · CJW Apps · cjw-apps@cwink.com · apps.cwink.com</footer>
 </body>
 </html>
