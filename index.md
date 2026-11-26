@@ -3,7 +3,6 @@ title: CJW Apps - Audiobook, eBook and IT Asset Management Apps
 ---
 
 <div class="hero">
-  <p class="eyebrow">CJW Apps</p>
   <h1>Apps that keep your data on your own device</h1>
   <p>No accounts with us, no ads, no tracking. For your books at home, and your IT assets at work.</p>
 </div>
