@@ -6,7 +6,7 @@ title: CJW-Apps ITAM — Privacy Policy
 
 # CJW-Apps ITAM — Privacy Policy
 
-*CJW Apps · Last updated 15 November 2026*
+*CJW Apps · Last updated 26 November 2026*
 
 CJW-Apps ITAM is an IT asset management program for Windows. It runs on
 your own PC and keeps its data there. This policy explains what the
@@ -65,6 +65,25 @@ ITAM's use of information received from Google APIs adheres to the
 [Google API Services User Data
 Policy](https://developers.google.com/terms/api-services-user-data-policy),
 including the Limited Use requirements.
+
+## Buying the Download version
+
+Licence keys for the Download version are sold through Paddle.com, our
+online reseller and the Merchant of Record for our orders. You pay on
+Paddle's checkout, and Paddle's
+[privacy notice](https://www.paddle.com/legal/privacy) covers the
+details you give it, including your payment details. We never see your
+card or bank details.
+
+From Paddle we receive the buyer's name, email address, organisation and
+country, what was bought and the order number. We use them only to send
+and renew your licence key, to answer your questions, and for our
+accounts. They are kept on our own PC, with a list of the keys issued,
+for as long as the law requires us to keep business records (six years
+in the UK), and are never sold or shared.
+
+When you ask for a demo key, we keep your email and the key we sent in
+the same way.
 
 ## Removing your information
 
