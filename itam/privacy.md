@@ -6,7 +6,7 @@ title: CJW-Apps ITAM — Privacy Policy
 
 # CJW-Apps ITAM — Privacy Policy
 
-*CJW Apps · Last updated 15 November 2026*
+*CJW Apps · Last updated 26 November 2026*
 
 CJW-Apps ITAM is an IT asset management program for Windows. It runs on
 your own PC and keeps its data there. This policy explains what the
@@ -43,7 +43,7 @@ receives it and cannot see it.
 ## Services ITAM contacts
 
 ITAM only contacts an outside service when an administrator sets that
-feature up. Each one receives what any website receives (such as your IP
+feature up, or, with ITAM Pro, to check for lifecycle updates. Each one receives what any website receives (such as your IP
 address) and the sign-in or request described.
 
 | Service | When | What it is used for |
@@ -52,6 +52,7 @@ address) and the sign-in or request described.
 | Microsoft Intune (Microsoft Graph) | If you connect Intune | ITAM **reads** your managed devices, to add them to the inventory. It changes nothing in Intune |
 | Google (sign-in) | If you allow signing in to ITAM with Google accounts | The person signs in on Google's own page; ITAM receives their name and email address |
 | Google Workspace | If you connect Google Workspace | ITAM **reads** your organisation's devices and licence counts, to add them to the inventory. It changes nothing in Google Workspace |
+| CJW Apps lifecycle updates (apps.cwink.com) | With ITAM Pro, once a month unless an administrator switches it off, or when someone presses **Check now** | Downloads the signed list of hardware models' support dates. Only the download is made: nothing about you, your assets or your licence is sent |
 | Microsoft Store | In the copy installed from the Microsoft Store | Checks whether ITAM Pro is active. Microsoft handles the subscription and payment; ITAM never sees payment details |
 | Devices on your own network | When you run network discovery | ITAM asks the devices in the ranges you choose what they are, using the logins you saved |
 
