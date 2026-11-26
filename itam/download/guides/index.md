@@ -13,7 +13,7 @@ Download version and will cover:
 - installing ITAM on one PC, or as a Windows service on a server;
 - setting up ITAM the first time, for one organisation, one school or a
   trust of schools;
-- licence keys: trials, editions, upgrades and what happens when a key
+- licence keys: demo keys, editions, upgrades and what happens when a key
   ends;
 - schools and trusts: buildings and rooms, staff who see only their own
   school, transfers, and schools joining and leaving;
