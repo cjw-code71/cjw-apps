@@ -16,7 +16,7 @@ thousands of files. For Android and Windows.
 ## Get it
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NTCNMVBPCNG) (listed as "Audiobook Library Player")
-- **Android:** coming soon to Google Play
+- **Android:** {% include google-play.html app="audiobook-library" name="Audiobook Library" style="line" %}
 
 ## Screenshots
 

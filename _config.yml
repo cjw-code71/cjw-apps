@@ -23,3 +23,20 @@ defaults:
       path: "README.md"
     values:
       sitemap: false
+
+# Google Play, per app. While an app is in Google's closed test: leave "url" empty. "group" is the Google Group
+# testers join first (if the test uses one; otherwise people ask by email and are added to the tester list).
+# When the app is published: put its Play Store address in "url" and the badges become a Google Play button.
+google_play:
+  audiobook-library:
+    package: com.cjwcode.audiobooklibrary
+    group: ""
+    url: ""
+  ebook-ai-reader:
+    package: com.cjwcode.ebookaireader
+    group: ""
+    url: ""
+  ebook-library:
+    package: com.cjwcode.ebooklibrary
+    group: ""
+    url: ""
