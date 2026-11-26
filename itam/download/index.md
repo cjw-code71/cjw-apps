@@ -12,10 +12,11 @@ Microsoft Store is blocked. Your IT team installs it on one PC, or as a
 Windows service on a server so colleagues use it from their browsers. You
 choose when to install updates.
 
-**Early access:** the schools pilot is open, and SMEs can ask for a free
-30-day trial key.
+**Early access:** the schools pilot is open, and you can ask for a free
+30-day demo key for any edition, to try it on your own system before you
+buy.
 
-<p><a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20trial%20request&amp;body=Organisation%3A%0ANumber%20of%20schools%20or%20sites%3A%0AAbout%20how%20many%20assets%3A%0A">Request a trial</a></p>
+<p><a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20demo%20key%20request&amp;body=Edition%20(Pro%2C%20Education%20or%20Education%20Trust)%3A%0AOrganisation%3A%0ANumber%20of%20schools%20or%20sites%3A%0AAbout%20how%20many%20assets%3A%0A">Request a demo key</a></p>
 
 **Guides:** [Download version guides](guides/)
 
@@ -45,7 +46,9 @@ schools £549.
 
 - **Free:** no key needed. ITAM works as the free version (up to 100
   assets) straight away.
-- **Trial:** a free 30-day key on request, with your organisation's name.
+- **Demo:** a free 30-day key for the edition you want (Pro, Education or
+  Education Trust), on request, with your organisation's name. Try it on
+  your own system before you buy the yearly licence.
 - **Paid editions:** a yearly key, with an invoice. Enter it in ITAM's
   About page: the features switch on at once, with no reinstall and no
   data to move.
@@ -54,7 +57,7 @@ schools £549.
 - **When a key ends:** ITAM goes back to the free version. Nothing is
   deleted: all your data stays viewable and exportable.
 
-<p><a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20trial%20request&amp;body=Organisation%3A%0ANumber%20of%20schools%20or%20sites%3A%0AAbout%20how%20many%20assets%3A%0A">Request a trial or join the schools pilot</a></p>
+<p><a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20demo%20key%20request&amp;body=Edition%20(Pro%2C%20Education%20or%20Education%20Trust)%3A%0AOrganisation%3A%0ANumber%20of%20schools%20or%20sites%3A%0AAbout%20how%20many%20assets%3A%0A">Request a demo key or join the schools pilot</a></p>
 
 ## Guides
 
