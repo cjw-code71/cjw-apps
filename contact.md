@@ -30,7 +30,7 @@ The buttons open your email app with the details we need already listed.
 Please don't send passwords, licence keys or recovery keys. We never need
 them.
 
-## Business enquiries
+## <img class="heading-icon" src="assets/brand/cjw-business-icon.svg" alt="" width="30" height="30">Business enquiries
 
 For CJW-Apps ITAM (questions about Pro, using it across several sites, or
 a demonstration copy) use the same address and put **ITAM** in the

@@ -2,7 +2,7 @@
 title: Audiobook Library Player - Audiobook App for Android and Windows
 ---
 
-<p class="crumbs"><a href="../entertainment/">Entertainment</a> › Audiobook Library</p>
+<p class="crumbs"><a href="../entertainment/"><img class="crumb-icon" src="../assets/brand/cjw-entertainment-icon.svg" alt="" width="18" height="18">Entertainment</a> › Audiobook Library</p>
 
 # Audiobook Library
 

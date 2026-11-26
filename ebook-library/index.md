@@ -2,7 +2,7 @@
 title: eBook Library Bookshelf - eBook Library and Reader, Android and Windows
 ---
 
-<p class="crumbs"><a href="../entertainment/">Entertainment</a> › eBook Library</p>
+<p class="crumbs"><a href="../entertainment/"><img class="crumb-icon" src="../assets/brand/cjw-entertainment-icon.svg" alt="" width="18" height="18">Entertainment</a> › eBook Library</p>
 
 # eBook Library
 

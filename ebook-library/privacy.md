@@ -2,7 +2,7 @@
 title: eBook Library — Privacy Policy
 ---
 
-<p class="crumbs"><a href="../entertainment/">Entertainment</a> › <a href="./">eBook Library</a> › Privacy policy</p>
+<p class="crumbs"><a href="../entertainment/"><img class="crumb-icon" src="../assets/brand/cjw-entertainment-icon.svg" alt="" width="18" height="18">Entertainment</a> › <a href="./">eBook Library</a> › Privacy policy</p>
 
 # eBook Library — Privacy Policy
 

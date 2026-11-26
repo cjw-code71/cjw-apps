@@ -13,7 +13,7 @@ answer quickly.
   Reader and eBook Library
 - [CJW-Apps ITAM](#cjw-apps-itam)
 
-## Entertainment apps
+## <img class="heading-icon" src="assets/brand/cjw-entertainment-icon.svg" alt="" width="30" height="30">Entertainment apps
 
 For **Audiobook Library**, **eBook AI Reader** and **eBook Library**.
 Please say which app and whether you use Android or Windows.
@@ -70,7 +70,7 @@ the file type and what you see.
 </details>
 </div>
 
-## CJW-Apps ITAM
+## <img class="heading-icon" src="assets/brand/cjw-business-icon.svg" alt="" width="30" height="30">CJW-Apps ITAM
 
 **Read the ITAM guides** for your version:
 [Microsoft Store version](itam/guides/) (Getting Started, Installation &

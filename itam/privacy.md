@@ -2,7 +2,7 @@
 title: CJW-Apps ITAM — Privacy Policy
 ---
 
-<p class="crumbs"><a href="../business/">Business</a> › <a href="./">CJW-Apps ITAM</a> › Privacy policy</p>
+<p class="crumbs"><a href="../business/"><img class="crumb-icon" src="../assets/brand/cjw-business-icon.svg" alt="" width="18" height="18">Business</a> › <a href="./">CJW-Apps ITAM</a> › Privacy policy</p>
 
 # CJW-Apps ITAM — Privacy Policy
 

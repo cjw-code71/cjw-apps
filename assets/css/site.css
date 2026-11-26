@@ -165,8 +165,11 @@ tr:last-child td { border-bottom: 0; }
   .brand-logo { height: 42px; }
   .brand-panel img { height: 52px; }
 }
+/* Division and brand icons beside breadcrumbs, headings and the footer name */
+.crumb-icon { width: 18px; height: 18px; border-radius: 4px; vertical-align: -4px; margin-right: 6px; }
+.heading-icon { width: 30px; height: 30px; border-radius: 7px; vertical-align: -5px; margin-right: 10px; }
+.foot-brand img { width: 26px; height: 26px; border-radius: 6px; vertical-align: -7px; margin-right: 8px; }
 @media (prefers-color-scheme: dark) {
-  /* the navy panels sit on a near-navy page: a fine edge keeps their shape */
-  .brand-panel { box-shadow: 0 0 0 1px var(--line); }
-  .division img { box-shadow: 0 0 0 1px var(--line); }
+  /* the navy panels and icons sit on a near-navy page: a fine edge keeps their shape */
+  .brand-panel, .division img, .crumb-icon, .heading-icon, .foot-brand img { box-shadow: 0 0 0 1px var(--line); }
 }
