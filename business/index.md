@@ -38,13 +38,13 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
       <img class="app-icon" src="../assets/icons/itam.png?v=2" alt="" width="56" height="56">
       <div>
         <h3><a href="../itam/download/">ITAM: Download version</a></h3>
-        <div class="platform">For SMEs, schools and school trusts</div>
+        <div class="platform">For SMEs and education: schools and school trusts</div>
       </div>
     </div>
     <p>Installed by your IT team, on one PC or as a Windows service on a server, with a yearly licence key and an invoice. Editions for SMEs (Pro), a school (Education) and a multi-academy trust (Education Trust, several schools in one ITAM). Also for organisations where the Microsoft Store is blocked.</p>
     <div class="card-actions">
       <span class="badge">Early access</span>
-      <a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20trial%20request">Request a trial</a>
+      <a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20demo%20key%20request">Request a demo key</a>
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../itam/download/">Editions and prices</a>
