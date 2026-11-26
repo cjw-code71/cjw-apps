@@ -102,6 +102,15 @@ eBook Library Pro is a one-off purchase made through Google Play or the
 Microsoft Store. The store handles the payment; we never see your payment
 details. The app only learns whether Pro is unlocked.
 
+On Android, the app uses Google Play's billing library to make the purchase
+and to check whether Pro is already unlocked. Like Google's other code, it
+sends Google its own diagnostic reports about how purchases are working
+(for example errors and timings, and basic details of the phone and its
+Android version). These go to Google under
+[Google's privacy policy](https://policies.google.com/privacy), not to
+us, and say nothing about your books. The Windows version uses the
+Microsoft Store instead.
+
 ## Children
 
 The app is not directed at children and collects no information from
