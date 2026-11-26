@@ -10,7 +10,7 @@ title: CJW Apps - Audiobook, eBook and IT Asset Management Apps
 
 <div class="cards two">
   <div class="card">
-    <p class="eyebrow">Entertainment</p>
+    <div class="division"><img src="assets/brand/cjw-entertainment-icon.svg" alt="" width="44" height="44"><p class="eyebrow">Entertainment</p></div>
     <h2><a href="entertainment/">For people with a lot of books</a></h2>
     <p>Audiobooks and ebooks on Android and Windows. Your library stays on your device.</p>
     <div class="app-list">
@@ -25,7 +25,7 @@ title: CJW Apps - Audiobook, eBook and IT Asset Management Apps
     <div class="card-actions"><a class="btn" href="entertainment/">See the Entertainment apps</a></div>
   </div>
   <div class="card">
-    <p class="eyebrow">Business</p>
+    <div class="division"><img src="assets/brand/cjw-business-icon.svg" alt="" width="44" height="44"><p class="eyebrow">Business</p></div>
     <h2><a href="business/">For small and growing organisations</a></h2>
     <p>Tools for Windows. Your records stay on your own PC, not in somebody else's cloud.</p>
     <div class="icon-row">

@@ -3,7 +3,7 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
 ---
 
 <div class="hero">
-  <p class="eyebrow">Business</p>
+  <div class="brand-panel"><img src="../assets/brand/cjw-business-logo.svg" alt="CJW Business" width="190" height="80"></div>
   <h1>Tools for small and growing organisations</h1>
   <p>On Windows. Your records stay on your own PC, not in somebody else's cloud. No account with us, no ads, no tracking.</p>
 </div>

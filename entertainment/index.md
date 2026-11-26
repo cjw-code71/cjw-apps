@@ -3,7 +3,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
 ---
 
 <div class="hero">
-  <p class="eyebrow">Entertainment</p>
+  <div class="brand-panel"><img src="../assets/brand/cjw-entertainment-logo.svg" alt="CJW Entertainment" width="245" height="80"></div>
   <h1>Apps for people with a lot of books</h1>
   <p>On Android and Windows. No accounts, no ads, no tracking: your library stays on your device.</p>
   <p>Free to start, with an optional one-off Pro purchase in each app: no subscriptions. Your books from OneDrive,
