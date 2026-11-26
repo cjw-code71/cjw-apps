@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>User Guide — CJW-Apps ITAM</title>
+<title>User Guide — CJW-Apps ITAM (Microsoft Store version)</title>
 <link rel="icon" href="images/itam-icon.png">
 <style>
 :root { --bg:#f5f7fa; --paper:#fff; --text:#17212b; --muted:#56636f; --line:#dde3ea; --brand:#0f4c81; --accent:#0b6bcb;
@@ -47,7 +47,7 @@ img { max-width:100%; height:auto; display:block; margin:1em 0 1.6em; border:1px
 figure { margin:0; }
 .figure-caption { font-size:.85rem; color:var(--muted); margin:-1.1em 0 1.6em; }
 blockquote:has(.warning) { background:color-mix(in srgb, #f59e0b 18%, var(--paper)); border-left-color:#d97706; }
-blockquote:has(.warning) p:first-child::before { content:"A0\FE0F  "; }
+blockquote:has(.warning) p:first-child::before { content:"\26A0\FE0F  "; }
 hr { border:0; border-top:1px solid var(--line); margin:2.4em 0; }
 footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85rem; color:var(--muted); text-align:center; }
 .pager { display:flex; justify-content:space-between; gap:12px; margin-top:3em; padding-top:1.2em; border-top:1px solid var(--line); }
@@ -87,11 +87,9 @@ use the same dates; CSV files write them <code>2027-12-31</code>.</p>
 <li><a href="#qr-labels">QR labels</a></li>
 <li><a href="#stocktake">Stocktake</a> (Pro)</li>
 <li><a href="#attachments">Attachments</a> (Pro)</li>
-<li><a href="#devices-given-out-and-loans">Devices given out and loans</a> (Education)</li>
 <li><a href="#disposal">Disposal</a> (Pro)</li>
 <li><a href="#software-licences">Software licences</a></li>
 <li><a href="#finance">Finance</a></li>
-<li><a href="#transfers-between-schools">Transfers between schools</a> (trust)</li>
 <li><a href="#alerts-and-messages">Alerts and messages</a></li>
 <li><a href="#importing-and-exporting">Importing and exporting</a></li>
 <li><a href="#reviewing-discovered-devices">Reviewing discovered devices</a> (editor)</li>
@@ -245,18 +243,6 @@ change log.</p>
 school can add files to its own licences; files on a licence shared with other schools are added by trust IT.</p>
 <p>Deleting an asset or a licence also removes its files. The files are kept beside the database and copied with each
 full backup (see Backups in the Installation &amp; Configuration Guide).</p>
-<h2 id="devices-given-out-and-loans">Devices given out and loans</h2>
-<p><em>ITAM Education and Education Trust.</em> Record who has a device: a member of staff, or a pupil.</p>
-<p><strong>Give a device out</strong> (editor). Open the asset. In <strong>Who has it</strong>, choose <strong>Staff</strong> or <strong>Pupil</strong> and enter the name.
-For a pupil, add their year and class if you like. <strong>From</strong> is today unless you choose another date (for devices
-given out before you started using ITAM). Press <strong>Give out</strong>.
-- <strong>Pupils:</strong> school-owned devices only. ITAM keeps only the pupil's name, year and class, and only people who can
-  see that school see them.
-- <strong>A loan</strong> is a device given out with a <strong>Due back</strong> date. The asset shows <strong>On loan</strong> until it comes back.</p>
-<p><strong>When it comes back</strong>, open the asset and press <strong>It is back</strong> (add a note if something is missing). A loan's asset
-gets its old status back. The record stays under <strong>Earlier</strong>, and the asset's History shows who had it and when.</p>
-<p><strong>Devices Out</strong> in the side menu lists every device given out in your schools, late loans first. Loans past their
-due date also show on the bell for editors of that school.</p>
 <h2 id="disposal">Disposal</h2>
 <p><em>ITAM Pro and above.</em> Dispose of an asset with a clear record: why, who agreed, where it went, and proof that its
 data was destroyed.</p>
@@ -415,25 +401,6 @@ discontinued; current subscriptions are expected to carry on, so next year is a 
 in the year it was bought. The write-off is straight line from the purchase date; decommissioned assets count as fully
 written off. Everything comes from today's records, so fill in the purchase details (<strong>Edit together</strong> can do several
 assets at once).</p>
-<h2 id="transfers-between-schools">Transfers between schools</h2>
-<p>In a trust (ITAM Education Trust), an asset that moves to another school is <strong>transferred</strong>. It is a move of where the
-asset is, not of who owns it.</p>
-<p><strong>Send an asset</strong> (editor). Open the asset and press <strong>Transfer to another school</strong> in the School box. Choose the
-school and add a note if you like, then press <strong>Send</strong>. The asset stays at your school, marked <em>On its way</em>, until the
-other school confirms it has arrived. You can send to any school in the trust that is not closing or inactive.</p>
-<p><strong>Receive an asset</strong> (editor). The bell and the <strong>Transfers</strong> button in the side menu show how many are waiting for
-your school. Open <strong>Transfers</strong> and press <strong>Receive</strong> when the asset arrives. Choose the room it goes to (or none) and
-press <strong>Confirm it has arrived</strong>. The asset is now at your school, and the school that sent it no longer sees it.</p>
-<p><strong>Cancel</strong> a transfer that has not been received yet. Either school can do this, for example if the asset is not
-coming after all. The asset stays where it was.</p>
-<p><strong>Moving at once.</strong> Trust IT (who can see every school), and Administrators who can see both schools, move the
-asset straight away: there is nothing to confirm. Editors always send it, even if they can see both schools. A move
-made on the asset form or by an import also counts as a transfer; only trust IT can move assets that way.</p>
-<p>While a transfer is waiting, the asset cannot be decommissioned or deleted. Cancel the transfer first.</p>
-<p><strong>The Transfers screen</strong> lists what is waiting for your school, what your school sent that has not been received yet,
-and recent transfers with who sent and received each one. The <strong>Report</strong> tab shows, for each of your schools, how
-many assets it received (In) and sent (Out) each month of the year you choose.</p>
-<p>Each step is in the asset's <strong>History</strong> (Transfer sent, Transferred, Transfer cancelled) and in the change log.</p>
 <h2 id="alerts-and-messages">Alerts and messages</h2>
 <figure><img alt="" src="images/05-alert-bell.png" loading="lazy" /><figcaption class="figure-caption">The alert bell</figcaption></figure>
 <p><strong>The alert bell</strong> shows:
@@ -442,7 +409,6 @@ many assets it received (In) and sent (Out) each month of the year you choose.</
   asset name to open it. Decommissioned assets are left out;
 - scheduled runs that left devices to review, each with a <strong>Review</strong> button: network discovery for editors
   and administrators, Intune and Google for administrators;
-- in a trust, transfers from other schools waiting for your school to receive (editors and administrators);
 - red error messages from this session (see Messages below).</p>
 <p>The number on the bell counts all of these. It is <strong>red</strong> when anything urgent is there (an error message, or
 a licence in its last week or expired, a warranty in its last week) and <strong>amber</strong> when only licence or warranty warnings are left; with nothing to show
@@ -588,6 +554,6 @@ forever; 2 years at first).</li>
 </ul>
 <div class="pager"><a href="02-Installation-and-Configuration.html">&larr; 2. Installation &amp; Configuration</a><a href="04-Troubleshooting.html">4. Troubleshooting &rarr;</a></div>
 </main>
-<footer>CJW-Apps ITAM 2.9.0 · CJW Apps · cjw-apps@cwink.com · apps.cwink.com</footer>
+<footer>CJW-Apps ITAM 2.9.0 · Microsoft Store version · CJW Apps · cjw-apps@cwink.com · apps.cwink.com</footer>
 </body>
 </html>

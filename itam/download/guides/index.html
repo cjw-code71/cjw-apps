@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CJW-Apps ITAM — Documentation — CJW-Apps ITAM (Download version)</title>
+<link rel="icon" href="images/itam-icon.png">
+<style>
+:root { --bg:#f5f7fa; --paper:#fff; --text:#17212b; --muted:#56636f; --line:#dde3ea; --brand:#0f4c81; --accent:#0b6bcb;
+        --soft:#e8f1fb; --note:#fff7e0; --note-line:#e5c55a; --code:#eef2f6; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0f151c; --paper:#161f29; --text:#e8edf2; --muted:#a3afbb; --line:#2a3644; --brand:#14365a; --accent:#6cb2f5;
+          --soft:#1b2d42; --note:#2b2615; --note-line:#7a6526; --code:#1e2935; }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Segoe UI", system-ui, Arial, sans-serif; }
+a { color:var(--accent); text-underline-offset:3px; }
+header.bar { background:var(--brand); color:#fff; position:sticky; top:0; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,.15); }
+header .inner { max-width:1180px; margin:0 auto; padding:10px 20px; display:flex; flex-wrap:wrap; gap:6px 22px; align-items:center; }
+header .brand { font-weight:700; font-size:1.05rem; display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; }
+header .brand img { width:30px; height:30px; border-radius:7px; background:#fff; }
+header nav { display:flex; flex-wrap:wrap; gap:4px; }
+header nav a { color:#dbe8f5; text-decoration:none; font-weight:600; font-size:.92rem; padding:6px 11px; border-radius:999px; }
+header nav a:hover { background:rgba(255,255,255,.12); color:#fff; }
+header nav a.here { background:#fff; color:var(--brand); }
+main { max-width:1000px; margin:28px auto 60px; padding:44px 56px; background:var(--paper); border:1px solid var(--line);
+       border-radius:14px; box-shadow:0 6px 24px rgba(16,32,48,.06); }
+h1 { font-size:2.1rem; line-height:1.2; margin:0 0 .2em; color:var(--brand); letter-spacing:-.3px; }
+@media (prefers-color-scheme: dark) { h1 { color:var(--text); } }
+h1 + p em { color:var(--muted); font-style:normal; font-size:.95rem; }
+h1, h2, h3, h4 { scroll-margin-top:84px; }
+h2 { font-size:1.45rem; margin:2.2em 0 .6em; padding-bottom:.3em; border-bottom:2px solid var(--line); }
+h3 { font-size:1.15rem; margin:1.8em 0 .5em; }
+h4 { font-size:1rem; margin:1.4em 0 .4em; }
+p, li { max-width:860px; }
+table { border-collapse:collapse; width:100%; margin:1em 0 1.4em; font-size:.93rem; }
+th, td { text-align:left; vertical-align:top; padding:9px 12px; border:1px solid var(--line); }
+th { background:var(--soft); font-weight:600; }
+tr:nth-child(even) td { background:color-mix(in srgb, var(--soft) 35%, transparent); }
+code { background:var(--code); padding:1px 6px; border-radius:5px; font-size:.9em; font-family:Consolas, "Cascadia Mono", monospace; }
+pre { background:var(--code); padding:14px 16px; border-radius:10px; overflow-x:auto; border:1px solid var(--line); }
+pre code { background:none; padding:0; }
+blockquote { margin:1.2em 0; padding:12px 16px; background:var(--note); border-left:4px solid var(--note-line); border-radius:8px; }
+blockquote p { margin:.2em 0; }
+img { max-width:100%; height:auto; display:block; margin:1em 0 1.6em; border:1px solid var(--line); border-radius:10px;
+      box-shadow:0 4px 16px rgba(16,32,48,.10); }
+figure { margin:0; }
+.figure-caption { font-size:.85rem; color:var(--muted); margin:-1.1em 0 1.6em; }
+blockquote:has(.warning) { background:color-mix(in srgb, #f59e0b 18%, var(--paper)); border-left-color:#d97706; }
+blockquote:has(.warning) p:first-child::before { content:"\26A0\FE0F  "; }
+hr { border:0; border-top:1px solid var(--line); margin:2.4em 0; }
+footer { max-width:1000px; margin:-40px auto 40px; padding:0 20px; font-size:.85rem; color:var(--muted); text-align:center; }
+.pager { display:flex; justify-content:space-between; gap:12px; margin-top:3em; padding-top:1.2em; border-top:1px solid var(--line); }
+.pager a { font-weight:600; }
+@media (max-width:760px) { main { margin:12px; padding:22px 18px; } h1 { font-size:1.7rem; } }
+@media print {
+  :root { --bg:#fff; --paper:#fff; --text:#000; --muted:#444; --line:#bbb; --brand:#0f4c81; --soft:#eef3f8; --code:#f2f2f2; }
+  header.bar, .pager { display:none; }
+  body { background:#fff; font-size:11pt; }
+  main { margin:0; padding:0; border:0; box-shadow:none; max-width:none; }
+  h2 { break-after:avoid; } h3 { break-after:avoid; } table, img, pre, blockquote { break-inside:avoid; }
+  img { box-shadow:none; max-height:16cm; object-fit:contain; }
+  pre { white-space:pre-wrap; word-break:break-all; }
+  a { color:#000; text-decoration:none; }
+  footer { margin:2em 0 0; }
+}
+</style>
+</head>
+<body>
+<header class="bar"><div class="inner">
+  <a class="brand" href="../" title="CJW-Apps ITAM on apps.cwink.com"><img src="images/itam-icon.png" alt="">CJW-Apps ITAM</a>
+  <nav aria-label="Guides"><a href="index.html" class="here">Contents</a><a href="01-Getting-Started.html" class="">1. Getting Started</a><a href="02-Installation-and-Configuration.html" class="">2. Installation &amp; Configuration</a><a href="03-User-Guide.html" class="">3. User Guide</a><a href="04-Troubleshooting.html" class="">4. Troubleshooting</a></nav>
+</div></header>
+<main>
+<h1 id="cjw-apps-itam--documentation">CJW-Apps ITAM — Documentation</h1>
+<p><em>Version 2.9.0</em></p>
+<p>CJW-Apps ITAM is an IT asset register for Windows. It keeps your PCs, servers, network devices, databases and
+software licences in one place, finds devices on your network without installing anything on them, and brings in
+the devices Microsoft Intune or Google Workspace already manage. All data stays on your own PC.</p>
+<table>
+<thead>
+<tr>
+<th>Guide</th>
+<th>For</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="01-Getting-Started.html">1. Getting Started</a></td>
+<td>Whoever installs ITAM</td>
+<td>What ITAM does, installing, first sign-in, a tour of the screen and the first fifteen minutes</td>
+</tr>
+<tr>
+<td><a href="02-Installation-and-Configuration.html">2. Installation &amp; Configuration</a></td>
+<td>Administrators and IT</td>
+<td>System requirements, <strong>network ports and firewalls</strong>, network access over HTTPS, users and sign-in, backups, discovery, Intune, Google Workspace</td>
+</tr>
+<tr>
+<td><a href="03-User-Guide.html">3. User Guide</a></td>
+<td>Everyone</td>
+<td>Day-to-day use: finding and changing assets, licences, alerts, imports and exports</td>
+</tr>
+<tr>
+<td><a href="04-Troubleshooting.html">4. Troubleshooting</a></td>
+<td>Administrators</td>
+<td>Problems and messages, and how to fix them</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Support:</strong> <a href="mailto:cjw-apps@cwink.com">cjw-apps@cwink.com</a> · <a href="https://apps.cwink.com/support.html">apps.cwink.com/support.html</a></p>
+<h2 id="words-used-in-these-guides">Words used in these guides</h2>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Asset / CI (configuration item)</strong></td>
+<td>One item in the inventory, such as a server, laptop, switch or database</td>
+</tr>
+<tr>
+<td><strong>CI type</strong></td>
+<td>The kind of asset (Server, Laptop, Database...). Each type belongs to a dashboard group</td>
+</tr>
+<tr>
+<td><strong>Roles</strong></td>
+<td><strong>Viewer</strong> looks and searches; <strong>Editor</strong> also adds, changes, imports and exports; <strong>Administrator</strong> also changes settings. The built-in <code>admin</code> account is the <strong>Owner</strong></td>
+</tr>
+<tr>
+<td><strong>Staged device</strong></td>
+<td>A device a network scan found that is not in the inventory yet, or differs from it. It waits for review</td>
+</tr>
+<tr>
+<td><strong>Saved login</strong></td>
+<td>A user name and password, or SNMP community, ITAM uses to read details during a scan. Stored encrypted</td>
+</tr>
+<tr>
+<td><strong>Imported By</strong></td>
+<td>Where an asset came from (Intune, Google Workspace, a network scan or a CSV file), who imported it and when</td>
+</tr>
+</tbody>
+</table>
+<div class="pager"><span></span><a href="01-Getting-Started.html">1. Getting Started &rarr;</a></div>
+</main>
+<footer>CJW-Apps ITAM 2.9.0 · Download version · CJW Apps · cjw-apps@cwink.com · apps.cwink.com</footer>
+</body>
+</html>
