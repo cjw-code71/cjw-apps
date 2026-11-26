@@ -3,7 +3,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
 ---
 
 <div class="hero">
-  <p class="eyebrow">Entertainment</p>
+  <div class="brand-panel"><img src="../assets/brand/cjw-entertainment-logo.svg" alt="CJW Entertainment" width="245" height="80"></div>
   <h1>Apps for people with a lot of books</h1>
   <p>On Android and Windows. No accounts, no ads, no tracking: your library stays on your device.</p>
   <p>Free to start, with an optional one-off Pro purchase in each app: no subscriptions. Your books from OneDrive,
@@ -24,7 +24,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
     <p>All your audiobooks in one place, streamed straight from OneDrive, Google Drive or your device, with a player made for audiobooks.</p>
     <div class="card-actions">
       <a class="btn" href="https://apps.microsoft.com/detail/9NTCNMVBPCNG">Microsoft Store</a>
-      <span class="badge">Google Play: coming soon</span>
+      {% include google-play.html app="audiobook-library" name="Audiobook Library" style="card" %}
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../audiobook-library/">More about it</a>
@@ -43,7 +43,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
     <p>Read your ebooks, or have them read aloud: ePub, Kindle, PDF and more, with natural voices, including six of our own, that run offline. From OneDrive, Google Drive or your device.</p>
     <div class="card-actions">
       <a class="btn" href="https://apps.microsoft.com/detail/9NWL094R78JQ">Microsoft Store</a>
-      <span class="badge">Google Play: coming soon</span>
+      {% include google-play.html app="ebook-ai-reader" name="eBook AI Reader" style="card" %}
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../ebook-ai-reader/">More about it</a>
@@ -63,7 +63,7 @@ title: CJW Apps - Audiobook and eBook Apps for Android and Windows
     <p>All your ebooks in one tidy library, with covers, series and a comfortable reader. From OneDrive, Google Drive or your device. The lighter of the two eBook apps: no read-aloud.</p>
     <div class="card-actions">
       <a class="btn" href="https://apps.microsoft.com/detail/9P23H7S4TF02">Microsoft Store</a>
-      <span class="badge">Google Play: coming soon</span>
+      {% include google-play.html app="ebook-library" name="eBook Library" style="card" %}
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../ebook-library/">More about it</a>

@@ -1,5 +1,5 @@
 title: CJW Apps
-description: Apps that keep your data on your own device
+description: Your Data, Your Control
 url: https://apps.cwink.com
 g2_url: "https://www.g2.com/products/cjw-itam/reviews"  # ITAM's G2 page: when set, "Listed on G2" links appear on the ITAM and Business pages
 email: cjw-apps@cwink.com  # the address shown everywhere on the site (footer, contact, support, privacy pages)
@@ -23,3 +23,17 @@ defaults:
       path: "README.md"
     values:
       sitemap: false
+
+# Google Play, per app. While an app is in Google's closed test, leave "url" empty: the site shows "in testing" and an
+# email button (people ask, and are added to the tester list in Play Console). When the app is published, put its
+# Play Store address in "url" and the badges become a Google Play button.
+google_play:
+  audiobook-library:
+    package: com.cjwcode.audiobooklibrary
+    url: ""
+  ebook-ai-reader:
+    package: com.cjwcode.ebookaireader
+    url: ""
+  ebook-library:
+    package: com.cjwcode.ebooklibrary
+    url: ""

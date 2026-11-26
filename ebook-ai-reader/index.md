@@ -2,7 +2,7 @@
 title: eBook AI Reader - eBook Reader That Reads Aloud, Android and Windows
 ---
 
-<p class="crumbs"><a href="../entertainment/">Entertainment</a> › eBook AI Reader</p>
+<p class="crumbs"><a href="../entertainment/"><img class="crumb-icon" src="../assets/brand/cjw-entertainment-icon.svg" alt="" width="18" height="18">Entertainment</a> › eBook AI Reader</p>
 
 # eBook AI Reader
 
@@ -20,7 +20,7 @@ without the read-aloud voices.
 ## Get it
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NWL094R78JQ) (listed as "eBook AI Reader")
-- **Android:** coming soon to Google Play
+- **Android:** {% include google-play.html app="ebook-ai-reader" name="eBook AI Reader" style="line" %}
 
 ## Screenshots
 

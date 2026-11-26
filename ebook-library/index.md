@@ -2,7 +2,7 @@
 title: eBook Library Bookshelf - eBook Library and Reader, Android and Windows
 ---
 
-<p class="crumbs"><a href="../entertainment/">Entertainment</a> › eBook Library</p>
+<p class="crumbs"><a href="../entertainment/"><img class="crumb-icon" src="../assets/brand/cjw-entertainment-icon.svg" alt="" width="18" height="18">Entertainment</a> › eBook Library</p>
 
 # eBook Library
 
@@ -20,7 +20,7 @@ natural voices that read your books aloud offline. eBook Library is the lighter 
 ## Get it
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9P23H7S4TF02) (listed as "eBook Library Bookshelf")
-- **Android:** coming soon to Google Play
+- **Android:** {% include google-play.html app="ebook-library" name="eBook Library" style="line" %}
 
 ## Screenshots
 

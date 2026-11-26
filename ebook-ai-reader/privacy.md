@@ -2,7 +2,7 @@
 title: eBook AI Reader — Privacy Policy
 ---
 
-<p class="crumbs"><a href="../entertainment/">Entertainment</a> › <a href="./">eBook AI Reader</a> › Privacy policy</p>
+<p class="crumbs"><a href="../entertainment/"><img class="crumb-icon" src="../assets/brand/cjw-entertainment-icon.svg" alt="" width="18" height="18">Entertainment</a> › <a href="./">eBook AI Reader</a> › Privacy policy</p>
 
 # eBook AI Reader — Privacy Policy
 

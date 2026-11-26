@@ -3,9 +3,9 @@ title: "CJW-Apps ITAM Download version: editions and prices"
 description: The Download version of CJW-Apps ITAM for SMEs, schools and school trusts. Free for up to 100 assets; Pro, Education and Education Trust editions with a yearly licence key.
 ---
 
-<p class="crumbs"><a href="../../business/">Business</a> › <a href="../">CJW-Apps ITAM</a> › Download version</p>
+<p class="crumbs"><a href="../../business/"><img class="crumb-icon" src="../../assets/brand/cjw-business-icon.svg" alt="" width="18" height="18">Business</a> › <a href="../">CJW-Apps ITAM</a> › Download version</p>
 
-# <img class="title-icon app-icon plain" src="../../assets/icons/itam.png" alt="" width="60" height="60">ITAM: Download version
+# <img class="title-icon app-icon" src="../../assets/icons/itam.png?v=2" alt="" width="60" height="60">ITAM: Download version
 
 For SMEs, schools and school trusts, and for organisations where the
 Microsoft Store is blocked. Your IT team installs it on one PC, or as a
