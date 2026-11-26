@@ -1,0 +1,16 @@
+{%- comment -%}
+Google Play for one app: include.app = audiobook-library | ebook-ai-reader | ebook-library; include.name = its name;
+include.style = card | line. Published (url set): a Google Play button. In Google's closed test: "in testing", and an
+email to CJW Apps asking to be added as a tester (the owner adds them in Play Console and sends the test link).
+{%- endcomment -%}
+{%- assign gp = site.google_play[include.app] -%}
+{%- capture ask -%}mailto:{{ site.email }}?subject=Android%20test%3A%20{{ include.name | url_encode }}&body=Please%20add%20me%20to%20the%20Android%20test.%0A%0AThe%20email%20address%20I%20use%20for%20Google%20Play%3A%20{%- endcapture -%}
+{%- if gp.url != "" -%}
+  {%- if include.style == "line" -%}<a href="{{ gp.url }}">Google Play</a>
+  {%- else -%}<a class="btn" href="{{ gp.url }}">Google Play</a>{%- endif -%}
+{%- elsif include.style == "line" -%}
+in testing on Google Play: <a href="{{ ask }}">email us to join the test</a> and we'll send you the link
+{%- else -%}
+<span class="badge">Google Play: in testing</span>
+      <a class="btn ghost" href="{{ ask }}">Email to join the Android test</a>
+{%- endif -%}

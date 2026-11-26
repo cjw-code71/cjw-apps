@@ -20,7 +20,7 @@ without the read-aloud voices.
 ## Get it
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NWL094R78JQ) (listed as "eBook AI Reader")
-- **Android:** coming soon to Google Play
+- **Android:** {% include google-play.html app="ebook-ai-reader" name="eBook AI Reader" style="line" %}
 
 ## Screenshots
 
