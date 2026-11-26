@@ -5,7 +5,7 @@ description: Guides for the Download version of CJW-Apps ITAM, for SMEs, schools
 
 <p class="crumbs"><a href="../../../business/">Business</a> › <a href="../../">CJW-Apps ITAM</a> › <a href="../">Download version</a> › Guides</p>
 
-# <img class="title-icon app-icon plain" src="../../../assets/icons/itam.png" alt="" width="60" height="60">ITAM Download version: guides
+# <img class="title-icon app-icon" src="../../../assets/icons/itam.png" alt="" width="60" height="60">ITAM Download version: guides
 
 The Download version has its own guides. They are published with the
 Download version and will cover:

@@ -16,7 +16,7 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
 <div class="cards two">
   <div class="card">
     <div class="card-head">
-      <img class="app-icon plain" src="../assets/icons/itam.png" alt="" width="56" height="56">
+      <img class="app-icon" src="../assets/icons/itam.png" alt="" width="56" height="56">
       <div>
         <h3><a href="../itam/store/">ITAM: Microsoft Store version</a></h3>
         <div class="platform">For starters and small businesses</div>
@@ -35,7 +35,7 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
 
   <div class="card">
     <div class="card-head">
-      <img class="app-icon plain" src="../assets/icons/itam.png" alt="" width="56" height="56">
+      <img class="app-icon" src="../assets/icons/itam.png" alt="" width="56" height="56">
       <div>
         <h3><a href="../itam/download/">ITAM: Download version</a></h3>
         <div class="platform">For SMEs, schools and school trusts</div>
