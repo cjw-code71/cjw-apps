@@ -165,3 +165,8 @@ tr:last-child td { border-bottom: 0; }
   .brand-logo { height: 42px; }
   .brand-panel img { height: 52px; }
 }
+@media (prefers-color-scheme: dark) {
+  /* the navy panels sit on a near-navy page: a fine edge keeps their shape */
+  .brand-panel { box-shadow: 0 0 0 1px var(--line); }
+  .division img { box-shadow: 0 0 0 1px var(--line); }
+}
