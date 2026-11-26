@@ -13,8 +13,8 @@ before you buy. By buying a licence key you agree to them.
 
 ## Who we are
 
-CJW Apps is run by Colin Wink, in the United Kingdom. Email:
-[{{ site.email }}](mailto:{{ site.email }}).
+CJW Apps is the trading name of **Colin Wink**, a sole trader in the United
+Kingdom. Email: [{{ site.email }}](mailto:{{ site.email }}).
 
 ## Who you buy from
 
