@@ -6,7 +6,7 @@ title: eBook AI Reader — Privacy Policy
 
 # eBook AI Reader — Privacy Policy
 
-*CJW Apps · Last updated 25 November 2026*
+*CJW Apps · Last updated 26 November 2026*
 
 eBook AI Reader is an ebook reader for Android and Windows that can read
 books aloud. This policy explains what the app does with your
@@ -71,7 +71,7 @@ With Pro, eBook AI Reader can keep your place in a book in step between your
 devices, and between eBook Library and eBook AI Reader. It is on once Pro is unlocked; you can turn it off in
 **Settings › Pro › Carry on from other devices**.
 
-**What is kept.** For each book: the book's cloud file ID (or, for folder books, their file name and size),
+**What is kept.** For each book: the book's cloud file ID (or, for a book from a folder on your device, its file name and size),
 its title, where you are in it, how far through it you are, whether it is
 finished, when, and the name of the device (for example your computer's
 name, which you can change) with a random ID made by the app. Nothing
@@ -81,18 +81,19 @@ else: no account details, no book contents.
 
 - books from OneDrive or Google Drive: a small file in the **Apps › CJW
   Apps** folder of that same account;
-- books from folders on your device (matched by their file name and size): the **sync folder** you choose (for example a pCloud
-  folder) and/or a **backup cloud** you choose (your OneDrive or Google
-  Drive, the same Apps › CJW Apps folder).
+- books from folders on your device (for example pCloud): only if you
+  choose a cloud for them under **Keep their places in** (your OneDrive or
+  Google Drive), in the same Apps › CJW Apps folder there. Otherwise their
+  place stays on this device.
 
 Each device writes only its own file and reads the others'. The files go
 straight between your device and your storage; we run no servers and
 never see them.
 
-**Removing it.** **Remove synced places** on the same Settings page
-deletes this device's file. You can also delete the Apps › CJW Apps folder
-or the files in your sync folder at any time; the app makes a new one only
-if the feature is still on.
+**Removing it.** **Remove this device's places** on the same Settings
+page deletes this device's file. You can also delete the Apps › CJW Apps
+folder at any time; the app makes a new one only if the feature is still
+on.
 
 ## Services the app contacts
 
