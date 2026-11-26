@@ -2,7 +2,7 @@
 title: Audiobook Library Player - Audiobook App for Android and Windows
 ---
 
-<p class="crumbs"><a href="../entertainment/">Entertainment</a> › Audiobook Library</p>
+<p class="crumbs"><a href="../entertainment/"><img class="crumb-icon" src="../assets/brand/cjw-entertainment-icon.svg" alt="" width="18" height="18">Entertainment</a> › Audiobook Library</p>
 
 # Audiobook Library
 
@@ -16,7 +16,7 @@ thousands of files. For Android and Windows.
 ## Get it
 
 - **Windows:** [Microsoft Store](https://apps.microsoft.com/detail/9NTCNMVBPCNG) (listed as "Audiobook Library Player")
-- **Android:** coming soon to Google Play
+- **Android:** {% include google-play.html app="audiobook-library" name="Audiobook Library" style="line" %}
 
 ## Screenshots
 

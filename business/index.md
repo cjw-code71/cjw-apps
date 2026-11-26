@@ -3,7 +3,7 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
 ---
 
 <div class="hero">
-  <p class="eyebrow">Business</p>
+  <div class="brand-panel"><img src="../assets/brand/cjw-business-logo.svg" alt="CJW Business" width="190" height="80"></div>
   <h1>Tools for small and growing organisations</h1>
   <p>On Windows. Your records stay on your own PC, not in somebody else's cloud. No account with us, no ads, no tracking.</p>
 </div>
@@ -16,7 +16,7 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
 <div class="cards two">
   <div class="card">
     <div class="card-head">
-      <img class="app-icon plain" src="../assets/icons/itam.png" alt="" width="56" height="56">
+      <img class="app-icon" src="../assets/icons/itam.png?v=2" alt="" width="56" height="56">
       <div>
         <h3><a href="../itam/store/">ITAM: Microsoft Store version</a></h3>
         <div class="platform">For starters and small businesses</div>
@@ -35,16 +35,16 @@ title: "CJW Apps - Business Apps: CJW-Apps ITAM IT Asset Management"
 
   <div class="card">
     <div class="card-head">
-      <img class="app-icon plain" src="../assets/icons/itam.png" alt="" width="56" height="56">
+      <img class="app-icon" src="../assets/icons/itam.png?v=2" alt="" width="56" height="56">
       <div>
         <h3><a href="../itam/download/">ITAM: Download version</a></h3>
-        <div class="platform">For SMEs, schools and school trusts</div>
+        <div class="platform">For SMEs and education: schools and school trusts</div>
       </div>
     </div>
     <p>Installed by your IT team, on one PC or as a Windows service on a server, with a yearly licence key and an invoice. Editions for SMEs (Pro), a school (Education) and a multi-academy trust (Education Trust, several schools in one ITAM). Also for organisations where the Microsoft Store is blocked.</p>
     <div class="card-actions">
       <span class="badge">Early access</span>
-      <a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20trial%20request">Request a trial</a>
+      <a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20demo%20key%20request">Request a demo key</a>
     </div>
     <div class="card-actions">
       <a class="btn ghost" href="../itam/download/">Editions and prices</a>

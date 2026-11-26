@@ -3,9 +3,9 @@ title: "CJW-Apps ITAM Microsoft Store version: editions and prices"
 description: The Microsoft Store version of CJW-Apps ITAM, IT asset management for Windows. Free for up to 100 assets; ITAM Pro £44.99 a month or £454.99 a year, with a 30-day free trial.
 ---
 
-<p class="crumbs"><a href="../../business/">Business</a> › <a href="../">CJW-Apps ITAM</a> › Microsoft Store version</p>
+<p class="crumbs"><a href="../../business/"><img class="crumb-icon" src="../../assets/brand/cjw-business-icon.svg" alt="" width="18" height="18">Business</a> › <a href="../">CJW-Apps ITAM</a> › Microsoft Store version</p>
 
-# <img class="title-icon app-icon plain" src="../../assets/icons/itam.png" alt="" width="60" height="60">ITAM: Microsoft Store version
+# <img class="title-icon app-icon" src="../../assets/icons/itam.png?v=2" alt="" width="60" height="60">ITAM: Microsoft Store version
 
 For starters and small businesses. Install it from the Microsoft Store and
 start straight away. Updates come automatically through the Store.

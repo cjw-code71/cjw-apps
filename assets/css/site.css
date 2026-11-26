@@ -45,10 +45,17 @@ img { max-width: 100%; height: auto; }
 .skip:focus { left: 8px; top: 8px; }
 
 /* ---- header */
-.site-header { background: var(--brand); color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .08); }
+/* The logo's own navy (design sheet, 26 Nov 2026), in light and dark themes alike */
+.site-header { background: #0f1720; color: #fff; border-bottom: 1px solid rgba(255, 255, 255, .08); }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
 .brand { display: inline-flex; align-items: center; gap: 9px; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.2rem; letter-spacing: .2px; }
-.brand-mark { background: #fff; color: var(--brand-strong); border-radius: 8px; padding: 2px 8px; font-size: .95rem; letter-spacing: .6px; }
+.brand-logo { display: block; height: 52px; width: auto; }
+/* A division logo on its navy, at the top of the Entertainment and Business pages */
+.brand-panel { display: inline-flex; background: #0f1720; border-radius: 14px; padding: 12px 20px; margin-bottom: 16px; }
+.brand-panel img { display: block; height: 64px; width: auto; }
+.division { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.division img { width: 44px; height: 44px; border-radius: 10px; }
+.division .eyebrow { margin: 0; }
 .menu { display: flex; flex-wrap: wrap; gap: 4px; }
 .menu a { color: #dbe8f5; text-decoration: none; font-weight: 600; font-size: .98rem; padding: 7px 13px; border-radius: 999px;
   min-height: 44px; display: inline-flex; align-items: center; }  /* comfortable to tap on a phone */
@@ -152,4 +159,17 @@ tr:last-child td { border-bottom: 0; }
   h1 { font-size: 1.7rem; }
   .bar { justify-content: center; }
   .cards, .cards.two { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .brand-logo { height: 42px; }
+  .brand-panel img { height: 52px; }
+}
+/* Division and brand icons beside breadcrumbs, headings and the footer name */
+.crumb-icon { width: 18px; height: 18px; border-radius: 4px; vertical-align: -4px; margin-right: 6px; }
+.heading-icon { width: 30px; height: 30px; border-radius: 7px; vertical-align: -5px; margin-right: 10px; }
+.foot-brand img { width: 26px; height: 26px; border-radius: 6px; vertical-align: -7px; margin-right: 8px; }
+@media (prefers-color-scheme: dark) {
+  /* the navy panels and icons sit on a near-navy page: a fine edge keeps their shape */
+  .brand-panel, .division img, .crumb-icon, .heading-icon, .foot-brand img { box-shadow: 0 0 0 1px var(--line); }
 }
