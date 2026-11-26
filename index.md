@@ -28,7 +28,7 @@ title: CJW Apps - Audiobook, eBook and IT Asset Management Apps
     <h2><a href="business/">For small and growing organisations</a></h2>
     <p>Tools for Windows. Your records stay on your own PC, not in somebody else's cloud.</p>
     <div class="icon-row">
-      <a href="itam/"><img class="app-icon" src="assets/icons/itam.png" alt="" width="30" height="30">CJW-Apps ITAM: IT Asset Management</a>
+      <a href="itam/"><img class="app-icon" src="assets/icons/itam.png?v=2" alt="" width="30" height="30">CJW-Apps ITAM: IT Asset Management</a>
     </div>
     <div class="card-actions"><a class="btn" href="business/">See the Business apps</a></div>
   </div>
