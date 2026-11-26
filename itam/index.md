@@ -47,9 +47,9 @@ Press a picture to see it full size.
 | **Updates** | Automatic, through the Store | You choose when to install them |
 | **Paying** | Monthly or yearly, through your Microsoft account | A yearly licence key, with an invoice |
 | **Free** | Up to 100 assets | Up to 100 assets |
-| **Trial** | 30 days of ITAM Pro | A free 30-day key, on request |
-| **Schools** | One organisation | One school, or a trust with several schools |
-| **Available** | [Now](https://apps.microsoft.com/detail/9N828LN3WS8V) | Early access: [request a trial](mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20trial%20request) or join the schools pilot |
+| **Try it free** | 30 days of ITAM Pro | A free 30-day demo key for any edition, on request |
+| **Schools** | No: for organisations | One school, or a trust with several schools |
+| **Available** | [Now](https://apps.microsoft.com/detail/9N828LN3WS8V) | Early access: [request a demo key](mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20demo%20key%20request) or join the schools pilot |
 
 </div>
 
@@ -71,10 +71,10 @@ For SMEs, schools and school trusts, and for organisations where the
 Microsoft Store is blocked. Your IT team installs it on one PC, or as a
 Windows service on a server. Free for up to 100 assets without a key;
 the Pro, Education and Education Trust editions are a yearly licence key.
-**Early access:** the schools pilot is open, and SMEs can ask for a
-30-day trial key.
+**Try it first:** ask for a free 30-day demo key for Pro, Education or
+Education Trust. The schools pilot is open too.
 
-<p><a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20trial%20request">Request a trial</a>
+<p><a class="btn" href="mailto:{{ site.email }}?subject=ITAM%20Download%20version%3A%20demo%20key%20request">Request a demo key</a>
 <a class="btn ghost" href="download/">Editions and prices</a>
 <a class="btn ghost" href="download/guides/">Guides</a></p>
 
