@@ -1,0 +1,102 @@
+---
+title: "Buy CJW-Apps ITAM (test page)"
+description: Test page for buying ITAM Download version licence keys through Paddle.
+noindex: true
+sitemap: false
+---
+
+<p class="crumbs"><a href="../../business/">Business</a> › <a href="../">CJW-Apps ITAM</a> › <a href="./">Download version</a> › Buy</p>
+
+{% if site.paddle.env == "sandbox" %}
+<div class="callout"><strong>Test page: Paddle Sandbox</strong><p>No real money is taken. Pay with the test card 4242 4242 4242 4242, any name, any future expiry date, CVV 100.</p></div>
+{% endif %}
+
+<h1>Buy a licence key</h1>
+
+<p>Your yearly licence key is emailed to you a few minutes after you pay. Enter it in ITAM's About page and the
+features switch on at once. Prices are a year and do not include VAT; Paddle adds VAT where it applies.</p>
+
+<form id="buy-form" class="buy-form" onsubmit="return false">
+  <p>
+    <label for="buy-org"><strong>Your organisation's name</strong></label><br>
+    <span style="color:var(--muted)">Shown in ITAM and on your licence key, for example "Oakfield Academy Trust".</span><br>
+    <input id="buy-org" type="text" maxlength="80" autocomplete="organization" required style="width:100%;max-width:460px;min-height:44px;padding:8px 10px;font-size:1rem">
+  </p>
+  <p id="buy-org-problem" role="alert" style="color:#b42318;font-weight:600" hidden>Enter your organisation's name first.</p>
+</form>
+
+<div class="callouts">
+  <div class="callout">
+    <strong>Pro</strong>
+    <p>For SMEs: no asset limit, Microsoft Intune and Google Workspace imports, stocktakes, photos and files, disposal records.</p>
+    <p><strong>£454.99 a year</strong></p>
+    <p><button type="button" class="btn" data-edition="pro">Buy Pro</button></p>
+  </div>
+  <div class="callout">
+    <strong>Education</strong>
+    <p>For one school: Pro, plus who has each device (staff, and pupils) and loans with due dates.</p>
+    <p><strong>£249 a year</strong></p>
+    <p><button type="button" class="btn" data-edition="education">Buy Education</button></p>
+  </div>
+  <div class="callout">
+    <strong>Education Trust</strong>
+    <p>For a multi-academy trust: Education for several schools in one ITAM, each school's own rooms and staff, transfers between schools.</p>
+    <p>
+      <label for="buy-schools">Number of schools</label>
+      <input id="buy-schools" type="number" min="2" max="52" value="2" style="width:5.5em;min-height:40px;padding:6px 8px;font-size:1rem">
+    </p>
+    <p><strong id="buy-trust-price">£349 a year (2 schools)</strong></p>
+    <p><button type="button" class="btn" data-edition="trust">Buy Education Trust</button></p>
+  </div>
+</div>
+
+<p style="color:var(--muted)">By buying you agree to our <a href="../../terms.html">terms</a> and
+<a href="../../refund.html">refund policy</a> (a full refund within 30 days). Our order process is conducted by our
+online reseller Paddle.com, the Merchant of Record for our orders.</p>
+
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+(function () {
+  var PRICES = {
+    pro: "{{ site.paddle.prices.pro }}",
+    education: "{{ site.paddle.prices.education }}",
+    trust: "{{ site.paddle.prices.trust }}",
+    extra_school: "{{ site.paddle.prices.extra_school }}"
+  };
+  if ("{{ site.paddle.env }}" === "sandbox") Paddle.Environment.set("sandbox");
+  Paddle.Initialize({ token: "{{ site.paddle.token }}" });
+
+  var schools = document.getElementById("buy-schools");
+  function schoolCount() {
+    var n = parseInt(schools.value, 10);
+    if (isNaN(n) || n < 2) n = 2;
+    if (n > 52) n = 52;
+    return n;
+  }
+  function showTrustPrice() {
+    var n = schoolCount();
+    document.getElementById("buy-trust-price").textContent = "£" + (349 + (n - 2) * 100) + " a year (" + n + " schools)";
+  }
+  schools.addEventListener("input", showTrustPrice);
+  showTrustPrice();
+
+  document.querySelectorAll("button[data-edition]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var org = document.getElementById("buy-org").value.replace(/\s+/g, " ").trim();
+      var problem = document.getElementById("buy-org-problem");
+      problem.hidden = Boolean(org);
+      if (!org) { document.getElementById("buy-org").focus(); return; }
+      var edition = button.getAttribute("data-edition");
+      var items = [{ priceId: PRICES[edition], quantity: 1 }];
+      var n = edition === "trust" ? schoolCount() : 1;
+      if (edition === "trust" && n > 2) items.push({ priceId: PRICES.extra_school, quantity: n - 2 });
+      Paddle.Checkout.open({
+        items: items,
+        customData: { organisation: org, edition: edition, schools: String(n) },
+        settings: { displayMode: "overlay", theme: "light", locale: "en",
+                    successUrl: "{{ site.url }}/itam/download/thank-you.html" }
+      });
+    });
+  });
+})();
+</script>

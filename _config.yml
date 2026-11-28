@@ -3,6 +3,7 @@ description: Your Data, Your Control
 url: https://apps.cwink.com
 g2_url: "https://www.g2.com/products/cjw-itam/reviews"  # ITAM's G2 page: when set, "Listed on G2" links appear on the ITAM and Business pages
 email: cjw-apps@cwink.com  # the address shown everywhere on the site (footer, contact, support, privacy pages)
+key_email: CJW-Apps-Key@cwink.com  # sends ITAM licence keys only; not monitored (replies go to email above)
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-sitemap
@@ -37,3 +38,15 @@ google_play:
   ebook-library:
     package: com.cjwcode.ebooklibrary
     url: ""
+
+# Paddle (selling the ITAM Download version's licence keys). "sandbox" while testing with test cards; at go-live set
+# env to "production", the live client-side token (live_...) and the live account's price ids. The token is meant to
+# be public (it only opens checkouts); never put an API key or webhook secret here.
+paddle:
+  env: sandbox
+  token: test_86a4c8c2cc44609a5b472711e5d
+  prices:
+    pro: pri_01m8h8wdtt0ezaczg1q3n50py6
+    education: pri_01m8h9p0eh56ccvsxej3v8stm2
+    trust: pri_01m8h9r9a9nzfyvjcb0v95mhsj
+    extra_school: pri_01m8h9t36132jy7jy2npfhm8na
